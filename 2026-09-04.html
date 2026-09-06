@@ -1,0 +1,648 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>English Class Progress Report — September 4, 2026</title>
+  <style>
+    :root {
+      --bg: #f7f7f5;
+      --paper: #ffffff;
+      --text: #252525;
+      --muted: #6b6b6b;
+      --line: #e7e7e4;
+      --blue: #2563a6;
+      --blue-soft: #edf4fb;
+      --green: #236b45;
+      --green-soft: #edf7f1;
+      --amber: #8b5e16;
+      --amber-soft: #fff7e6;
+      --shadow: 0 12px 36px rgba(28, 28, 26, 0.07);
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 18px;
+      line-height: 1.68;
+    }
+
+    main {
+      width: min(100% - 32px, 860px);
+      margin: 28px auto 64px;
+      padding: 56px 64px 72px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+      line-height: 1.25;
+      letter-spacing: -0.025em;
+    }
+
+    h1 {
+      max-width: 720px;
+      font-size: clamp(2.15rem, 7vw, 3.25rem);
+      font-weight: 780;
+    }
+
+    h2 {
+      margin-top: 60px;
+      padding-top: 8px;
+      font-size: clamp(1.55rem, 5vw, 2rem);
+      font-weight: 750;
+    }
+
+    h3 {
+      font-size: 1.12rem;
+      font-weight: 720;
+    }
+
+    p { margin: 0 0 14px; }
+    strong { font-weight: 740; }
+
+    .eyebrow {
+      margin-bottom: 12px;
+      color: var(--blue);
+      font-size: 0.78rem;
+      font-weight: 760;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .meta {
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .quick-nav {
+      display: flex;
+      gap: 9px;
+      margin-top: 30px;
+      padding-bottom: 6px;
+      overflow-x: auto;
+      scrollbar-width: thin;
+    }
+
+    .quick-nav a {
+      flex: 0 0 auto;
+      padding: 7px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--text);
+      background: #fafaf9;
+      font-size: 0.82rem;
+      font-weight: 650;
+      text-decoration: none;
+    }
+
+    .quick-nav a:hover { background: var(--blue-soft); }
+
+    .section-rule {
+      height: 1px;
+      margin-top: 54px;
+      background: var(--line);
+    }
+
+    .callout {
+      margin-top: 20px;
+      padding: 22px 24px;
+      border: 1px solid #d8e9df;
+      border-radius: 12px;
+      background: var(--green-soft);
+    }
+
+    .callout p:last-child { margin-bottom: 0; }
+
+    .profile-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .profile-card {
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 13px;
+      background: #fff;
+    }
+
+    .scale {
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-weight: 720;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .level {
+      margin: 4px 0 10px;
+      color: var(--blue);
+      font-size: 1.25rem;
+      font-weight: 780;
+    }
+
+    .profile-card p:last-child {
+      margin: 0;
+      color: #444;
+      font-size: 0.9rem;
+      line-height: 1.55;
+    }
+
+    .note {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .stack {
+      display: grid;
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .pattern,
+    .suggestion,
+    .target {
+      padding: 20px 22px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fff;
+    }
+
+    .pattern h3,
+    .suggestion h3,
+    .target h3 { color: var(--blue); }
+
+    .pattern p,
+    .suggestion p,
+    .target p { margin-top: 8px; }
+
+    .examples {
+      margin: 12px 0 0;
+      padding-left: 1.3em;
+    }
+
+    .examples li { margin: 5px 0; }
+
+    .example-label {
+      color: var(--blue);
+      font-weight: 730;
+    }
+
+    .correction-tools {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin: 18px 0 12px;
+    }
+
+    .correction-tools p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    button {
+      padding: 8px 12px;
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      background: #fafaf9;
+      color: var(--text);
+      font: inherit;
+      font-size: 0.82rem;
+      font-weight: 680;
+      cursor: pointer;
+    }
+
+    details {
+      border-top: 1px solid var(--line);
+    }
+
+    details:last-of-type { border-bottom: 1px solid var(--line); }
+
+    summary {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 18px 3px;
+      list-style: none;
+      font-weight: 720;
+      cursor: pointer;
+    }
+
+    summary::-webkit-details-marker { display: none; }
+
+    summary::before {
+      content: "›";
+      display: inline-grid;
+      width: 24px;
+      height: 24px;
+      place-items: center;
+      border-radius: 6px;
+      color: var(--muted);
+      background: #f3f3f1;
+      font-size: 1.25rem;
+      line-height: 1;
+      transition: transform 0.15s ease;
+    }
+
+    details[open] summary::before { transform: rotate(90deg); }
+
+    .correction-body {
+      display: grid;
+      gap: 10px;
+      padding: 0 3px 22px 39px;
+    }
+
+    .version {
+      padding: 13px 15px;
+      border-radius: 9px;
+      background: #f7f7f5;
+    }
+
+    .version.minimal { background: var(--blue-soft); }
+    .version.natural { background: var(--green-soft); }
+
+    .version-label {
+      display: block;
+      margin-bottom: 3px;
+      color: var(--muted);
+      font-size: 0.76rem;
+      font-weight: 760;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .language-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .language-item {
+      padding: 17px 18px;
+      border: 1px solid var(--line);
+      border-radius: 11px;
+    }
+
+    .language-item p {
+      margin: 5px 0 0;
+      color: #505050;
+      font-size: 0.91rem;
+      line-height: 1.5;
+    }
+
+    .model-answer {
+      margin-top: 20px;
+      padding: 24px 26px;
+      border-left: 4px solid var(--blue);
+      border-radius: 5px 12px 12px 5px;
+      background: var(--blue-soft);
+      font-size: 1.02rem;
+    }
+
+    .model-answer p:last-child { margin-bottom: 0; }
+
+    .target-number {
+      display: inline-block;
+      margin-right: 8px;
+      color: var(--blue);
+      font-size: 0.82rem;
+      font-weight: 780;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    footer {
+      margin-top: 60px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    @media (max-width: 720px) {
+      body {
+        background: var(--paper);
+        font-size: 17px;
+        line-height: 1.65;
+      }
+
+      main {
+        width: 100%;
+        margin: 0;
+        padding: 32px 20px 56px;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      h2 { margin-top: 48px; }
+      .section-rule { margin-top: 44px; }
+      .profile-grid, .language-list { grid-template-columns: 1fr; }
+      .callout, .pattern, .suggestion, .target { padding: 18px; }
+      .correction-tools { align-items: flex-start; flex-direction: column; }
+      summary { padding: 17px 1px; }
+      .correction-body { padding-left: 0; }
+      .model-answer { padding: 20px; }
+    }
+
+    @media print {
+      body { background: #fff; font-size: 11pt; }
+      main { width: 100%; margin: 0; padding: 0; border: 0; box-shadow: none; }
+      .quick-nav, .correction-tools button { display: none; }
+      details { break-inside: avoid; }
+      details > * { display: block; }
+      summary::before { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">English coaching report</p>
+      <h1>English Class<br>Progress Report</h1>
+      <p class="meta"><strong>Jihoon Ahn</strong> · Morning phone class · September 4, 2026</p>
+
+      <nav class="quick-nav" aria-label="Report sections">
+        <a href="#overall">Overall</a>
+        <a href="#profile">Levels</a>
+        <a href="#patterns">Patterns</a>
+        <a href="#suggestions">Suggestions</a>
+        <a href="#corrections">Corrections</a>
+        <a href="#language">Language</a>
+        <a href="#model">Model answer</a>
+        <a href="#targets">Targets</a>
+      </nav>
+    </header>
+
+    <section id="overall">
+      <h2>🎯 Overall Performance</h2>
+      <div class="callout">
+        <p>You sustained a natural <strong>15-minute conversation</strong> and explained a postponed gathering and Korean wedding customs in detail. Your greatest strength was <strong>idea development</strong>: you added background, examples, comparisons, and personal experience without relying on constant prompts. You also accepted corrections quickly and reused new phrases. Your main weakness was <strong>grammatical precision in longer sentences</strong>, particularly agreement, articles, time expressions, tense, and collocations. To move toward <strong>OPIc AL and solid B2 performance</strong>, build answers from two or three short core sentences before adding details.</p>
+      </div>
+    </section>
+
+    <section id="profile">
+      <h2>📊 Performance Profile</h2>
+      <div class="profile-grid">
+        <article class="profile-card">
+          <p class="scale">OPIc</p>
+          <p class="level">IH range</p>
+          <p>You can sustain conversation, narrate experiences, and explain a cultural practice at length. More consistent structure and accuracy are needed for AL.</p>
+        </article>
+        <article class="profile-card">
+          <p class="scale">TOEFL iBT Speaking</p>
+          <p class="level">3.5–4.0 / 6</p>
+          <p>Your delivery is understandable and developed, but frequent grammar and word-choice problems reduce precision. Integrated tasks were not assessed.</p>
+        </article>
+        <article class="profile-card">
+          <p class="scale">CEFR Speaking</p>
+          <p class="level">B1+ to low B2</p>
+          <p>You can explain experiences, compare cultures, and maintain interaction. Accuracy and organization are not yet consistently at B2.</p>
+        </article>
+      </div>
+      <p class="note"><strong>Note:</strong> These are informal speaking estimates based on one conversation, not official test scores.</p>
+    </section>
+
+    <section id="patterns">
+      <h2>🔍 Highest-Priority Patterns</h2>
+      <div class="stack">
+        <article class="pattern">
+          <h3>1. Use “in” for a future time</h3>
+          <p>Use <strong>“in + amount of time”</strong> when you mean how long from now. Use “later” when the starting point is already clear.</p>
+          <ul class="examples">
+            <li>“One of my coworkers is getting married <strong>in two months</strong>.”</li>
+            <li>“We can hold the bachelor party <strong>later</strong>, after his son feels better.”</li>
+          </ul>
+        </article>
+
+        <article class="pattern">
+          <h3>2. Control agreement and articles</h3>
+          <p>Check the subject before choosing <strong>“is” or “are”</strong>, and use “a” or “an” with one countable item.</p>
+          <ul class="examples">
+            <li>“One of my coworkers <strong>is</strong> getting married.”</li>
+            <li>“We usually give each guest <strong>a wedding invitation</strong>.”</li>
+          </ul>
+        </article>
+
+        <article class="pattern">
+          <h3>3. Use natural event collocations</h3>
+          <p>Learn a noun together with the verb that commonly goes with it.</p>
+          <ul class="examples">
+            <li>“We were going to <strong>have a small gathering</strong>.”</li>
+            <li>“The bride and groom usually <strong>treat their friends to dinner</strong>.”</li>
+          </ul>
+        </article>
+
+        <article class="pattern">
+          <h3>4. Choose the tense before adding details</h3>
+          <p>Use the <strong>present perfect</strong> for an unfinished decision and the <strong>simple past</strong> for a completed situation.</p>
+          <ul class="examples">
+            <li>“We <strong>haven't decided</strong> when we're going to meet yet.”</li>
+            <li>“I <strong>got married</strong> during the COVID-19 pandemic.”</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="suggestions">
+      <h2>🚀 Suggestions to Improve</h2>
+      <div class="stack">
+        <article class="suggestion">
+          <h3>Use a three-part cultural explanation</h3>
+          <p>State the <strong>custom</strong>, explain the <strong>reason</strong>, and give one <strong>example</strong>.</p>
+          <p><span class="example-label">Example:</span> “In Korea, couples often meet friends before the wedding. They usually pay for dinner because the guests will later bring a cash gift. For example, my wife and I handed out many invitations in person.”</p>
+        </article>
+
+        <article class="suggestion">
+          <h3>Build a time-expression bank</h3>
+          <p>Practice each phrase with one real sentence.</p>
+          <p><span class="example-label">Examples:</span> <strong>“in two months,” “during the pandemic,” “before my wedding,”</strong> and <strong>“we haven't decided yet.”</strong></p>
+        </article>
+
+        <article class="suggestion">
+          <h3>Replace translated collocations</h3>
+          <p>Record the complete replacement—not only one word.</p>
+          <p><span class="example-label">Example:</span> Change “make a gathering” to <strong>“have a gathering”</strong>, and change “return my investment” to <strong>“receive some of that money back.”</strong></p>
+        </article>
+
+        <article class="suggestion">
+          <h3>Finish the core sentence first</h3>
+          <p>When an answer becomes complicated, finish the main fact and begin a second sentence.</p>
+          <p><span class="example-label">Example:</span> “Our gathering was postponed. One coworker's son had a high fever, so we decided to meet another time.”</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="corrections">
+      <h2>✏️ Key Corrections</h2>
+      <div class="correction-tools">
+        <p>Tap a correction to open it.</p>
+        <button type="button" id="toggle-all">Expand all</button>
+      </div>
+
+      <details open>
+        <summary>1. Describe canceled plans</summary>
+        <div class="correction-body">
+          <div class="version"><span class="version-label">Your wording</span>“I had a plan with my friend, my coworkers. It was canceled yesterday.”</div>
+          <div class="version minimal"><span class="version-label">Minimal correction</span>“I had plans with my coworkers, but they were canceled yesterday.”</div>
+          <div class="version natural"><span class="version-label">Natural version</span><strong>“I was supposed to go out with my coworkers, but our plans were canceled yesterday.”</strong></div>
+        </div>
+      </details>
+
+      <details>
+        <summary>2. Say when a future event will happen</summary>
+        <div class="correction-body">
+          <div class="version"><span class="version-label">Your wording</span>“One of my coworkers are getting married two months later.”</div>
+          <div class="version minimal"><span class="version-label">Minimal correction</span>“One of my coworkers is getting married in two months.”</div>
+          <div class="version natural"><span class="version-label">Natural version</span><strong>“One of my coworkers is getting married in two months, so we were planning a small bachelor party for him.”</strong></div>
+        </div>
+      </details>
+
+      <details>
+        <summary>3. Describe an undecided plan</summary>
+        <div class="correction-body">
+          <div class="version"><span class="version-label">Your wording</span>“We are not decided when we are gonna meet.”</div>
+          <div class="version minimal"><span class="version-label">Minimal correction</span>“We haven't decided when we are going to meet.”</div>
+          <div class="version natural"><span class="version-label">Natural version</span><strong>“We haven't set a new date yet, so it feels almost canceled.”</strong></div>
+        </div>
+      </details>
+
+      <details>
+        <summary>4. Explain invitation customs</summary>
+        <div class="correction-body">
+          <div class="version"><span class="version-label">Your wording</span>“We have a invitation card for wedding ceremony.”</div>
+          <div class="version minimal"><span class="version-label">Minimal correction</span>“We have a wedding invitation card.”</div>
+          <div class="version natural"><span class="version-label">Natural version</span><strong>“In Korea, couples often hand out wedding invitations in person.”</strong></div>
+        </div>
+      </details>
+
+      <details>
+        <summary>5. Keep pronouns consistent</summary>
+        <div class="correction-body">
+          <div class="version"><span class="version-label">Your wording</span>“We usually give it to my friends or family.”</div>
+          <div class="version minimal"><span class="version-label">Minimal correction</span>“We usually give it to our friends or family.”</div>
+          <div class="version natural"><span class="version-label">Natural version</span><strong>“Couples usually give the invitations to their friends and family in person.”</strong></div>
+        </div>
+      </details>
+
+      <details>
+        <summary>6. Name the hosts</summary>
+        <div class="correction-body">
+          <div class="version"><span class="version-label">Your wording</span>“The groom and bride have to buy dinner.”</div>
+          <div class="version minimal"><span class="version-label">Minimal correction</span>“The bride and groom have to buy dinner.”</div>
+          <div class="version natural"><span class="version-label">Natural version</span><strong>“The bride and groom usually treat their friends to dinner before the wedding.”</strong></div>
+        </div>
+      </details>
+
+      <details>
+        <summary>7. Use a natural digital term</summary>
+        <div class="correction-body">
+          <div class="version"><span class="version-label">Your wording</span>“They will send the invitation card in virtual card.”</div>
+          <div class="version minimal"><span class="version-label">Minimal correction</span>“They will send the invitation as a virtual card.”</div>
+          <div class="version natural"><span class="version-label">Natural version</span><strong>“If someone cannot attend the dinner, the couple can send a digital invitation instead.”</strong></div>
+        </div>
+      </details>
+
+      <details>
+        <summary>8. Explain attendance checking</summary>
+        <div class="correction-body">
+          <div class="version"><span class="version-label">Your wording</span>“They will check who is going to come to the wedding or not.”</div>
+          <div class="version minimal"><span class="version-label">Minimal correction</span>“They will check whether people are going to come to the wedding.”</div>
+          <div class="version natural"><span class="version-label">Natural version</span><strong>“The dinner also helps the couple find out who plans to attend the wedding.”</strong></div>
+        </div>
+      </details>
+
+      <details>
+        <summary>9. Describe a numerical limit</summary>
+        <div class="correction-body">
+          <div class="version"><span class="version-label">Your wording</span>“We had 100 people limit.”</div>
+          <div class="version minimal"><span class="version-label">Minimal correction</span>“We had a 100-person limit.”</div>
+          <div class="version natural"><span class="version-label">Natural version</span><strong>“At that time, wedding gatherings were limited to 100 people.”</strong></div>
+        </div>
+      </details>
+
+      <details>
+        <summary>10. Talk about past gift money</summary>
+        <div class="correction-body">
+          <div class="version"><span class="version-label">Your wording</span>“Before my wedding, I already sent much money to many guests.”</div>
+          <div class="version minimal"><span class="version-label">Minimal correction</span>“Before my wedding, I had already given money at many weddings.”</div>
+          <div class="version natural"><span class="version-label">Natural version</span><strong>“Before I got married, I had already given cash gifts at many other people's weddings.”</strong></div>
+        </div>
+      </details>
+    </section>
+
+    <section id="language">
+      <h2>💬 Useful Language</h2>
+      <div class="language-list">
+        <article class="language-item"><strong>postpone a gathering</strong><p>Move a social event to a later date.</p></article>
+        <article class="language-item"><strong>have a gathering</strong><p>Organize or take part in a social event.</p></article>
+        <article class="language-item"><strong>get married in two months</strong><p>Use “in” for a future time measured from now.</p></article>
+        <article class="language-item"><strong>hand out invitations in person</strong><p>Give invitations directly to guests.</p></article>
+        <article class="language-item"><strong>treat someone to dinner</strong><p>Pay for another person's meal.</p></article>
+        <article class="language-item"><strong>cash gift / wedding gift money</strong><p>Money given to a couple at their wedding.</p></article>
+      </div>
+    </section>
+
+    <section id="model">
+      <h2>🗣️ Model Answer</h2>
+      <h3 style="margin-top: 14px;">Korean wedding invitations</h3>
+      <blockquote class="model-answer">
+        <p>“In Korea, couples often <strong>meet their friends before the wedding</strong> and hand out invitations in person. The bride and groom usually <strong>treat everyone to dinner or lunch</strong>. Later, the guests normally bring a cash gift to the wedding, so the meal is a way for the couple to thank them in advance. It also helps the couple find out who plans to attend. I got married during the COVID-19 pandemic, when there was a <strong>100-person limit</strong> on gatherings. That felt small in Korea because many weddings normally have 200 guests or more.”</p>
+      </blockquote>
+    </section>
+
+    <section id="targets">
+      <h2>✅ Next-Class Targets</h2>
+      <div class="stack">
+        <article class="target">
+          <h3><span class="target-number">Target 1</span>Organize a cultural explanation</h3>
+          <p>Give one 90-second answer using <strong>“custom → reason → example.”</strong></p>
+          <p><span class="example-label">Example:</span> “In Korea, couples often deliver invitations in person. They do this because they want to meet each guest before the wedding. For example, they may invite friends to dinner and give them the card there.”</p>
+        </article>
+        <article class="target">
+          <h3><span class="target-number">Target 2</span>Use three time frames accurately</h3>
+          <p><span class="example-label">Examples:</span> “He is getting married <strong>in two months</strong>.” “I got married <strong>during the pandemic</strong>.” “We <strong>haven't decided</strong> on a new date yet.”</p>
+        </article>
+        <article class="target">
+          <h3><span class="target-number">Target 3</span>Control singular and plural agreement</h3>
+          <p><span class="example-label">Examples:</span> “One coworker <strong>is</strong> getting married.” “Most of my coworkers <strong>are</strong> available.” “The bride and groom <strong>are</strong> hosting dinner.”</p>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      <p><strong>Transcription note:</strong> This report is based on an automated transcription. A few low-clarity phrases may not be word-for-word, so the corrections focus on clearly recoverable meaning and recurring language patterns.</p>
+    </footer>
+  </main>
+
+  <script>
+    const toggle = document.getElementById("toggle-all");
+    const corrections = [...document.querySelectorAll("#corrections details")];
+    toggle.addEventListener("click", () => {
+      const shouldOpen = corrections.some((item) => !item.open);
+      corrections.forEach((item) => { item.open = shouldOpen; });
+      toggle.textContent = shouldOpen ? "Collapse all" : "Expand all";
+    });
+  </script>
+</body>
+</html>
