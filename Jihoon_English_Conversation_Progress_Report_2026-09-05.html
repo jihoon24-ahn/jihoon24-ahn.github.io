@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>English Conversation Progress Report — September 5, 2026</title>
+  <style>
+    :root {
+      --bg:#f7f7f5;--paper:#fff;--text:#252525;--muted:#6b6b6b;--line:#e7e7e4;
+      --blue:#2563a6;--blue-soft:#edf4fb;--green:#236b45;--green-soft:#edf7f1;--amber:#8b5e16;--amber-soft:#fff7e6;
+      --shadow:0 12px 36px rgba(28,28,26,.07)
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:18px;line-height:1.68}
+    main{width:min(100% - 32px,860px);margin:28px auto 64px;padding:56px 64px 72px;background:var(--paper);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}
+    h1,h2,h3{margin:0;line-height:1.25;letter-spacing:-.025em}
+    h1{max-width:720px;font-size:clamp(2.15rem,7vw,3.25rem);font-weight:780}
+    h2{margin-top:60px;padding-top:8px;font-size:clamp(1.55rem,5vw,2rem);font-weight:750}
+    h3{font-size:1.12rem;font-weight:720}
+    p{margin:0 0 14px}strong{font-weight:740}
+    .eyebrow{margin-bottom:12px;color:var(--blue);font-size:.78rem;font-weight:760;letter-spacing:.12em;text-transform:uppercase}
+    .meta{margin-top:16px;color:var(--muted);font-size:1rem}
+    .quick-nav{display:flex;gap:9px;margin-top:30px;padding-bottom:6px;overflow-x:auto;scrollbar-width:thin}
+    .quick-nav a{flex:0 0 auto;padding:7px 12px;border:1px solid var(--line);border-radius:999px;color:var(--text);background:#fafaf9;font-size:.82rem;font-weight:650;text-decoration:none}
+    .quick-nav a:hover{background:var(--blue-soft)}
+    .callout{margin-top:20px;padding:22px 24px;border:1px solid #d8e9df;border-radius:12px;background:var(--green-soft)}
+    .callout p:last-child{margin-bottom:0}
+    .profile-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+    .profile-card{padding:20px;border:1px solid var(--line);border-radius:13px;background:#fff}
+    .scale{color:var(--muted);font-size:.78rem;font-weight:720;letter-spacing:.04em;text-transform:uppercase}
+    .level{margin:4px 0 10px;color:var(--blue);font-size:1.25rem;font-weight:780}
+    .profile-card p:last-child{margin:0;color:#444;font-size:.9rem;line-height:1.55}
+    .note{margin-top:14px;color:var(--muted);font-size:.88rem}
+    .stack{display:grid;gap:14px;margin-top:22px}
+    .pattern,.suggestion,.target{padding:20px 22px;border:1px solid var(--line);border-radius:12px;background:#fff}
+    .pattern h3,.suggestion h3,.target h3{color:var(--blue)}
+    .pattern p,.suggestion p,.target p{margin-top:8px}
+    .examples{margin:12px 0 0;padding-left:1.3em}.examples li{margin:5px 0}
+    .example-label{color:var(--blue);font-weight:730}
+    .correction-tools{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:18px 0 12px}
+    .correction-tools p{margin:0;color:var(--muted);font-size:.9rem}
+    button{padding:8px 12px;border:1px solid var(--line);border-radius:9px;background:#fafaf9;color:var(--text);font:inherit;font-size:.82rem;font-weight:680;cursor:pointer}
+    details{border-top:1px solid var(--line)}details:last-of-type{border-bottom:1px solid var(--line)}
+    summary{display:flex;align-items:center;gap:12px;padding:18px 3px;list-style:none;font-weight:720;cursor:pointer}
+    summary::-webkit-details-marker{display:none}
+    summary::before{content:"›";display:inline-grid;width:24px;height:24px;place-items:center;border-radius:6px;color:var(--muted);background:#f3f3f1;font-size:1.25rem;line-height:1;transition:transform .15s ease}
+    details[open] summary::before{transform:rotate(90deg)}
+    .correction-body{display:grid;gap:10px;padding:0 3px 22px 39px}
+    .version{padding:13px 15px;border-radius:9px;background:#f7f7f5}.version.minimal{background:var(--blue-soft)}.version.natural{background:var(--green-soft)}
+    .version-label{display:block;margin-bottom:3px;color:var(--muted);font-size:.76rem;font-weight:760;letter-spacing:.04em;text-transform:uppercase}
+    .why{padding:13px 15px;border-left:3px solid #d8a64b;border-radius:5px 9px 9px 5px;background:var(--amber-soft);font-size:.92rem;line-height:1.55}
+    .why strong{color:var(--amber)}
+    .language-list{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+    .language-item{padding:17px 18px;border:1px solid var(--line);border-radius:11px}
+    .language-item p{margin:5px 0 0;color:#505050;font-size:.91rem;line-height:1.5}
+    .model-answer{margin-top:20px;padding:24px 26px;border-left:4px solid var(--blue);border-radius:5px 12px 12px 5px;background:var(--blue-soft);font-size:1.02rem}
+    .model-answer p:last-child{margin-bottom:0}
+    .target-number{display:inline-block;margin-right:8px;color:var(--blue);font-size:.82rem;font-weight:780;letter-spacing:.03em;text-transform:uppercase}
+    footer{margin-top:60px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:.82rem}
+    @media(max-width:720px){
+      body{background:var(--paper);font-size:17px;line-height:1.65}
+      main{width:100%;margin:0;padding:32px 20px 56px;border:0;border-radius:0;box-shadow:none}
+      h2{margin-top:48px}.profile-grid,.language-list{grid-template-columns:1fr}
+      .callout,.pattern,.suggestion,.target{padding:18px}.correction-tools{align-items:flex-start;flex-direction:column}
+      summary{padding:17px 1px}.correction-body{padding-left:0}.model-answer{padding:20px}
+    }
+    @media print{body{background:#fff;font-size:11pt}main{width:100%;margin:0;padding:0;border:0;box-shadow:none}.quick-nav,.correction-tools button{display:none}details{break-inside:avoid}details>*{display:block}summary::before{display:none}}
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">English coaching report</p>
+      <h1>English Conversation<br>Progress Report</h1>
+      <p class="meta"><strong>Jihoon Ahn</strong> · Conversation with Cheryl · September 5, 2026</p>
+      <nav class="quick-nav" aria-label="Report sections">
+        <a href="#overall">Overall</a><a href="#profile">Levels</a><a href="#patterns">Patterns</a>
+        <a href="#suggestions">Suggestions</a><a href="#corrections">Corrections</a>
+        <a href="#language">Language</a><a href="#model">Model answer</a><a href="#targets">Targets</a>
+      </nav>
+    </header>
+
+    <section id="overall">
+      <h2>🎯 Overall Performance</h2>
+      <div class="callout">
+        <p>You sustained a wide-ranging <strong>79-minute conversation</strong> about work, family, culture, diplomacy, and travel. Your greatest strength was <strong>idea development</strong>: you supplied detailed background, examples, and comparisons and kept communicating even when vocabulary was difficult. You also used repair phrases such as <strong>“How can I put this?”</strong> and responded well to Cheryl’s clarification. Your main weakness was <strong>accuracy in longer answers</strong>, especially tense, prepositions, pronoun reference, and workplace collocations. To approach <strong>OPIc AL and consistent B2 performance</strong>, state the main point in one complete sentence before adding supporting details.</p>
+      </div>
+    </section>
+
+    <section id="profile">
+      <h2>📊 Performance Profile</h2>
+      <div class="profile-grid">
+        <article class="profile-card"><p class="scale">OPIc</p><p class="level">IH range</p><p>You can sustain extended conversation and discuss complex familiar topics. More consistent paragraph organization and grammatical control are needed for AL.</p></article>
+        <article class="profile-card"><p class="scale">TOEFL iBT Speaking</p><p class="level">3.5–4.0 / 6</p><p>Your ideas are developed and generally understandable, but frequent formulation problems reduce precision. Integrated academic tasks were not assessed.</p></article>
+        <article class="profile-card"><p class="scale">CEFR Speaking</p><p class="level">B1+ to low B2</p><p>You can explain professional and cultural topics at length. Accuracy, concision, and sentence control are not yet consistently at B2.</p></article>
+      </div>
+      <p class="note"><strong>Note:</strong> These are informal speaking estimates from one conversation, not official test scores.</p>
+    </section>
+
+    <section id="patterns">
+      <h2>🔍 Highest-Priority Patterns</h2>
+      <div class="stack">
+        <article class="pattern">
+          <h3>1. Keep the timeline consistent</h3>
+          <p>Choose <strong>past, present, or future</strong> before adding details. Use the present perfect for a situation continuing until now.</p>
+          <ul class="examples">
+            <li>“I <strong>graduated</strong> from graduate school while I was living in Washington, D.C.”</li>
+            <li>“I <strong>have been in this role for</strong> more than six months.”</li>
+            <li>“Early next year, I <strong>will report</strong> our final 2026 emissions.”</li>
+          </ul>
+        </article>
+        <article class="pattern">
+          <h3>2. Learn workplace language as complete chunks</h3>
+          <p>Combine each verb with the noun or preposition that naturally follows it.</p>
+          <ul class="examples">
+            <li>“I am <strong>responsible for</strong> greenhouse gas and wastewater management.”</li>
+            <li>“We are developing a plan <strong>for calculating and verifying</strong> emissions.”</li>
+          </ul>
+        </article>
+        <article class="pattern">
+          <h3>3. Anchor pronouns to a clear person</h3>
+          <p>When several people are in a story, repeat the relationship or name before returning to <strong>“he”</strong> or <strong>“she.”</strong></p>
+          <ul class="examples">
+            <li>“My brother was worried, but <strong>his fiancée</strong> remained calm.”</li>
+            <li>“My former coworker changed roles. <strong>She</strong> may have felt that I replaced her.”</li>
+          </ul>
+        </article>
+        <article class="pattern">
+          <h3>4. Finish the core sentence before expanding</h3>
+          <p>Your meaning becomes less clear when you revise the grammar several times inside one sentence. Finish one short sentence, pause, and add the reason.</p>
+          <ul class="examples">
+            <li>“I sometimes miss working in the cleanroom. <strong>The work was physically demanding, but it involved less mental stress.</strong>”</li>
+            <li>“My brother’s wedding was held in a botanical garden. <strong>The venue looked beautiful, but it was extremely hot.</strong>”</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="suggestions">
+      <h2>🚀 Suggestions to Improve</h2>
+      <div class="stack">
+        <article class="suggestion">
+          <h3>Use a three-part professional update</h3>
+          <p>Organize a work answer as <strong>responsibility → current task → deadline or goal</strong>.</p>
+          <p><span class="example-label">Example:</span> “I manage greenhouse gas and wastewater data at my factory. This month, I’m preparing our emissions-calculation plan. Early next year, I’ll submit the final 2026 report.”</p>
+        </article>
+        <article class="suggestion">
+          <h3>Practice one topic in three time frames</h3>
+          <p>Describe the same subject in the past, present, and future.</p>
+          <p><span class="example-label">Example:</span> “Last year, I was still learning the process. Now, I understand the system much better. Next year, I want to complete the report more efficiently.”</p>
+        </article>
+        <article class="suggestion">
+          <h3>Use noun anchors in family stories</h3>
+          <p>Repeat <strong>“my brother,” “his fiancée,”</strong> or <strong>“my mother”</strong> whenever the pronoun could be ambiguous.</p>
+          <p><span class="example-label">Example:</span> “My brother wanted to confirm every detail. His fiancée, however, was very easygoing.”</p>
+        </article>
+        <article class="suggestion">
+          <h3>Restart cleanly after a repair phrase</h3>
+          <p>You already use “How can I put this?” effectively. After the phrase, begin a complete new sentence instead of continuing the unfinished one.</p>
+          <p><span class="example-label">Example:</span> “How can I put this? My brother is strong-willed, and once he makes a decision, he rarely changes his mind.”</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="corrections">
+      <h2>✏️ Key Corrections</h2>
+      <div class="correction-tools"><p>Tap a correction to open it.</p><button type="button" id="toggle-all">Expand all</button></div>
+
+      <details open>
+        <summary>1. Describe a busy month</summary>
+        <div class="correction-body">
+          <div class="version"><span class="version-label">Your wording</span>“This September, I have many things. I have many things to do.”</div>
+          <div class="version minimal"><span class="version-label">Minimal correction</span>“This September, I have many things to do.”</div>
+          <div class="version natural"><span class="version-label">Natural version</span><strong>“I have a lot on my plate this September.”</strong></div>
+          <div class="why"><strong>Why?</strong> The first two sentences repeat the same idea. The minimal version removes the repetition, while <strong>“have a lot on my plate”</strong> is a natural conversational way to say that you are very busy.</div>
+        </div>
+      </details>
+
+      <details>
+        <summary>2. Explain your responsibility</summary>
+        <div class="correction-body">
+          <div class="version"><span class="version-label">Your wording</span>“I’m a person in charge—or personally charge—of my factory.”</div>
+          <div class="version minimal"><span class="version-label">Minimal correction</span>“I’m the person in charge at my factory.”</div>
+          <div class="version natural"><span class="version-label">Natural version</span><strong>“I’m responsible for greenhouse gas management at my factory.”</strong></div>
+          <div class="why"><strong>Why?</strong> <strong>“In charge”</strong> is a fixed phrase; “personally charge” cannot be used this way. The natural version names your exact responsibility and therefore sounds clearer and more professional.</div>
+        </div>
+      </details>
+
+      <details>
+        <summary>3. Describe the reporting plan</summary>
+        <div class="correction-body">
+          <div class="version"><span class="version-label">Your wording</span>“We make a plan how to calculate, how to verify greenhouse gas in my factory.”</div>
+          <div class="version minimal"><span class="version-label">Minimal correction</span>“We are making a plan for how to calculate and verify greenhouse gas emissions at my factory.”</div>
+          <div class="version natural"><span class="version-label">Natural version</span><strong>“We’re developing a process for calculating and verifying our factory’s greenhouse gas emissions.”</strong></div>
+          <div class="why"><strong>Why?</strong> Use <strong>“a plan for how to…”</strong> rather than “a plan how to,” and say <strong>“greenhouse gas emissions”</strong> when referring to the measured output. “Developing a process” better describes a formal workplace system.</div>
+        </div>
+      </details>
+
+      <details>
+        <summary>4. Talk about graduate school</summary>
+        <div class="correction-body">
+          <div class="version"><span class="version-label">Your wording</span>“When I was in D.C., I graduate from graduate school.”</div>
+          <div class="version minimal"><span class="version-label">Minimal correction</span>“When I was in D.C., I graduated from graduate school.”</div>
+          <div class="version natural"><span class="version-label">Natural version</span><strong>“I earned my graduate degree while I was living in Washington, D.C.”</strong></div>
+          <div class="why"><strong>Why?</strong> Graduation was completed in the past, so <strong>“graduate”</strong> must become <strong>“graduated.”</strong> “Earned my graduate degree” avoids repeating “graduate” and sounds smoother.</div>
+        </div>
+      </details>
+
+      <details>
+        <summary>5. Explain your career move</summary>
+        <div class="correction-body">
+          <div class="version"><span class="version-label">Your wording</span>“When return at my company, I asked my boss. I wanted to move to job related to greenhouse gas.”</div>
+          <div class="version minimal"><span class="version-label">Minimal correction</span>“When I returned to my company, I asked my boss to move me to a job related to greenhouse gas management.”</div>
+          <div class="version natural"><span class="version-label">Natural version</span><strong>“When I returned to Samsung, I asked to transfer into a sustainability-related role.”</strong></div>
+          <div class="why"><strong>Why?</strong> The clause needs the subject <strong>“I,”</strong> and the correct preposition is <strong>“return to.”</strong> In workplace English, “transfer into a role” is more precise than “move to job.”</div>
+        </div>
+      </details>
+
+      <details>
+        <summary>6. Describe how long you have held the role</summary>
+        <div class="correction-body">
+          <div class="version"><span class="version-label">Your wording</span>“Now I have worked in more than six months.”</div>
+          <div class="version minimal"><span class="version-label">Minimal correction</span>“Now I have worked in this role for more than six months.”</div>
+          <div class="version natural"><span class="version-label">Natural version</span><strong>“I’ve been in this role for more than six months now.”</strong></div>
+          <div class="why"><strong>Why?</strong> Use <strong>“for”</strong> with a duration, not “in.” Because the role began in the past and continues now, the present perfect form <strong>“I’ve been”</strong> is appropriate.</div>
+        </div>
+      </details>
+
+      <details>
+        <summary>7. Talk about something you still miss</summary>
+        <div class="correction-body">
+          <div class="version"><span class="version-label">Your wording</span>“I don’t have to wear a clean suit anymore, but sometimes I missed it.”</div>
+          <div class="version minimal"><span class="version-label">Minimal correction</span>“I don’t have to wear a clean suit anymore, but sometimes I miss it.”</div>
+          <div class="version natural"><span class="version-label">Natural version</span><strong>“I no longer have to wear a cleanroom suit, although I sometimes miss working on the factory floor.”</strong></div>
+          <div class="why"><strong>Why?</strong> <strong>“Sometimes”</strong> describes your current recurring feeling, so use the present tense <strong>“miss.”</strong> The natural version also clarifies that you miss the factory-floor work, not merely the clothing.</div>
+        </div>
+      </details>
+
+      <details>
+        <summary>8. Describe an awkward relationship</summary>
+        <div class="correction-body">
+          <div class="version"><span class="version-label">Your wording</span>“I feel a little bit awkward feeling to her.”</div>
+          <div class="version minimal"><span class="version-label">Minimal correction</span>“I feel a little awkward with her.”</div>
+          <div class="version natural"><span class="version-label">Natural version</span><strong>“I feel a little awkward around the person who previously handled this role.”</strong></div>
+          <div class="why"><strong>Why?</strong> After <strong>“feel,”</strong> use the adjective “awkward” directly; “awkward feeling” is unnecessary here. English normally uses <strong>“awkward with”</strong> or <strong>“awkward around”</strong> a person.</div>
+        </div>
+      </details>
+
+      <details>
+        <summary>9. Distinguish “stressed” from “stressful”</summary>
+        <div class="correction-body">
+          <div class="version"><span class="version-label">Your wording</span>“My mother was very stressful.”</div>
+          <div class="version minimal"><span class="version-label">Minimal correction</span>“My mother was very stressed.”</div>
+          <div class="version natural"><span class="version-label">Natural version</span><strong>“My mother was very worried that my brother might not meet the right person.”</strong></div>
+          <div class="why"><strong>Why?</strong> A person who experiences stress is <strong>“stressed.”</strong> Something that causes stress is <strong>“stressful.”</strong> “Worried” is even more precise because you explained what concerned your mother.</div>
+        </div>
+      </details>
+
+      <details>
+        <summary>10. Keep the wedding story clear</summary>
+        <div class="correction-body">
+          <div class="version"><span class="version-label">Your wording</span>“She didn’t choose his dress even a month before the wedding.”</div>
+          <div class="version minimal"><span class="version-label">Minimal correction</span>“She hadn’t chosen her dress even a month before the wedding.”</div>
+          <div class="version natural"><span class="version-label">Natural version</span><strong>“Even one month before the wedding, my brother’s fiancée still hadn’t chosen her wedding dress.”</strong></div>
+          <div class="why"><strong>Why?</strong> The dress belonged to your brother’s fiancée, so the correct pronoun is <strong>“her.”</strong> The past perfect <strong>“hadn’t chosen”</strong> shows that the choice was still unfinished at a specific point before the wedding.</div>
+        </div>
+      </details>
+    </section>
+
+    <section id="language">
+      <h2>💬 Useful Language</h2>
+      <div class="language-list">
+        <article class="language-item"><strong>be responsible for</strong><p>Have responsibility for a task or area. “I’m responsible for emissions reporting.”</p></article>
+        <article class="language-item"><strong>take over a role</strong><p>Assume a position previously held by someone else.</p></article>
+        <article class="language-item"><strong>get along with someone</strong><p>Have a friendly or workable relationship with that person.</p></article>
+        <article class="language-item"><strong>meet one’s match</strong><p>Meet someone equally strong or capable, especially in personality.</p></article>
+        <article class="language-item"><strong>all stressed out</strong><p>Extremely worried or tense. Informal and natural in conversation.</p></article>
+        <article class="language-item"><strong>go off without a problem</strong><p>Happen successfully and without serious difficulty.</p></article>
+      </div>
+    </section>
+
+    <section id="model">
+      <h2>🗣️ Model Answer</h2>
+      <h3 style="margin-top:14px">My current sustainability role</h3>
+      <blockquote class="model-answer">
+        <p>“I’m currently <strong>responsible for greenhouse gas and wastewater management</strong> at my factory. This September, I’m preparing a process for calculating and verifying our 2026 emissions, and early next year I’ll compile the final data and submit the report. When I returned to Samsung after graduate school in Washington, D.C., I asked to <strong>transfer into a sustainability-related role</strong> because I had studied sustainable management. I made several mistakes during my first reporting cycle because I was still learning the company’s systems. However, I’ve now been in the role for more than six months, so my goal is to complete this year’s report <strong>more accurately and efficiently</strong>.”</p>
+      </blockquote>
+    </section>
+
+    <section id="targets">
+      <h2>✅ Next-Class Targets</h2>
+      <div class="stack">
+        <article class="target">
+          <h3><span class="target-number">Target 1</span>Give a concise professional update</h3>
+          <p>Speak for 60–90 seconds using <strong>responsibility → current task → next deadline</strong>.</p>
+          <p><span class="example-label">Example:</span> “I manage two environmental areas at my factory. This month, I’m preparing the emissions plan. Early next year, I’ll submit the verified results.”</p>
+        </article>
+        <article class="target">
+          <h3><span class="target-number">Target 2</span>Control three time frames</h3>
+          <p><span class="example-label">Examples:</span> “I <strong>made</strong> mistakes during my first cycle.” “I <strong>have been</strong> in the role for six months.” “I <strong>will submit</strong> the report next year.”</p>
+        </article>
+        <article class="target">
+          <h3><span class="target-number">Target 3</span>Maintain clear pronoun reference</h3>
+          <p>Tell a short family story without switching incorrectly between “he” and “she.”</p>
+          <p><span class="example-label">Example:</span> “My brother was stressed about the wedding. His fiancée was much more relaxed because she believed everything would work out.”</p>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      <p><strong>Transcript note:</strong> This report is based on an automated transcript. Some names and low-clarity phrases may not be word-for-word, so corrections focus on clearly recoverable meaning and recurring language patterns.</p>
+    </footer>
+  </main>
+  <script>
+    const toggle=document.getElementById("toggle-all");
+    const corrections=[...document.querySelectorAll("#corrections details")];
+    toggle.addEventListener("click",()=>{const shouldOpen=corrections.some(item=>!item.open);corrections.forEach(item=>{item.open=shouldOpen});toggle.textContent=shouldOpen?"Collapse all":"Expand all"});
+  </script>
+</body>
+</html>
