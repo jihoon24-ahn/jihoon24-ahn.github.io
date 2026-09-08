@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Jihoon Ahn's English conversation progress report for September 8, 2026.">
+  <title>English Conversation Progress Report — September 8, 2026</title>
+  <style>
+    :root {
+      --bg:#f7f7f5;--paper:#fff;--text:#252525;--muted:#6b6b6b;--line:#e7e7e4;
+      --blue:#2563a6;--blue-soft:#edf4fb;--green:#236b45;--green-soft:#edf7f1;--amber:#8b5e16;--amber-soft:#fff7e6;
+      --shadow:0 12px 36px rgba(28,28,26,.07)
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:18px;line-height:1.68}
+    main{width:min(100% - 32px,860px);margin:28px auto 64px;padding:56px 64px 72px;background:var(--paper);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}
+    h1,h2,h3{margin:0;line-height:1.25;letter-spacing:-.025em}
+    h1{max-width:720px;font-size:clamp(2.15rem,7vw,3.25rem);font-weight:780}
+    h2{margin-top:60px;padding-top:8px;font-size:clamp(1.55rem,5vw,2rem);font-weight:750}
+    h3{font-size:1.12rem;font-weight:720}
+    p{margin:0 0 14px}strong{font-weight:740}
+    .eyebrow{margin-bottom:12px;color:var(--blue);font-size:.78rem;font-weight:760;letter-spacing:.12em;text-transform:uppercase}
+    .meta{margin-top:16px;color:var(--muted);font-size:1rem}
+    .quick-nav{display:flex;gap:9px;margin-top:30px;padding-bottom:6px;overflow-x:auto;scrollbar-width:thin}
+    .quick-nav a{flex:0 0 auto;padding:7px 12px;border:1px solid var(--line);border-radius:999px;color:var(--text);background:#fafaf9;font-size:.82rem;font-weight:650;text-decoration:none}
+    .quick-nav a:hover{background:var(--blue-soft)}
+    .callout{margin-top:20px;padding:22px 24px;border:1px solid #d8e9df;border-radius:12px;background:var(--green-soft)}
+    .callout p:last-child{margin-bottom:0}
+    .profile-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+    .profile-card{padding:20px;border:1px solid var(--line);border-radius:13px;background:#fff}
+    .scale{color:var(--muted);font-size:.78rem;font-weight:720;letter-spacing:.04em;text-transform:uppercase}
+    .level{margin:4px 0 10px;color:var(--blue);font-size:1.25rem;font-weight:780}
+    .profile-card p:last-child{margin:0;color:#444;font-size:.9rem;line-height:1.55}
+    .note{margin-top:14px;color:var(--muted);font-size:.88rem}
+    .stack{display:grid;gap:14px;margin-top:22px}
+    .pattern,.suggestion,.target{padding:20px 22px;border:1px solid var(--line);border-radius:12px;background:#fff}
+    .pattern h3,.suggestion h3,.target h3{color:var(--blue)}
+    .pattern p,.suggestion p,.target p{margin-top:8px}
+    .examples{margin:12px 0 0;padding-left:1.3em}.examples li{margin:5px 0}
+    .example-label{color:var(--blue);font-weight:730}
+    .correction-tools{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:18px 0 12px}
+    .correction-tools p{margin:0;color:var(--muted);font-size:.9rem}
+    button{padding:8px 12px;border:1px solid var(--line);border-radius:9px;background:#fafaf9;color:var(--text);font:inherit;font-size:.82rem;font-weight:680;cursor:pointer}
+    details{border-top:1px solid var(--line)}details:last-of-type{border-bottom:1px solid var(--line)}
+    summary{display:flex;align-items:center;gap:12px;padding:18px 3px;list-style:none;font-weight:720;cursor:pointer}
+    summary::-webkit-details-marker{display:none}
+    summary::before{content:"›";display:inline-grid;width:24px;height:24px;place-items:center;border-radius:6px;color:var(--muted);background:#f3f3f1;font-size:1.25rem;line-height:1;transition:transform .15s ease}
+    details[open] summary::before{transform:rotate(90deg)}
+    .correction-body{display:grid;gap:10px;padding:0 3px 22px 39px}
+    .version{padding:13px 15px;border-radius:9px;background:#f7f7f5}.version.minimal{background:var(--blue-soft)}.version.natural{background:var(--green-soft)}
+    .version-label{display:block;margin-bottom:3px;color:var(--muted);font-size:.76rem;font-weight:760;letter-spacing:.04em;text-transform:uppercase}
+    .why{padding:13px 15px;border-left:3px solid #d8a64b;border-radius:5px 9px 9px 5px;background:var(--amber-soft);font-size:.92rem;line-height:1.55}
+    .why strong{color:var(--amber)}
+    .language-list{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+    .language-item{padding:17px 18px;border:1px solid var(--line);border-radius:11px}
+    .language-item p{margin:5px 0 0;color:#505050;font-size:.91rem;line-height:1.5}
+    .model-answer{margin-top:20px;padding:24px 26px;border-left:4px solid var(--blue);border-radius:5px 12px 12px 5px;background:var(--blue-soft);font-size:1.02rem}
+    .model-answer p:last-child{margin-bottom:0}
+    .target-number{display:inline-block;margin-right:8px;color:var(--blue);font-size:.82rem;font-weight:780;letter-spacing:.03em;text-transform:uppercase}
+    footer{margin-top:60px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:.82rem}
+    @media(max-width:720px){
+      body{background:var(--paper);font-size:17px;line-height:1.65}
+      main{width:100%;margin:0;padding:32px 20px 56px;border:0;border-radius:0;box-shadow:none}
+      h2{margin-top:48px}.profile-grid,.language-list{grid-template-columns:1fr}
+      .callout,.pattern,.suggestion,.target{padding:18px}.correction-tools{align-items:flex-start;flex-direction:column}
+      summary{padding:17px 1px}.correction-body{padding-left:0}.model-answer{padding:20px}
+    }
+    @media print{body{background:#fff;font-size:11pt}main{width:100%;margin:0;padding:0;border:0;box-shadow:none}.quick-nav,.correction-tools button{display:none}details{break-inside:avoid}details>*{display:block}summary::before{display:none}}
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">English coaching report</p>
+      <h1>English Conversation<br>Progress Report</h1>
+      <p class="meta"><strong>Jihoon Ahn</strong> · Conversation with Catherine · September 8, 2026</p>
+      <nav class="quick-nav" aria-label="Report sections">
+        <a href="#overall">Overall</a><a href="#profile">Levels</a><a href="#patterns">Patterns</a>
+        <a href="#suggestions">Suggestions</a><a href="#corrections">Corrections</a>
+        <a href="#language">Language</a><a href="#model">Model answer</a><a href="#targets">Targets</a>
+      </nav>
+    </header>
+
+    <section id="overall">
+      <h2>🎯 Overall Performance</h2>
+      <div class="callout">
+        <p>You sustained a thoughtful <strong>52-minute conversation</strong> about family, aging, money, relationships, and career goals. Your biggest strength was <strong>story development</strong>: you supplied relevant background and kept speaking through difficult, personal topics. You also responded well to Catherine’s questions and incorporated new expressions into the discussion. Your main weakness was <strong>sentence control</strong>, especially verb forms, articles, prepositions, and references to several family members. To improve clarity, complete one short core sentence before adding the next event or explanation.</p>
+      </div>
+    </section>
+
+    <section id="profile">
+      <h2>📊 Performance Profile</h2>
+      <div class="profile-grid">
+        <article class="profile-card"><p class="scale">OPIc</p><p class="level">IH range</p><p>You can sustain extended conversation and narrate detailed personal experiences. More consistent organization and grammatical accuracy are needed for AL.</p></article>
+        <article class="profile-card"><p class="scale">TOEFL iBT Speaking</p><p class="level">3.5–4.0 / 6</p><p>Your ideas are developed and understandable, but frequent formulation problems sometimes reduce precision. Formal integrated tasks were not assessed.</p></article>
+        <article class="profile-card"><p class="scale">CEFR Speaking</p><p class="level">B1+ to low B2</p><p>You can discuss abstract subjects such as inheritance, marriage, and aging. Accuracy and concise sentence construction are not yet consistently B2.</p></article>
+      </div>
+      <p class="note"><strong>Note:</strong> These are informal estimates based on one conversation, not official test scores.</p>
+    </section>
+
+    <section id="patterns">
+      <h2>🔍 Highest-Priority Patterns</h2>
+      <div class="stack">
+        <article class="pattern">
+          <h3>1. Control verb forms inside past stories</h3>
+          <p>When you tell a completed story, keep the main events in the <strong>simple past</strong>. Use <strong>would</strong> for a future possibility viewed from that past time.</p>
+          <ul class="examples">
+            <li>“My family <strong>was worried</strong> that my brother <strong>would never get married</strong>.”</li>
+            <li>“My father <strong>introduced</strong> several women to him, but he <strong>refused</strong> to meet them.”</li>
+            <li>“Eventually, his acquaintance <strong>introduced</strong> him to the woman he later married.”</li>
+          </ul>
+        </article>
+        <article class="pattern">
+          <h3>2. Use time and place prepositions as fixed chunks</h3>
+          <p>Practice the complete phrase rather than choosing each preposition separately.</p>
+          <ul class="examples">
+            <li>“My wife came to Korea <strong>in August</strong>.”</li>
+            <li>“I stay <strong>at my parents’ house on weekends</strong>.”</li>
+            <li>“Street vendors were standing <strong>along the road</strong>.”</li>
+          </ul>
+        </article>
+        <article class="pattern">
+          <h3>3. Learn verbs with their natural partners</h3>
+          <p>Several errors came from translating one word at a time. Store the verb and its usual noun together.</p>
+          <ul class="examples">
+            <li>“<strong>get married</strong>,” “<strong>do household chores</strong>,” and “<strong>make a decision</strong>”</li>
+            <li>“<strong>reduce the tax burden</strong>” and “<strong>contribute toward the wedding</strong>”</li>
+            <li>“<strong>use new appliances</strong>” and “<strong>earn a good test score</strong>”</li>
+          </ul>
+        </article>
+        <article class="pattern">
+          <h3>4. Reintroduce people in a family story</h3>
+          <p>Because the conversation included your brother, his wife, her cousin, and both sets of parents, pronouns sometimes became unclear. Repeat the relationship when the speaker changes.</p>
+          <ul class="examples">
+            <li>“<strong>His wife’s cousin</strong> knew my brother first. She later introduced <strong>my brother</strong> to <strong>her cousin</strong>.”</li>
+            <li>“Before the wedding, <strong>my brother</strong> took care of our parents. Now that he lives in Daejeon, <strong>I</strong> visit them more often.”</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="suggestions">
+      <h2>🚀 Suggestions to Improve</h2>
+      <div class="stack">
+        <article class="suggestion">
+          <h3>Build stories with situation → complication → result</h3>
+          <p>This structure will help you tell long stories without losing the listener.</p>
+          <p><span class="example-label">Example:</span> “My brother moved to Daejeon for work and did not know many people there. My mother worried that he would not meet anyone. However, someone from his swimming pool introduced him to her cousin, and they eventually got married.”</p>
+        </article>
+        <article class="suggestion">
+          <h3>Use a name or relationship after every topic shift</h3>
+          <p>Avoid beginning several sentences with “he,” “she,” or “they” when more than one person is involved.</p>
+          <p><span class="example-label">Example:</span> “My mother asked me to help my brother financially. <strong>My brother</strong> later thanked me and sent my family some wild ginseng.”</p>
+        </article>
+        <article class="suggestion">
+          <h3>Practice difficult ideas first in plain English</h3>
+          <p>Explain tax or inheritance ideas with one simple sentence before using technical vocabulary.</p>
+          <p><span class="example-label">Example:</span> “My parents can give us a certain amount while they are alive without creating a large tax bill. In other words, they can make gifts up to the tax-free limit.”</p>
+        </article>
+        <article class="suggestion">
+          <h3>Describe personality with precise adjectives</h3>
+          <p>Use <strong>“stubborn”</strong> or <strong>“strong-willed”</strong> for someone who rarely changes a decision. Use <strong>“calmer”</strong> or <strong>“less irritable”</strong> for an improved mood.</p>
+          <p><span class="example-label">Example:</span> “My brother is strong-willed, but my wife seems much calmer than she was during our time in Washington.”</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="corrections">
+      <h2>✏️ Key Corrections</h2>
+      <div class="correction-tools"><p>Tap a correction to see the revision and explanation.</p><button type="button" id="toggle-all">Expand all</button></div>
+
+      <details open>
+        <summary>1. Describe street sellers</summary>
+        <div class="correction-body">
+          <div class="version"><span class="version-label">Your wording</span>“Actually, it was not a retail shop. In the road, many people were standing.”</div>
+          <div class="version minimal"><span class="version-label">Minimal correction</span>“Actually, it was not a retail shop. Many people were standing along the road.”</div>
+          <div class="version natural"><span class="version-label">Natural version</span><strong>“It wasn’t a regular store; it was a street vendor selling leather goods.”</strong></div>
+          <div class="why"><strong>Why?</strong> Use <strong>“along the road”</strong> or <strong>“on the street,”</strong> not “in the road,” unless someone is physically blocking traffic. <strong>“Street vendor”</strong> or <strong>“hawker”</strong> identifies the seller more clearly.</div>
+        </div>
+      </details>
+
+      <details>
+        <summary>2. Regret a bargaining decision</summary>
+        <div class="correction-body">
+          <div class="version"><span class="version-label">Your wording</span>“I should have offered 25, 20 euros.”</div>
+          <div class="version minimal"><span class="version-label">Minimal correction</span>“I should have offered 20 or 25 euros.”</div>
+          <div class="version natural"><span class="version-label">Natural version</span><strong>“I should have started by offering 20 euros and negotiated from there.”</strong></div>
+          <div class="why"><strong>Why?</strong> Join alternatives with <strong>“or.”</strong> The natural version explains the bargaining strategy and uses <strong>“negotiated from there”</strong> for the later back-and-forth.</div>
+        </div>
+      </details>
+
+      <details>
+        <summary>3. Use “in” with a month</summary>
+        <div class="correction-body">
+          <div class="version"><span class="version-label">Your wording</span>“I met my wife on August.”</div>
+          <div class="version minimal"><span class="version-label">Minimal correction</span>“I met my wife in August.”</div>
+          <div class="version natural"><span class="version-label">Natural version</span><strong>“My wife came back to Korea in August for my younger brother’s wedding.”</strong></div>
+          <div class="why"><strong>Why?</strong> Use <strong>“in”</strong> with months and years. Use “on” with a particular day, such as “on August 15.” The natural version also makes the event and reason explicit.</div>
+        </div>
+      </details>
+
+      <details>
+        <summary>4. Explain your mother’s concern</summary>
+        <div class="correction-body">
+          <div class="version"><span class="version-label">Your wording</span>“One of the biggest worries for her, it is my brother.”</div>
+          <div class="version minimal"><span class="version-label">Minimal correction</span>“One of her biggest worries was my brother.”</div>
+          <div class="version natural"><span class="version-label">Natural version</span><strong>“My mother had been worried that my younger brother might never get married.”</strong></div>
+          <div class="why"><strong>Why?</strong> Do not repeat the subject with both <strong>“one of her biggest worries”</strong> and “it.” The past tense fits because the concern existed before the wedding.</div>
+        </div>
+      </details>
+
+      <details>
+        <summary>5. Use “get married” after “would”</summary>
+        <div class="correction-body">
+          <div class="version"><span class="version-label">Your wording</span>“My family was worried that he wouldn’t married.”</div>
+          <div class="version minimal"><span class="version-label">Minimal correction</span>“My family was worried that he wouldn’t get married.”</div>
+          <div class="version natural"><span class="version-label">Natural version</span><strong>“My family was worried that he might never get married.”</strong></div>
+          <div class="why"><strong>Why?</strong> A modal verb such as <strong>“would”</strong> must be followed by a base verb. <strong>“Married”</strong> is not the needed base verb here, so use the fixed expression <strong>“get married.”</strong></div>
+        </div>
+      </details>
+
+      <details>
+        <summary>6. Describe travel time naturally</summary>
+        <div class="correction-body">
+          <div class="version"><span class="version-label">Your wording</span>“It’s far from Seoul. So three hours drive.”</div>
+          <div class="version minimal"><span class="version-label">Minimal correction</span>“It’s far from Seoul. It’s a three-hour drive.”</div>
+          <div class="version natural"><span class="version-label">Natural version</span><strong>“Daejeon is about three hours away from Seoul by car.”</strong></div>
+          <div class="why"><strong>Why?</strong> The second part needs a subject and verb. Before a noun, <strong>“three-hour”</strong> acts as one adjective, so “hour” remains singular and the words are hyphenated.</div>
+        </div>
+      </details>
+
+      <details>
+        <summary>7. Describe your weekend routine</summary>
+        <div class="correction-body">
+          <div class="version"><span class="version-label">Your wording</span>“In weekends, I sleep at parents’ home.”</div>
+          <div class="version minimal"><span class="version-label">Minimal correction</span>“On weekends, I sleep at my parents’ home.”</div>
+          <div class="version natural"><span class="version-label">Natural version</span><strong>“I usually stay overnight at my parents’ house on weekends.”</strong></div>
+          <div class="why"><strong>Why?</strong> Use <strong>“on weekends”</strong> and include the possessive <strong>“my.”</strong> <strong>“Stay overnight”</strong> sounds more natural when the point is that you visit and spend the night there.</div>
+        </div>
+      </details>
+
+      <details>
+        <summary>8. Talk about household chores</summary>
+        <div class="correction-body">
+          <div class="version"><span class="version-label">Your wording</span>“My mother have me make many things, such as house chores, vacuum cleaning, and washing a dish.”</div>
+          <div class="version minimal"><span class="version-label">Minimal correction</span>“My mother has me do many things, such as household chores, vacuuming, and washing the dishes.”</div>
+          <div class="version natural"><span class="version-label">Natural version</span><strong>“When I visit, my mother asks me to help with chores such as vacuuming and washing the dishes.”</strong></div>
+          <div class="why"><strong>Why?</strong> Use <strong>“has”</strong> with the singular subject “mother,” <strong>“do chores”</strong> rather than “make chores,” and <strong>“wash the dishes”</strong> for the general household task.</div>
+        </div>
+      </details>
+
+      <details>
+        <summary>9. Explain the tax-free limit</summary>
+        <div class="correction-body">
+          <div class="version"><span class="version-label">Your wording</span>“My parents can choose to give me some amount of money under some limit.”</div>
+          <div class="version minimal"><span class="version-label">Minimal correction</span>“My parents can choose to give me a certain amount of money under the limit.”</div>
+          <div class="version natural"><span class="version-label">Natural version</span><strong>“My parents can give me money up to the tax-free gift limit.”</strong></div>
+          <div class="why"><strong>Why?</strong> <strong>“Some amount under some limit”</strong> is understandable but vague. <strong>“Up to the tax-free gift limit”</strong> expresses both the maximum amount and the tax context precisely.</div>
+        </div>
+      </details>
+
+      <details>
+        <summary>10. Describe your brother’s finances</summary>
+        <div class="correction-body">
+          <div class="version"><span class="version-label">Your wording</span>“My mother was worried about my brother’s economic background.”</div>
+          <div class="version minimal"><span class="version-label">Minimal correction</span>“My mother was worried about my brother’s financial situation.”</div>
+          <div class="version natural"><span class="version-label">Natural version</span><strong>“My mother was concerned about whether my brother could afford a home after getting married.”</strong></div>
+          <div class="why"><strong>Why?</strong> <strong>“Economic background”</strong> usually refers broadly to the conditions in which someone grew up. <strong>“Financial situation”</strong> means the person’s current money circumstances.</div>
+        </div>
+      </details>
+
+      <details>
+        <summary>11. Explain your parents’ difficulty with technology</summary>
+        <div class="correction-body">
+          <div class="version"><span class="version-label">Your wording</span>“They doesn’t know how to manage some electronics.”</div>
+          <div class="version minimal"><span class="version-label">Minimal correction</span>“They don’t know how to use some electronic devices.”</div>
+          <div class="version natural"><span class="version-label">Natural version</span><strong>“My parents sometimes need help using the new appliances in their apartment.”</strong></div>
+          <div class="why"><strong>Why?</strong> Use <strong>“don’t”</strong> with “they.” We normally <strong>“use”</strong> or <strong>“operate”</strong> devices; “manage” means control or organize something rather than operate it.</div>
+        </div>
+      </details>
+
+      <details>
+        <summary>12. Explain your promotion goal</summary>
+        <div class="correction-body">
+          <div class="version"><span class="version-label">Your wording</span>“I need the English good tests for promotion. My company needs me to get the good score.”</div>
+          <div class="version minimal"><span class="version-label">Minimal correction</span>“I need a good English test score for promotion. My company needs me to get a good score.”</div>
+          <div class="version natural"><span class="version-label">Natural version</span><strong>“I need a strong English test score to qualify for promotion, even though I rarely use English in my current role.”</strong></div>
+          <div class="why"><strong>Why?</strong> The natural noun phrase is <strong>“an English test score,”</strong> and a singular countable noun needs an article. <strong>“To qualify for promotion”</strong> clearly explains the score’s purpose.</div>
+        </div>
+      </details>
+    </section>
+
+    <section id="language">
+      <h2>💬 Useful Language</h2>
+      <div class="language-list">
+        <article class="language-item"><strong>street vendor / hawker</strong><p>Someone who sells goods in a public place rather than inside a regular store.</p></article>
+        <article class="language-item"><strong>haggle over the price</strong><p>Negotiate repeatedly to reach a lower price. “I should have haggled over the price.”</p></article>
+        <article class="language-item"><strong>hit it off</strong><p>Quickly form a friendly or romantic connection. “They hit it off and started dating.”</p></article>
+        <article class="language-item"><strong>meet one’s match</strong><p>Meet someone with an equally strong personality or ability.</p></article>
+        <article class="language-item"><strong>a tax-free gift limit</strong><p>The maximum gift that can be made without triggering gift tax under the applicable rules.</p></article>
+        <article class="language-item"><strong>contribute toward something</strong><p>Give money or help for a shared expense. “I contributed toward my brother’s new home.”</p></article>
+        <article class="language-item"><strong>absence makes the heart grow fonder</strong><p>Being apart can make people appreciate each other more.</p></article>
+        <article class="language-item"><strong>catch up professionally</strong><p>Reach a similar career position or level after falling behind.</p></article>
+      </div>
+    </section>
+
+    <section id="model">
+      <h2>🗣️ Model Answer</h2>
+      <h3 style="margin-top:14px">How my family responsibilities have changed</h3>
+      <blockquote class="model-answer">
+        <p>“Before my younger brother got married, he usually <strong>helped take care of our parents</strong>. However, he moved to Daejeon for work, which is about three hours away from Seoul by car. Since I live closer, I now visit my parents almost every weekend and often stay overnight. They are still independent, but they sometimes need help with household chores or with <strong>using the new appliances</strong> in their apartment. Seeing them rely on me more has made me think seriously about aging and my own future. I used to be certain that I did not want children, but recently I have <strong>started reconsidering that decision</strong>.”</p>
+      </blockquote>
+    </section>
+
+    <section id="targets">
+      <h2>✅ Next-Class Targets</h2>
+      <div class="stack">
+        <article class="target">
+          <h3><span class="target-number">Target 1</span>Tell one complete past-tense story</h3>
+          <p>Speak for 60–90 seconds about how your brother met his wife. Keep the main events in the simple past.</p>
+          <p><span class="example-label">Example opening:</span> “My brother moved to Daejeon for work and did not know many people there. He joined a swimming pool, and someone he met there eventually introduced him to her cousin.”</p>
+        </article>
+        <article class="target">
+          <h3><span class="target-number">Target 2</span>Use five exact family-and-money phrases</h3>
+          <p>Include <strong>“financial situation,” “contribute toward,” “tax-free limit,” “leave money to someone,”</strong> and <strong>“reduce the tax burden.”</strong></p>
+          <p><span class="example-label">Example:</span> “Giving money gradually can reduce the tax burden instead of leaving the entire amount to the children later.”</p>
+        </article>
+        <article class="target">
+          <h3><span class="target-number">Target 3</span>Explain your promotion goal concisely</h3>
+          <p>Use <strong>current situation → requirement → motivation</strong> in three sentences.</p>
+          <p><span class="example-label">Example:</span> “I was on leave for about three years, so some younger coworkers have moved ahead of me. A strong English test score is required for promotion. I want to improve my English and catch up professionally.”</p>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      <p><strong>Transcript note:</strong> This report is based on an automated transcript with inconsistent speaker labels and several low-clarity passages. Corrections focus on statements whose intended meaning could be recovered reliably from the surrounding conversation.</p>
+    </footer>
+  </main>
+  <script>
+    const toggle=document.getElementById("toggle-all");
+    const corrections=[...document.querySelectorAll("#corrections details")];
+    toggle.addEventListener("click",()=>{const shouldOpen=corrections.some(item=>!item.open);corrections.forEach(item=>{item.open=shouldOpen});toggle.textContent=shouldOpen?"Collapse all":"Expand all"});
+  </script>
+</body>
+</html>
