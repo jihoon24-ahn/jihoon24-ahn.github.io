@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Jihoon Ahn's English conversation progress report for September 14, 2026.">
+  <title>English Conversation Progress Report — September 14, 2026</title>
+  <style>
+    :root {
+      --bg:#f7f7f5;--paper:#fff;--text:#252525;--muted:#6b6b6b;--line:#e7e7e4;
+      --blue:#2563a6;--blue-soft:#edf4fb;--green:#236b45;--green-soft:#edf7f1;--amber:#8b5e16;--amber-soft:#fff7e6;
+      --shadow:0 12px 36px rgba(28,28,26,.07)
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:18px;line-height:1.68}
+    main{width:min(100% - 32px,860px);margin:28px auto 64px;padding:56px 64px 72px;background:var(--paper);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}
+    h1,h2,h3{margin:0;line-height:1.25;letter-spacing:-.025em}
+    h1{max-width:720px;font-size:clamp(2.15rem,7vw,3.25rem);font-weight:780}
+    h2{margin-top:60px;padding-top:8px;font-size:clamp(1.55rem,5vw,2rem);font-weight:750}
+    h3{font-size:1.12rem;font-weight:720}
+    p{margin:0 0 14px}strong{font-weight:740}
+    .eyebrow{margin-bottom:12px;color:var(--blue);font-size:.78rem;font-weight:760;letter-spacing:.12em;text-transform:uppercase}
+    .meta{margin-top:16px;color:var(--muted);font-size:1rem}
+    .quick-nav{display:flex;gap:9px;margin-top:30px;padding-bottom:6px;overflow-x:auto;scrollbar-width:thin}
+    .quick-nav a{flex:0 0 auto;padding:7px 12px;border:1px solid var(--line);border-radius:999px;color:var(--text);background:#fafaf9;font-size:.82rem;font-weight:650;text-decoration:none}
+    .quick-nav a:hover{background:var(--blue-soft)}
+    .callout{margin-top:20px;padding:22px 24px;border:1px solid #d8e9df;border-radius:12px;background:var(--green-soft)}
+    .callout p:last-child{margin-bottom:0}
+    .profile-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+    .profile-card{padding:20px;border:1px solid var(--line);border-radius:13px;background:#fff}
+    .scale{color:var(--muted);font-size:.78rem;font-weight:720;letter-spacing:.04em;text-transform:uppercase}
+    .level{margin:4px 0 10px;color:var(--blue);font-size:1.25rem;font-weight:780}
+    .profile-card p:last-child{margin:0;color:#444;font-size:.9rem;line-height:1.55}
+    .note{margin-top:14px;color:var(--muted);font-size:.88rem}
+    .stack{display:grid;gap:14px;margin-top:22px}
+    .pattern,.suggestion,.target{padding:20px 22px;border:1px solid var(--line);border-radius:12px;background:#fff}
+    .pattern h3,.suggestion h3,.target h3{color:var(--blue)}
+    .pattern p,.suggestion p,.target p{margin-top:8px}
+    .examples{margin:12px 0 0;padding-left:1.3em}.examples li{margin:5px 0}
+    .example-label{color:var(--blue);font-weight:730}
+    .correction-tools{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:18px 0 12px}
+    .correction-tools p{margin:0;color:var(--muted);font-size:.9rem}
+    button{padding:8px 12px;border:1px solid var(--line);border-radius:9px;background:#fafaf9;color:var(--text);font:inherit;font-size:.82rem;font-weight:680;cursor:pointer}
+    details{border-top:1px solid var(--line)}details:last-of-type{border-bottom:1px solid var(--line)}
+    summary{display:flex;align-items:center;gap:12px;padding:18px 3px;list-style:none;font-weight:720;cursor:pointer}
+    summary::-webkit-details-marker{display:none}
+    summary::before{content:"›";display:inline-grid;width:24px;height:24px;place-items:center;border-radius:6px;color:var(--muted);background:#f3f3f1;font-size:1.25rem;line-height:1;transition:transform .15s ease}
+    details[open] summary::before{transform:rotate(90deg)}
+    .correction-body{display:grid;gap:10px;padding:0 3px 22px 39px}
+    .version{padding:13px 15px;border-radius:9px;background:#f7f7f5}.version.minimal{background:var(--blue-soft)}.version.natural{background:var(--green-soft)}
+    .version-label{display:block;margin-bottom:3px;color:var(--muted);font-size:.76rem;font-weight:760;letter-spacing:.04em;text-transform:uppercase}
+    .why{padding:13px 15px;border-left:3px solid #d8a64b;border-radius:5px 9px 9px 5px;background:var(--amber-soft);font-size:.92rem;line-height:1.55}
+    .why strong{color:var(--amber)}
+    .language-list{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+    .language-item{padding:17px 18px;border:1px solid var(--line);border-radius:11px}
+    .language-item p{margin:5px 0 0;color:#505050;font-size:.91rem;line-height:1.5}
+    .model-answer{margin-top:20px;padding:24px 26px;border-left:4px solid var(--blue);border-radius:5px 12px 12px 5px;background:var(--blue-soft);font-size:1.02rem}
+    .model-answer p:last-child{margin-bottom:0}
+    .target-number{display:inline-block;margin-right:8px;color:var(--blue);font-size:.82rem;font-weight:780;letter-spacing:.03em;text-transform:uppercase}
+    footer{margin-top:60px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:.82rem}
+    @media(max-width:720px){
+      body{background:var(--paper);font-size:17px;line-height:1.65}
+      main{width:100%;margin:0;padding:32px 20px 56px;border:0;border-radius:0;box-shadow:none}
+      h2{margin-top:48px}.profile-grid,.language-list{grid-template-columns:1fr}
+      .callout,.pattern,.suggestion,.target{padding:18px}.correction-tools{align-items:flex-start;flex-direction:column}
+      summary{padding:17px 1px}.correction-body{padding-left:0}.model-answer{padding:20px}
+    }
+    @media print{body{background:#fff;font-size:11pt}main{width:100%;margin:0;padding:0;border:0;box-shadow:none}.quick-nav,.correction-tools button{display:none}details{break-inside:avoid}details>*{display:block}summary::before{display:none}}
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">English coaching report</p>
+      <h1>English Conversation<br>Progress Report</h1>
+      <p class="meta"><strong>Jihoon Ahn</strong> · Conversation with Daryl · September 14, 2026</p>
+      <nav class="quick-nav" aria-label="Report sections">
+        <a href="#overall">Overall</a><a href="#profile">Levels</a><a href="#patterns">Patterns</a>
+        <a href="#suggestions">Suggestions</a><a href="#corrections">Corrections</a>
+        <a href="#language">Language</a><a href="#model">Model answer</a><a href="#targets">Targets</a>
+      </nav>
+    </header>
+
+    <section id="overall">
+      <h2>🎯 Overall Performance</h2>
+      <div class="callout"><p>You sustained a <strong>16-minute conversation</strong> about a Buddhist memorial tradition, soulmates, marriage, films, and cultural attitudes toward celebrity jokes. Your biggest strength was <strong>explaining personal beliefs and cultural context</strong>; you kept developing ideas even when you needed new vocabulary such as “reincarnated” and “roast.” Your biggest weakness was controlling articles, verb forms, and sentence structure during longer explanations. The most important next step is to organize each abstract answer into <strong>one clear opinion, one reason, and one example</strong> before adding further detail.</p></div>
+    </section>
+
+    <section id="profile">
+      <h2>📊 Performance Profile</h2>
+      <div class="profile-grid">
+        <article class="profile-card"><p class="scale">OPIc</p><p class="level">IH range</p><p>You can sustain an extended discussion, explain a cultural practice, and give opinions about abstract relationship topics. Frequent grammatical reformulation and imprecise phrasing limit consistency at the Advanced Low level.</p></article>
+        <article class="profile-card"><p class="scale">TOEFL iBT Speaking</p><p class="level">3.5 / 6</p><p>Your responses contain relevant ideas and supporting examples, but language-form errors sometimes obscure relationships between ideas. Formal TOEFL integrated speaking tasks were not assessed.</p></article>
+        <article class="profile-card"><p class="scale">CEFR Speaking</p><p class="level">B1+ to low B2</p><p>You can discuss beliefs, traditions, relationships, and cultural differences with reasonable fluency. More reliable grammar and clearer organization are needed for consistent B2 performance.</p></article>
+      </div>
+      <p class="note"><strong>Note:</strong> These are informal estimates based on one conversation, not official test scores.</p>
+    </section>
+
+    <section id="patterns">
+      <h2>🔍 Highest-Priority Patterns</h2>
+      <div class="stack">
+        <article class="pattern"><h3>1. Use articles with singular countable nouns</h3><p>Singular nouns such as <strong>day</strong>, <strong>ceremony</strong>, <strong>soulmate</strong>, and <strong>excuse</strong> usually need <em>a</em>, <em>an</em>, or <em>the</em>.</p><ul class="examples"><li>“The 49th day is <strong>an important day</strong> in the tradition.”</li><li>“I believe that <strong>a soulmate</strong> can also be a close friend.”</li></ul></article>
+        <article class="pattern"><h3>2. Separate states from completed actions</h3><p>Use <strong>have been</strong> for a continuing state and a simple or present-perfect verb for actions and experiences.</p><ul class="examples"><li>“I <strong>have been married</strong> for about five years.”</li><li>“Over that time, I <strong>have observed</strong> many couples.”</li></ul></article>
+        <article class="pattern"><h3>3. Build natural verb-and-noun combinations</h3><p>Several ideas were understandable but used translated combinations. Learning the verb and noun together will make your speech more automatic.</p><ul class="examples"><li>“Many families still <strong>observe the ceremony</strong>.”</li><li>“People are expected to <strong>be a good sport</strong> during a roast.”</li></ul></article>
+        <article class="pattern"><h3>4. Organize abstract opinions with clear frames</h3><p>When discussing soulmates or cultural norms, long sentences sometimes lost their main point. Use frames such as <strong>I don’t think…</strong>, <strong>whether…or…</strong>, and <strong>in my experience…</strong>.</p><ul class="examples"><li>“I don’t think soulmates <strong>have to be romantic partners</strong>.”</li><li>“No one else can know <strong>whether the connection is genuine or just an excuse</strong>.”</li></ul></article>
+      </div>
+    </section>
+
+    <section id="suggestions">
+      <h2>🚀 Suggestions to Improve</h2>
+      <div class="stack">
+        <article class="suggestion"><h3>Define a tradition in three steps</h3><p>Give the name, timing, and meaning before adding family details. This creates a clear path for the listener.</p><p><span class="example-label">Example:</span> “It is a Buddhist memorial ceremony. It takes place around the 49th day after someone passes away. The day has spiritual significance for the family.”</p></article>
+        <article class="suggestion"><h3>Anchor continuing states with “have been”</h3><p>When a situation began in the past and continues now, start with <em>have been</em> and add <em>for</em> plus a duration.</p><p><span class="example-label">Example:</span> “I <strong>have been married for about five years</strong>, and my views on relationships have changed.”</p></article>
+        <article class="suggestion"><h3>Use a whether-or frame for uncertainty</h3><p>A <em>whether…or…</em> frame lets you compare possibilities without creating several unfinished clauses.</p><p><span class="example-label">Example:</span> “An outsider cannot know <strong>whether it is a genuine connection or simply an excuse</strong>.”</p></article>
+        <article class="suggestion"><h3>Compare cultures with one contrast at a time</h3><p>State the practice in one culture, then contrast the likely reaction in the other culture.</p><p><span class="example-label">Example:</span> “Roasts are a familiar part of some American award shows, <strong>whereas</strong> public jokes about a guest may feel rude in Korea.”</p></article>
+      </div>
+    </section>
+
+    <section id="corrections">
+      <h2>✏️ Key Corrections</h2>
+      <div class="correction-tools"><p>Tap a correction to see the revision and explanation.</p><button type="button" id="toggle-all">Expand all</button></div>
+
+      <!-- Keep 10–12 correction blocks. Duplicate or remove complete details elements only when necessary. -->
+      <details open><summary>1. Name the memorial ceremony clearly</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>“Have you heard about 49 ceremony, funeral ceremony?”</div><div class="version minimal"><span class="version-label">Minimal correction</span>“Have you heard about the 49-day funeral ceremony?”</div><div class="version natural"><span class="version-label">Natural version</span><strong>“Have you heard of the Buddhist 49-day memorial ceremony?”</strong></div><div class="why"><strong>Why?</strong> A specific ceremony needs <em>the</em>, and <em>49-day</em> works as a compound adjective. <em>Memorial ceremony</em> is more precise and less likely to suggest that the funeral itself lasts 49 days.</div></div></details>
+      <details><summary>2. Use an article before “important day”</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>“Forty-nine is seven times seven, so it’s a little bit important day.”</div><div class="version minimal"><span class="version-label">Minimal correction</span>“Forty-nine is seven times seven, so it’s a little bit of an important day.”</div><div class="version natural"><span class="version-label">Natural version</span><strong>“Forty-nine is seven times seven, so the 49th day has special significance.”</strong></div><div class="why"><strong>Why?</strong> A singular countable noun needs an article. The natural version replaces the awkward degree phrase with <em>has special significance</em>, which suits a cultural explanation.</div></div></details>
+      <details><summary>3. Avoid the progressive with a future decision</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>“On the 49th day, she will be deciding where she goes.”</div><div class="version minimal"><span class="version-label">Minimal correction</span>“On the 49th day, she will decide where she goes.”</div><div class="version natural"><span class="version-label">Natural version</span><strong>“On the 49th day, it is believed that her soul’s next destination is decided.”</strong></div><div class="why"><strong>Why?</strong> Use <em>will decide</em> for a single future event. The natural version uses an impersonal belief frame and passive voice to explain the tradition without presenting it as an objective fact.</div></div></details>
+      <details><summary>4. Use “take” with “seriously”</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>“Many people don’t think this 49th ceremony very seriously.”</div><div class="version minimal"><span class="version-label">Minimal correction</span>“Many people don’t take this 49-day ceremony very seriously.”</div><div class="version natural"><span class="version-label">Natural version</span><strong>“Many people no longer observe the 49-day ceremony strictly.”</strong></div><div class="why"><strong>Why?</strong> English uses the collocation <em>take something seriously</em>, not <em>think something seriously</em>. <em>Observe a ceremony</em> means to follow or perform the tradition.</div></div></details>
+      <details><summary>5. Explain a non-romantic soulmate</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>“I don’t think it’s the close meaning in romantic relationships. I think we can use this word in friends.”</div><div class="version minimal"><span class="version-label">Minimal correction</span>“I don’t think its meaning is limited to romantic relationships. I think we can use this word for friends.”</div><div class="version natural"><span class="version-label">Natural version</span><strong>“I don’t think soulmates have to be romantic partners; close friends can be soulmates too.”</strong></div><div class="why"><strong>Why?</strong> Use <em>be limited to</em> to restrict a meaning and <em>for friends</em> rather than <em>in friends</em>. The natural version states the opinion directly and supports it with a clear contrast.</div></div></details>
+      <details><summary>6. Use the present simple for a habit</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>“I sometimes saw them.”</div><div class="version minimal"><span class="version-label">Minimal correction</span>“I sometimes watch them.”</div><div class="version natural"><span class="version-label">Natural version</span><strong>“I watch romantic comedies sometimes.”</strong></div><div class="why"><strong>Why?</strong> Use the present simple for a current habit. <em>Saw</em> describes a completed past event, while <em>watch</em> fits repeated viewing.</div></div></details>
+      <details><summary>7. Use “whether” to compare possibilities</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>“The person doesn’t know it is just excuse or it is lie or they are really soulmate.”</div><div class="version minimal"><span class="version-label">Minimal correction</span>“The person doesn’t know whether it is just an excuse or a lie, or whether they are really soulmates.”</div><div class="version natural"><span class="version-label">Natural version</span><strong>“No one else can know whether it is an excuse or a genuine connection.”</strong></div><div class="why"><strong>Why?</strong> Use <em>whether</em> when presenting alternatives, and add articles before singular nouns. The natural version removes repetition and contrasts the two central possibilities.</div></div></details>
+      <details><summary>8. Use a real condition for meeting a soulmate</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>“If soulmate exists, I would know she is my soulmate immediately.”</div><div class="version minimal"><span class="version-label">Minimal correction</span>“If a soulmate exists, I would know she is my soulmate immediately.”</div><div class="version natural"><span class="version-label">Natural version</span><strong>“If I met my soulmate, I think I would know immediately.”</strong></div><div class="why"><strong>Why?</strong> Add <em>a</em> before the singular noun. The natural version uses <em>if + past</em> with <em>would</em> to describe an imagined future situation.</div></div></details>
+      <details><summary>9. Describe a continuing marital state</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>“I have married for over five years.”</div><div class="version minimal"><span class="version-label">Minimal correction</span>“I have been married for over five years.”</div><div class="version natural"><span class="version-label">Natural version</span><strong>“I’ve been married for about five years.”</strong></div><div class="why"><strong>Why?</strong> <em>Marry</em> is an event, while <em>be married</em> is a state. Use the present perfect form <em>have been married</em> with <em>for</em> to show that the state continues now.</div></div></details>
+      <details><summary>10. Remove the passive form from “watch”</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>“I’ve been watched many couples.”</div><div class="version minimal"><span class="version-label">Minimal correction</span>“I’ve watched many couples.”</div><div class="version natural"><span class="version-label">Natural version</span><strong>“Over the years, I’ve observed many couples and noticed that every relationship has problems.”</strong></div><div class="why"><strong>Why?</strong> You performed the action, so use the active present perfect <em>have watched</em>, not <em>have been watched</em>. <em>Observed</em> better expresses learning from other couples over time.</div></div></details>
+    </section>
+
+    <section id="language">
+      <h2>💬 Useful Language</h2>
+      <div class="language-list">
+        <article class="language-item"><strong>49-day memorial ceremony</strong><p>A Buddhist observance held around the 49th day after a person’s death.</p></article>
+        <article class="language-item"><strong>pass away</strong><p>A respectful way to say that someone died. “My grandmother passed away 49 days ago.”</p></article>
+        <article class="language-item"><strong>be reincarnated</strong><p>Be born again as another person or living being according to a religious belief.</p></article>
+        <article class="language-item"><strong>get together</strong><p>Meet as a group. “Saturday was the only day when the whole family could get together.”</p></article>
+        <article class="language-item"><strong>the real deal</strong><p>Something or someone genuine rather than an imitation or excuse.</p></article>
+        <article class="language-item"><strong>bound to happen</strong><p>Certain or very likely to happen. “Disagreements are bound to happen because no one is perfect.”</p></article>
+        <article class="language-item"><strong>a roast</strong><p>An event or performance in which people make planned jokes about a particular person.</p></article>
+        <article class="language-item"><strong>be a good sport</strong><p>React pleasantly when teased or when something does not go your way.</p></article>
+      </div>
+    </section>
+
+    <section id="model">
+      <h2>🗣️ Model Answer</h2>
+      <h3 style="margin-top:14px">What I believe about soulmates</h3>
+      <blockquote class="model-answer"><p>I believe in soulmates, but I don’t think a soulmate has to be a romantic partner. A close friend can also understand you deeply and become an important part of your life. At the same time, I no longer believe that meeting a soulmate guarantees a perfect relationship. I’ve <strong>been married for about five years</strong>, and I’ve observed many couples. <strong>Every relationship has its own problems</strong> because no one is perfect. In fact, being with someone who is exactly like you might be boring because you could predict everything they would do. Differences can make a relationship more interesting, although they can also cause conflict. If someone who is already married says they have met a soulmate, an outsider cannot know <strong>whether the connection is genuine or simply an excuse</strong>. Ultimately, I think a strong relationship depends less on finding one perfect person and more on understanding differences, solving problems, and continuing to care for each other.</p></blockquote>
+    </section>
+
+    <section id="targets">
+      <h2>✅ Next-Class Targets</h2>
+      <div class="stack">
+        <article class="target"><h3><span class="target-number">Target 1</span>Explain the memorial tradition in 90 seconds</h3><p>Use a three-step structure—name, timing, and meaning—and include <em>pass away</em>, <em>49th day</em>, and <em>get together</em>.</p><p><span class="example-label">Example:</span> “The family holds a <strong>49-day memorial ceremony</strong> after someone passes away. The 49th day has spiritual significance, and relatives get together to remember the person.”</p></article>
+        <article class="target"><h3><span class="target-number">Target 2</span>Give a 60-second soulmate opinion</h3><p>State one opinion, one reason, and one example. Use <em>have to be</em> and one <em>whether…or…</em> sentence.</p><p><span class="example-label">Example:</span> “A soulmate doesn’t <strong>have to be</strong> a romantic partner. A close friend can be one too, and no outsider can know <strong>whether a connection is romantic or platonic</strong>.”</p></article>
+        <article class="target"><h3><span class="target-number">Target 3</span>Compare roast culture in 90 seconds</h3><p>Use <em>whereas</em>, <em>a roast</em>, and <em>be a good sport</em> to make three clear cultural comparisons.</p><p><span class="example-label">Example:</span> “A roast is familiar at some American events, <strong>whereas</strong> similar public teasing may feel rude in Korea. In the U.S., guests are often expected to <strong>be good sports</strong>.”</p></article>
+      </div>
+    </section>
+
+    <footer><p><strong>Transcript note:</strong> This report is based on an automated transcription of a 16-minute, low-bandwidth phone recording. Speaker labels were inconsistent, so attribution was inferred from context: Daryl led the interview, defined unfamiliar vocabulary, and supplied recasts, while Jihoon gave the longer personal explanations. Several unclear fragments—especially one sentence about choosing the family gathering date and part of the discussion about Will Smith—were excluded rather than treated as Jihoon’s exact wording.</p></footer>
+  </main>
+  <script>
+    const toggle=document.getElementById("toggle-all");
+    const corrections=[...document.querySelectorAll("#corrections details")];
+    toggle.addEventListener("click",()=>{const shouldOpen=corrections.some(item=>!item.open);corrections.forEach(item=>{item.open=shouldOpen});toggle.textContent=shouldOpen?"Collapse all":"Expand all"});
+  </script>
+</body>
+</html>
