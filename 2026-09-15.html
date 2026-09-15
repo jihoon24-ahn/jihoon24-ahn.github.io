@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Jihoon Ahn's English conversation progress report for September 15, 2026.">
+  <title>English Conversation Progress Report — September 15, 2026</title>
+  <style>
+    :root {
+      --bg:#f7f7f5;--paper:#fff;--text:#252525;--muted:#6b6b6b;--line:#e7e7e4;
+      --blue:#2563a6;--blue-soft:#edf4fb;--green:#236b45;--green-soft:#edf7f1;--amber:#8b5e16;--amber-soft:#fff7e6;
+      --shadow:0 12px 36px rgba(28,28,26,.07)
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:18px;line-height:1.68}
+    main{width:min(100% - 32px,860px);margin:28px auto 64px;padding:56px 64px 72px;background:var(--paper);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}
+    h1,h2,h3{margin:0;line-height:1.25;letter-spacing:-.025em}
+    h1{max-width:720px;font-size:clamp(2.15rem,7vw,3.25rem);font-weight:780}
+    h2{margin-top:60px;padding-top:8px;font-size:clamp(1.55rem,5vw,2rem);font-weight:750}
+    h3{font-size:1.12rem;font-weight:720}
+    p{margin:0 0 14px}strong{font-weight:740}
+    .eyebrow{margin-bottom:12px;color:var(--blue);font-size:.78rem;font-weight:760;letter-spacing:.12em;text-transform:uppercase}
+    .meta{margin-top:16px;color:var(--muted);font-size:1rem}
+    .quick-nav{display:flex;gap:9px;margin-top:30px;padding-bottom:6px;overflow-x:auto;scrollbar-width:thin}
+    .quick-nav a{flex:0 0 auto;padding:7px 12px;border:1px solid var(--line);border-radius:999px;color:var(--text);background:#fafaf9;font-size:.82rem;font-weight:650;text-decoration:none}
+    .quick-nav a:hover{background:var(--blue-soft)}
+    .callout{margin-top:20px;padding:22px 24px;border:1px solid #d8e9df;border-radius:12px;background:var(--green-soft)}
+    .callout p:last-child{margin-bottom:0}
+    .profile-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+    .profile-card{padding:20px;border:1px solid var(--line);border-radius:13px;background:#fff}
+    .scale{color:var(--muted);font-size:.78rem;font-weight:720;letter-spacing:.04em;text-transform:uppercase}
+    .level{margin:4px 0 10px;color:var(--blue);font-size:1.25rem;font-weight:780}
+    .profile-card p:last-child{margin:0;color:#444;font-size:.9rem;line-height:1.55}
+    .note{margin-top:14px;color:var(--muted);font-size:.88rem}
+    .stack{display:grid;gap:14px;margin-top:22px}
+    .pattern,.suggestion,.target{padding:20px 22px;border:1px solid var(--line);border-radius:12px;background:#fff}
+    .pattern h3,.suggestion h3,.target h3{color:var(--blue)}
+    .pattern p,.suggestion p,.target p{margin-top:8px}
+    .examples{margin:12px 0 0;padding-left:1.3em}.examples li{margin:5px 0}
+    .example-label{color:var(--blue);font-weight:730}
+    .correction-tools{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:18px 0 12px}
+    .correction-tools p{margin:0;color:var(--muted);font-size:.9rem}
+    button{padding:8px 12px;border:1px solid var(--line);border-radius:9px;background:#fafaf9;color:var(--text);font:inherit;font-size:.82rem;font-weight:680;cursor:pointer}
+    details{border-top:1px solid var(--line)}details:last-of-type{border-bottom:1px solid var(--line)}
+    summary{display:flex;align-items:center;gap:12px;padding:18px 3px;list-style:none;font-weight:720;cursor:pointer}
+    summary::-webkit-details-marker{display:none}
+    summary::before{content:"›";display:inline-grid;width:24px;height:24px;place-items:center;border-radius:6px;color:var(--muted);background:#f3f3f1;font-size:1.25rem;line-height:1;transition:transform .15s ease}
+    details[open] summary::before{transform:rotate(90deg)}
+    .correction-body{display:grid;gap:10px;padding:0 3px 22px 39px}
+    .version{padding:13px 15px;border-radius:9px;background:#f7f7f5}.version.minimal{background:var(--blue-soft)}.version.natural{background:var(--green-soft)}
+    .version-label{display:block;margin-bottom:3px;color:var(--muted);font-size:.76rem;font-weight:760;letter-spacing:.04em;text-transform:uppercase}
+    .why{padding:13px 15px;border-left:3px solid #d8a64b;border-radius:5px 9px 9px 5px;background:var(--amber-soft);font-size:.92rem;line-height:1.55}
+    .why strong{color:var(--amber)}
+    .language-list{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+    .language-item{padding:17px 18px;border:1px solid var(--line);border-radius:11px}
+    .language-item p{margin:5px 0 0;color:#505050;font-size:.91rem;line-height:1.5}
+    .model-answer{margin-top:20px;padding:24px 26px;border-left:4px solid var(--blue);border-radius:5px 12px 12px 5px;background:var(--blue-soft);font-size:1.02rem}
+    .model-answer p:last-child{margin-bottom:0}
+    .target-number{display:inline-block;margin-right:8px;color:var(--blue);font-size:.82rem;font-weight:780;letter-spacing:.03em;text-transform:uppercase}
+    footer{margin-top:60px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:.82rem}
+    @media(max-width:720px){
+      body{background:var(--paper);font-size:17px;line-height:1.65}
+      main{width:100%;margin:0;padding:32px 20px 56px;border:0;border-radius:0;box-shadow:none}
+      h2{margin-top:48px}.profile-grid,.language-list{grid-template-columns:1fr}
+      .callout,.pattern,.suggestion,.target{padding:18px}.correction-tools{align-items:flex-start;flex-direction:column}
+      summary{padding:17px 1px}.correction-body{padding-left:0}.model-answer{padding:20px}
+    }
+    @media print{body{background:#fff;font-size:11pt}main{width:100%;margin:0;padding:0;border:0;box-shadow:none}.quick-nav,.correction-tools button{display:none}details{break-inside:avoid}details>*{display:block}summary::before{display:none}}
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">English coaching report</p>
+      <h1>English Conversation<br>Progress Report</h1>
+      <p class="meta"><strong>Jihoon Ahn</strong> · Conversation with Catherine · September 15, 2026</p>
+      <nav class="quick-nav" aria-label="Report sections">
+        <a href="#overall">Overall</a><a href="#profile">Levels</a><a href="#patterns">Patterns</a>
+        <a href="#suggestions">Suggestions</a><a href="#corrections">Corrections</a>
+        <a href="#language">Language</a><a href="#model">Model answer</a><a href="#targets">Targets</a>
+      </nav>
+    </header>
+
+    <section id="overall">
+      <h2>🎯 Overall Performance</h2>
+      <div class="callout"><p>You sustained a <strong>56-minute conversation</strong> spanning a greenhouse-gas audit, English classes, a field-trip misunderstanding, workplace stress, travel, and cultural vocabulary. Your biggest strength was <strong>story development</strong>: you supplied context, explained motives, and connected personal experiences to Catherine’s examples. Your biggest weakness was sentence control, particularly prepositions, verb tense, articles, and passive structures during longer answers. The most important next step is to deliver each story in <strong>three complete stages—situation, key event, and result</strong>—using reliable chunks such as “meet in person,” “on her behalf,” and “have my picture taken.”</p></div>
+    </section>
+
+    <section id="profile">
+      <h2>📊 Performance Profile</h2>
+      <div class="profile-grid">
+        <article class="profile-card"><p class="scale">OPIc</p><p class="level">IH range</p><p>You can sustain an extended conversation, narrate experiences, and discuss professional and cultural topics with substantial detail. Recurring grammar errors and unclear sentence boundaries limit consistent Advanced Low performance.</p></article>
+        <article class="profile-card"><p class="scale">TOEFL iBT Speaking</p><p class="level">3.5–4.0 / 6</p><p>Your responses are generally developed and comprehensible, with useful examples and topic range. Accuracy and organization vary during long answers. Formal TOEFL integrated speaking tasks were not assessed.</p></article>
+        <article class="profile-card"><p class="scale">CEFR Speaking</p><p class="level">B1+ to low B2</p><p>You can explain work processes, narrate social incidents, and discuss unfamiliar topics at length. More consistent grammatical control and precision are needed for stable B2 speaking.</p></article>
+      </div>
+      <p class="note"><strong>Note:</strong> These are informal estimates based on one conversation, not official test scores.</p>
+    </section>
+
+    <section id="patterns">
+      <h2>🔍 Highest-Priority Patterns</h2>
+      <div class="stack">
+        <article class="pattern"><h3>1. Use destination and relationship prepositions precisely</h3><p>Prepositions were sometimes translated directly from Korean. Learn complete chunks such as <strong>send a report to</strong>, <strong>a friend of hers</strong>, and <strong>a trip to</strong>.</p><ul class="examples"><li>“I sent the emissions report <strong>to the external auditors</strong>.”</li><li>“I asked Catherine about her <strong>trip to Turkmenistan</strong>.”</li></ul></article>
+        <article class="pattern"><h3>2. Match verb tense to time and experience</h3><p>Use the simple past for a finished event and the present perfect for experience or a situation connected to now.</p><ul class="examples"><li>“My wife <strong>has already visited</strong> Spain.”</li><li>“I <strong>haven’t been to</strong> Ashgabat yet.”</li></ul></article>
+        <article class="pattern"><h3>3. Control passive and causative structures</h3><p>When someone receives an action, English often needs <strong>be + past participle</strong> or <strong>have + object + past participle</strong>.</p><ul class="examples"><li>“He <strong>was appointed ambassador</strong> several months ago.”</li><li>“She was reluctant to <strong>have her picture taken</strong>.”</li></ul></article>
+        <article class="pattern"><h3>4. Break long stories into complete sentences</h3><p>Long explanations sometimes contained repeated starts, unclear pronouns, or missing verbs. Complete the event before adding background or interpretation.</p><ul class="examples"><li>“A student did not want to join the group photo. Another student became frustrated. I later apologized on her behalf.”</li><li>“The auditors will visit our factory next week. We will meet in person. They will review my records and supporting documents.”</li></ul></article>
+      </div>
+    </section>
+
+    <section id="suggestions">
+      <h2>🚀 Suggestions to Improve</h2>
+      <div class="stack">
+        <article class="suggestion"><h3>Store prepositions inside useful work and travel chunks</h3><p>Practice the whole phrase rather than selecting the preposition during the conversation.</p><p><span class="example-label">Example:</span> “I sent the report <strong>to</strong> the auditors, and I asked Catherine about her trip <strong>to</strong> Turkmenistan.”</p></article>
+        <article class="suggestion"><h3>Use a finished-time versus life-experience check</h3><p>Choose the simple past with a finished time and the present perfect with <em>already</em>, <em>yet</em>, or general experience.</p><p><span class="example-label">Example:</span> “Catherine <strong>went</strong> there ten years ago, but I <strong>haven’t been</strong> there yet.”</p></article>
+        <article class="suggestion"><h3>Ask who receives the action</h3><p>Before speaking, identify whether the subject performs the action or receives it. This will guide active, passive, or causative form.</p><p><span class="example-label">Example:</span> “The government <strong>appointed</strong> him, so he <strong>was appointed</strong> ambassador. A photographer took the photo, so she <strong>had her picture taken</strong>.”</p></article>
+        <article class="suggestion"><h3>Use a three-sentence story reset</h3><p>When a story becomes tangled, restart with situation, event, and result. Add details only after those three sentences are complete.</p><p><span class="example-label">Example:</span> “We went on a field trip. One student refused the group photo, and another student spoke sharply. Later, I explained that her reaction was not typical in Korea.”</p></article>
+      </div>
+    </section>
+
+    <section id="corrections">
+      <h2>✏️ Key Corrections</h2>
+      <div class="correction-tools"><p>Tap a correction to see the revision and explanation.</p><button type="button" id="toggle-all">Expand all</button></div>
+
+      <!-- Keep 10–12 correction blocks. Duplicate or remove complete details elements only when necessary. -->
+      <details open><summary>1. Describe sending the emissions report</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>“A few hours ago, I sent my report of my company directories. Greenhouse gas emissions report.”</div><div class="version minimal"><span class="version-label">Minimal correction</span>“A few hours ago, I sent my company’s greenhouse-gas emissions report.”</div><div class="version natural"><span class="version-label">Natural version</span><strong>“A few hours ago, I sent my company’s greenhouse-gas emissions report to the external auditors.”</strong></div><div class="why"><strong>Why?</strong> Use the possessive <em>my company’s</em> to show ownership and combine the fragments into one sentence. Adding <em>to the external auditors</em> completes the action with its recipient.</div></div></details>
+      <details><summary>2. Explain the auditors’ visit</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>“Next Monday through Tuesday, they will come to our factory, and we will in person, and they will check my record or documents.”</div><div class="version minimal"><span class="version-label">Minimal correction</span>“Next Monday and Tuesday, they will come to our factory, we will meet in person, and they will check my records and documents.”</div><div class="version natural"><span class="version-label">Natural version</span><strong>“The auditors will visit our factory next Monday and Tuesday to meet with us and review my records and supporting documents.”</strong></div><div class="why"><strong>Why?</strong> The phrase is <em>meet in person</em>; <em>in person</em cannot stand alone as the verb. Use plural <em>records</em> and <em>and</em when both records and documents will be checked.</div></div></details>
+      <details><summary>3. Use the causative form for a photograph</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>“One student was reluctant to take a picture.”</div><div class="version minimal"><span class="version-label">Minimal correction</span>“One student was reluctant to have her picture taken.”</div><div class="version natural"><span class="version-label">Natural version</span><strong>“One student did not want to be included in the group photo.”</strong></div><div class="why"><strong>Why?</strong> <em>Take a picture</em> means operate the camera. Because someone else would photograph the student, use <em>have her picture taken</em> or the passive idea <em>be included in the photo</em>.</div></div></details>
+      <details><summary>4. Describe your relationship to someone</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>“I was not a friend of her.”</div><div class="version minimal"><span class="version-label">Minimal correction</span>“I was not a friend of hers.”</div><div class="version natural"><span class="version-label">Natural version</span><strong>“I didn’t know her well, and we weren’t friends.”</strong></div><div class="why"><strong>Why?</strong> After <em>a friend of</em>, use the independent possessive pronoun <em>hers</em>. The natural version states the degree of familiarity more directly.</div></div></details>
+      <details><summary>5. Apologize for another person’s behavior</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>“I apologize for her.”</div><div class="version minimal"><span class="version-label">Minimal correction</span>“I apologized for her behavior.”</div><div class="version natural"><span class="version-label">Natural version</span><strong>“I apologized on her behalf and explained that her reaction was not typical.”</strong></div><div class="why"><strong>Why?</strong> Because the event happened in the past, use <em>apologized</em>. <em>On her behalf</em> means you offered the apology for another person.</div></div></details>
+      <details><summary>6. Describe inspiring Catherine’s class</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>“I’m glad that I was the hint of the session.”</div><div class="version minimal"><span class="version-label">Minimal correction</span>“I’m glad that I gave you the idea for the session.”</div><div class="version natural"><span class="version-label">Natural version</span><strong>“I’m glad our earlier conversations became the spark for your Advice Club.”</strong></div><div class="why"><strong>Why?</strong> A person is not usually <em>the hint</em> of a class. <em>Give someone the idea</em> is the minimal meaning, while <em>be the spark for</em> naturally describes inspiring something new.</div></div></details>
+      <details><summary>7. Introduce the regional summit</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>“In this week, a Central Asia and Korea summit is being held.”</div><div class="version minimal"><span class="version-label">Minimal correction</span>“This week, a Central Asia–Korea summit is being held.”</div><div class="version natural"><span class="version-label">Natural version</span><strong>“A summit between Korea and Central Asian countries is taking place this week.”</strong></div><div class="why"><strong>Why?</strong> Do not use <em>in</em> before <em>this week</em>. <em>Between Korea and Central Asian countries</em> expresses the participants more clearly.</div></div></details>
+      <details><summary>8. Use the passive form with “appoint”</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>“He appointed as a ambassador.”</div><div class="version minimal"><span class="version-label">Minimal correction</span>“He was appointed as an ambassador.”</div><div class="version natural"><span class="version-label">Natural version</span><strong>“He was appointed ambassador about four or five months ago.”</strong></div><div class="why"><strong>Why?</strong> The person receives the appointment, so use <em>was appointed</em>. Use <em>an</em> before a vowel sound; in the natural version, the title can follow <em>appointed</em> without an article.</div></div></details>
+      <details><summary>9. Use the present perfect for a prior visit</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>“My wife doesn’t like to go to Spain because she already visited there.”</div><div class="version minimal"><span class="version-label">Minimal correction</span>“My wife doesn’t want to go to Spain because she has already visited.”</div><div class="version natural"><span class="version-label">Natural version</span><strong>“My wife doesn’t want to return to Spain because she’s already been there.”</strong></div><div class="why"><strong>Why?</strong> Use <em>want to go</em> for preference about a future trip. The present perfect with <em>already</em> connects her past visit to her current decision.</div></div></details>
+      <details><summary>10. Ask about a past trip</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>“How about your trip in Turkmenistan?”</div><div class="version minimal"><span class="version-label">Minimal correction</span>“How about your trip to Turkmenistan?”</div><div class="version natural"><span class="version-label">Natural version</span><strong>“What was your trip to Turkmenistan like?”</strong></div><div class="why"><strong>Why?</strong> Use <em>to</em> for a trip’s destination. <em>What was…like?</em> naturally invites someone to describe an experience rather than answer yes or no.</div></div></details>
+    </section>
+
+    <section id="language">
+      <h2>💬 Useful Language</h2>
+      <div class="language-list">
+        <article class="language-item"><strong>turnaround time</strong><p>The time needed to complete and return work. “The auditors’ turnaround time may be about a week.”</p></article>
+        <article class="language-item"><strong>a fire to put out</strong><p>An urgent problem that requires immediate action. “The report did not reveal a fire that management had to put out.”</p></article>
+        <article class="language-item"><strong>have my picture taken</strong><p>Be photographed by someone else.</p></article>
+        <article class="language-item"><strong>apologize on someone’s behalf</strong><p>Offer an apology for another person. “I apologized on her behalf.”</p></article>
+        <article class="language-item"><strong>a venting session</strong><p>A conversation in which someone expresses frustration or difficult feelings.</p></article>
+        <article class="language-item"><strong>take it out on someone</strong><p>Treat someone badly because you are upset about something else. “She was stressed at work and took it out on me.”</p></article>
+        <article class="language-item"><strong>be the spark for something</strong><p>Provide the initial idea or energy that starts something.</p></article>
+        <article class="language-item"><strong>a token amount</strong><p>A deliberately small payment made mainly for symbolic reasons.</p></article>
+      </div>
+    </section>
+
+    <section id="model">
+      <h2>🗣️ Model Answer</h2>
+      <h3 style="margin-top:14px">An update on my greenhouse-gas report</h3>
+      <blockquote class="model-answer"><p>A few hours before class, I sent my company’s greenhouse-gas emissions report to the external auditors. This was an important milestone because I had spent a great deal of time preparing the data and supporting documents. I am now <strong>waiting for their feedback</strong>, and I expect the <strong>turnaround time</strong> to be about a week. The auditors will visit our factory next Monday and Tuesday. We will <strong>meet in person</strong>, and they will review my records and documents to confirm that the report is accurate. My managers have not given me detailed feedback yet, but my boss seems confident that the review will go well. He does not think the report reveals <strong>a major problem or an urgent fire to put out</strong>. Even so, I want to prepare carefully for the visit so that I can answer questions clearly, explain the calculation process, and provide any additional evidence the auditors request.</p></blockquote>
+    </section>
+
+    <section id="targets">
+      <h2>✅ Next-Class Targets</h2>
+      <div class="stack">
+        <article class="target"><h3><span class="target-number">Target 1</span>Deliver a 90-second audit update</h3><p>Explain the report’s status using four stages: submission, waiting period, site visit, and next action. Include <em>external auditors</em>, <em>turnaround time</em>, and <em>meet in person</em>.</p><p><span class="example-label">Example:</span> “I sent the report to the <strong>external auditors</strong>. The turnaround time should be about a week, and we will <strong>meet in person</strong> during their factory visit.”</p></article>
+        <article class="target"><h3><span class="target-number">Target 2</span>Retell the field-trip incident in 90 seconds</h3><p>Use three complete stages—situation, conflict, and response—and include two passive or causative forms.</p><p><span class="example-label">Example:</span> “One student was reluctant to <strong>have her picture taken</strong>. Another student spoke sharply, so I later <strong>apologized on her behalf</strong>.”</p></article>
+        <article class="target"><h3><span class="target-number">Target 3</span>Compare two travel experiences in 60 seconds</h3><p>Use the simple past once, the present perfect twice, and the correct destination preposition <em>to</em>.</p><p><span class="example-label">Example:</span> “Catherine <strong>went to</strong> Turkmenistan ten years ago. I <strong>haven’t been to</strong> Ashgabat yet, and my wife <strong>has already been to</strong> Spain.”</p></article>
+      </div>
+    </section>
+
+    <footer><p><strong>Transcript note:</strong> This report is based on attached automated session notes covering approximately 56 minutes. The file contained inconsistent speaker labels, several “Unknown” segments, and obvious recognition errors. Attribution was inferred from context: Catherine asked most questions, supplied vocabulary and recasts, and told extended examples; Jihoon described his work, classes, relationships, and travel plans. Unclear fragments—including parts of the discussion about workplace hierarchy, immigration, and politics—were excluded rather than presented as Jihoon’s exact wording.</p></footer>
+  </main>
+  <script>
+    const toggle=document.getElementById("toggle-all");
+    const corrections=[...document.querySelectorAll("#corrections details")];
+    toggle.addEventListener("click",()=>{const shouldOpen=corrections.some(item=>!item.open);corrections.forEach(item=>{item.open=shouldOpen});toggle.textContent=shouldOpen?"Collapse all":"Expand all"});
+  </script>
+</body>
+</html>
