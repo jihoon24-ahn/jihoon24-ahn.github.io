@@ -35,9 +35,9 @@
     .profile-card p:last-child{margin:0;color:#444;font-size:.9rem;line-height:1.55}
     .note{margin-top:14px;color:var(--muted);font-size:.88rem}
     .stack{display:grid;gap:14px;margin-top:22px}
-    .pattern,.suggestion,.target{padding:20px 22px;border:1px solid var(--line);border-radius:12px;background:#fff}
-    .pattern h3,.suggestion h3,.target h3{color:var(--blue)}
-    .pattern p,.suggestion p,.target p{margin-top:8px}
+    .pattern{padding:20px 22px;border:1px solid var(--line);border-radius:12px;background:#fff}
+    .pattern h3{color:var(--blue)}
+    .pattern p{margin-top:8px}
     .examples{margin:12px 0 0;padding-left:1.3em}.examples li{margin:5px 0}
     .example-label{color:var(--blue);font-weight:730}
     .correction-tools{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:18px 0 12px}
@@ -58,13 +58,12 @@
     .language-item p{margin:5px 0 0;color:#505050;font-size:.91rem;line-height:1.5}
     .model-answer{margin-top:20px;padding:24px 26px;border-left:4px solid var(--blue);border-radius:5px 12px 12px 5px;background:var(--blue-soft);font-size:1.02rem}
     .model-answer p:last-child{margin-bottom:0}
-    .target-number{display:inline-block;margin-right:8px;color:var(--blue);font-size:.82rem;font-weight:780;letter-spacing:.03em;text-transform:uppercase}
     footer{margin-top:60px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:.82rem}
     @media(max-width:720px){
       body{background:var(--paper);font-size:17px;line-height:1.65}
       main{width:100%;margin:0;padding:32px 20px 56px;border:0;border-radius:0;box-shadow:none}
       h2{margin-top:48px}.profile-grid,.language-list{grid-template-columns:1fr}
-      .callout,.pattern,.suggestion,.target{padding:18px}.correction-tools{align-items:flex-start;flex-direction:column}
+      .callout,.pattern{padding:18px}.correction-tools{align-items:flex-start;flex-direction:column}
       summary{padding:17px 1px}.correction-body{padding-left:0}.model-answer{padding:20px}
     }
     @media print{body{background:#fff;font-size:11pt}main{width:100%;margin:0;padding:0;border:0;box-shadow:none}.quick-nav,.correction-tools button{display:none}details{break-inside:avoid}details>*{display:block}summary::before{display:none}}
@@ -77,14 +76,14 @@
       <h1>English Conversation<br>Progress Report</h1>
       <p class="meta"><strong>Jihoon Ahn</strong> · Conversation with {{TEACHER_NAME}} · {{REPORT_DATE_LONG}}</p>
       <nav class="quick-nav" aria-label="Report sections">
-        <a href="#overall">Overall</a><a href="#profile">Levels</a><a href="#patterns">Patterns</a>
-        <a href="#suggestions">Suggestions</a><a href="#corrections">Corrections</a>
-        <a href="#language">Language</a><a href="#model">Model answer</a><a href="#targets">Targets</a>
+        <a href="#overall">Overall</a><a href="#profile">Levels</a><a href="#patterns">Priorities</a>
+        <a href="#corrections">Corrections</a><a href="#language">Language</a><a href="#model">Model answer</a>
       </nav>
     </header>
 
     <section id="overall">
       <h2>🎯 Overall Performance</h2>
+      <!-- Write approximately 60 words. -->
       <div class="callout"><p>{{OVERALL_PERFORMANCE_HTML}}</p></div>
     </section>
 
@@ -99,22 +98,13 @@
     </section>
 
     <section id="patterns">
-      <h2>🔍 Highest-Priority Patterns</h2>
+      <h2>🚀 Priority Patterns &amp; Suggestions</h2>
       <div class="stack">
-        <article class="pattern"><h3>1. {{PATTERN_1_TITLE}}</h3><p>{{PATTERN_1_EXPLANATION_HTML}}</p><ul class="examples"><li>{{PATTERN_1_EXAMPLE_1_HTML}}</li><li>{{PATTERN_1_EXAMPLE_2_HTML}}</li></ul></article>
-        <article class="pattern"><h3>2. {{PATTERN_2_TITLE}}</h3><p>{{PATTERN_2_EXPLANATION_HTML}}</p><ul class="examples"><li>{{PATTERN_2_EXAMPLE_1_HTML}}</li><li>{{PATTERN_2_EXAMPLE_2_HTML}}</li></ul></article>
-        <article class="pattern"><h3>3. {{PATTERN_3_TITLE}}</h3><p>{{PATTERN_3_EXPLANATION_HTML}}</p><ul class="examples"><li>{{PATTERN_3_EXAMPLE_1_HTML}}</li><li>{{PATTERN_3_EXAMPLE_2_HTML}}</li></ul></article>
-        <article class="pattern"><h3>4. {{PATTERN_4_TITLE}}</h3><p>{{PATTERN_4_EXPLANATION_HTML}}</p><ul class="examples"><li>{{PATTERN_4_EXAMPLE_1_HTML}}</li><li>{{PATTERN_4_EXAMPLE_2_HTML}}</li></ul></article>
-      </div>
-    </section>
-
-    <section id="suggestions">
-      <h2>🚀 Suggestions to Improve</h2>
-      <div class="stack">
-        <article class="suggestion"><h3>{{SUGGESTION_1_TITLE}}</h3><p>{{SUGGESTION_1_EXPLANATION_HTML}}</p><p><span class="example-label">Example:</span> {{SUGGESTION_1_EXAMPLE_HTML}}</p></article>
-        <article class="suggestion"><h3>{{SUGGESTION_2_TITLE}}</h3><p>{{SUGGESTION_2_EXPLANATION_HTML}}</p><p><span class="example-label">Example:</span> {{SUGGESTION_2_EXAMPLE_HTML}}</p></article>
-        <article class="suggestion"><h3>{{SUGGESTION_3_TITLE}}</h3><p>{{SUGGESTION_3_EXPLANATION_HTML}}</p><p><span class="example-label">Example:</span> {{SUGGESTION_3_EXAMPLE_HTML}}</p></article>
-        <article class="suggestion"><h3>{{SUGGESTION_4_TITLE}}</h3><p>{{SUGGESTION_4_EXPLANATION_HTML}}</p><p><span class="example-label">Example:</span> {{SUGGESTION_4_EXAMPLE_HTML}}</p></article>
+        <article class="pattern"><h3>1. {{PATTERN_1_TITLE}}</h3><p>{{PATTERN_1_EXPLANATION_HTML}}</p><p><span class="example-label">Try:</span> {{PATTERN_1_SUGGESTION_HTML}}</p><ul class="examples"><li>{{PATTERN_1_EXAMPLE_1_HTML}}</li><li>{{PATTERN_1_EXAMPLE_2_HTML}}</li></ul></article>
+        <article class="pattern"><h3>2. {{PATTERN_2_TITLE}}</h3><p>{{PATTERN_2_EXPLANATION_HTML}}</p><p><span class="example-label">Try:</span> {{PATTERN_2_SUGGESTION_HTML}}</p><ul class="examples"><li>{{PATTERN_2_EXAMPLE_1_HTML}}</li><li>{{PATTERN_2_EXAMPLE_2_HTML}}</li></ul></article>
+        <article class="pattern"><h3>3. {{PATTERN_3_TITLE}}</h3><p>{{PATTERN_3_EXPLANATION_HTML}}</p><p><span class="example-label">Try:</span> {{PATTERN_3_SUGGESTION_HTML}}</p><ul class="examples"><li>{{PATTERN_3_EXAMPLE_1_HTML}}</li><li>{{PATTERN_3_EXAMPLE_2_HTML}}</li></ul></article>
+        <article class="pattern"><h3>4. {{PATTERN_4_TITLE}}</h3><p>{{PATTERN_4_EXPLANATION_HTML}}</p><p><span class="example-label">Try:</span> {{PATTERN_4_SUGGESTION_HTML}}</p><ul class="examples"><li>{{PATTERN_4_EXAMPLE_1_HTML}}</li><li>{{PATTERN_4_EXAMPLE_2_HTML}}</li></ul></article>
+        <article class="pattern"><h3>5. {{PATTERN_5_TITLE}}</h3><p>{{PATTERN_5_EXPLANATION_HTML}}</p><p><span class="example-label">Try:</span> {{PATTERN_5_SUGGESTION_HTML}}</p><ul class="examples"><li>{{PATTERN_5_EXAMPLE_1_HTML}}</li><li>{{PATTERN_5_EXAMPLE_2_HTML}}</li></ul></article>
       </div>
     </section>
 
@@ -122,7 +112,7 @@
       <h2>✏️ Key Corrections</h2>
       <div class="correction-tools"><p>Tap a correction to see the revision and explanation.</p><button type="button" id="toggle-all">Expand all</button></div>
 
-      <!-- Keep 10–12 correction blocks. Duplicate or remove complete details elements only when necessary. -->
+      <!-- Keep 6–8 correction blocks. Remove complete details elements only when the source has fewer reliable examples. -->
       <details open><summary>1. {{CORRECTION_1_TITLE}}</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>{{CORRECTION_1_ORIGINAL}}</div><div class="version minimal"><span class="version-label">Minimal correction</span>{{CORRECTION_1_MINIMAL}}</div><div class="version natural"><span class="version-label">Natural version</span><strong>{{CORRECTION_1_NATURAL}}</strong></div><div class="why"><strong>Why?</strong> {{CORRECTION_1_WHY_HTML}}</div></div></details>
       <details><summary>2. {{CORRECTION_2_TITLE}}</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>{{CORRECTION_2_ORIGINAL}}</div><div class="version minimal"><span class="version-label">Minimal correction</span>{{CORRECTION_2_MINIMAL}}</div><div class="version natural"><span class="version-label">Natural version</span><strong>{{CORRECTION_2_NATURAL}}</strong></div><div class="why"><strong>Why?</strong> {{CORRECTION_2_WHY_HTML}}</div></div></details>
       <details><summary>3. {{CORRECTION_3_TITLE}}</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>{{CORRECTION_3_ORIGINAL}}</div><div class="version minimal"><span class="version-label">Minimal correction</span>{{CORRECTION_3_MINIMAL}}</div><div class="version natural"><span class="version-label">Natural version</span><strong>{{CORRECTION_3_NATURAL}}</strong></div><div class="why"><strong>Why?</strong> {{CORRECTION_3_WHY_HTML}}</div></div></details>
@@ -131,14 +121,11 @@
       <details><summary>6. {{CORRECTION_6_TITLE}}</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>{{CORRECTION_6_ORIGINAL}}</div><div class="version minimal"><span class="version-label">Minimal correction</span>{{CORRECTION_6_MINIMAL}}</div><div class="version natural"><span class="version-label">Natural version</span><strong>{{CORRECTION_6_NATURAL}}</strong></div><div class="why"><strong>Why?</strong> {{CORRECTION_6_WHY_HTML}}</div></div></details>
       <details><summary>7. {{CORRECTION_7_TITLE}}</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>{{CORRECTION_7_ORIGINAL}}</div><div class="version minimal"><span class="version-label">Minimal correction</span>{{CORRECTION_7_MINIMAL}}</div><div class="version natural"><span class="version-label">Natural version</span><strong>{{CORRECTION_7_NATURAL}}</strong></div><div class="why"><strong>Why?</strong> {{CORRECTION_7_WHY_HTML}}</div></div></details>
       <details><summary>8. {{CORRECTION_8_TITLE}}</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>{{CORRECTION_8_ORIGINAL}}</div><div class="version minimal"><span class="version-label">Minimal correction</span>{{CORRECTION_8_MINIMAL}}</div><div class="version natural"><span class="version-label">Natural version</span><strong>{{CORRECTION_8_NATURAL}}</strong></div><div class="why"><strong>Why?</strong> {{CORRECTION_8_WHY_HTML}}</div></div></details>
-      <details><summary>9. {{CORRECTION_9_TITLE}}</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>{{CORRECTION_9_ORIGINAL}}</div><div class="version minimal"><span class="version-label">Minimal correction</span>{{CORRECTION_9_MINIMAL}}</div><div class="version natural"><span class="version-label">Natural version</span><strong>{{CORRECTION_9_NATURAL}}</strong></div><div class="why"><strong>Why?</strong> {{CORRECTION_9_WHY_HTML}}</div></div></details>
-      <details><summary>10. {{CORRECTION_10_TITLE}}</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>{{CORRECTION_10_ORIGINAL}}</div><div class="version minimal"><span class="version-label">Minimal correction</span>{{CORRECTION_10_MINIMAL}}</div><div class="version natural"><span class="version-label">Natural version</span><strong>{{CORRECTION_10_NATURAL}}</strong></div><div class="why"><strong>Why?</strong> {{CORRECTION_10_WHY_HTML}}</div></div></details>
-      <details><summary>11. {{CORRECTION_11_TITLE}}</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>{{CORRECTION_11_ORIGINAL}}</div><div class="version minimal"><span class="version-label">Minimal correction</span>{{CORRECTION_11_MINIMAL}}</div><div class="version natural"><span class="version-label">Natural version</span><strong>{{CORRECTION_11_NATURAL}}</strong></div><div class="why"><strong>Why?</strong> {{CORRECTION_11_WHY_HTML}}</div></div></details>
-      <details><summary>12. {{CORRECTION_12_TITLE}}</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>{{CORRECTION_12_ORIGINAL}}</div><div class="version minimal"><span class="version-label">Minimal correction</span>{{CORRECTION_12_MINIMAL}}</div><div class="version natural"><span class="version-label">Natural version</span><strong>{{CORRECTION_12_NATURAL}}</strong></div><div class="why"><strong>Why?</strong> {{CORRECTION_12_WHY_HTML}}</div></div></details>
     </section>
 
     <section id="language">
       <h2>💬 Useful Language</h2>
+      <!-- Keep 6–8 useful expressions. Remove complete article elements only when necessary. -->
       <div class="language-list">
         <article class="language-item"><strong>{{LANGUAGE_1_EXPRESSION}}</strong><p>{{LANGUAGE_1_MEANING_AND_EXAMPLE}}</p></article>
         <article class="language-item"><strong>{{LANGUAGE_2_EXPRESSION}}</strong><p>{{LANGUAGE_2_MEANING_AND_EXAMPLE}}</p></article>
@@ -154,16 +141,8 @@
     <section id="model">
       <h2>🗣️ Model Answer</h2>
       <h3 style="margin-top:14px">{{MODEL_ANSWER_TITLE}}</h3>
+      <!-- Write approximately 100 words. -->
       <blockquote class="model-answer"><p>{{MODEL_ANSWER_HTML}}</p></blockquote>
-    </section>
-
-    <section id="targets">
-      <h2>✅ Next-Class Targets</h2>
-      <div class="stack">
-        <article class="target"><h3><span class="target-number">Target 1</span>{{TARGET_1_TITLE}}</h3><p>{{TARGET_1_TASK_HTML}}</p><p><span class="example-label">Example:</span> {{TARGET_1_EXAMPLE_HTML}}</p></article>
-        <article class="target"><h3><span class="target-number">Target 2</span>{{TARGET_2_TITLE}}</h3><p>{{TARGET_2_TASK_HTML}}</p><p><span class="example-label">Example:</span> {{TARGET_2_EXAMPLE_HTML}}</p></article>
-        <article class="target"><h3><span class="target-number">Target 3</span>{{TARGET_3_TITLE}}</h3><p>{{TARGET_3_TASK_HTML}}</p><p><span class="example-label">Example:</span> {{TARGET_3_EXAMPLE_HTML}}</p></article>
-      </div>
     </section>
 
     <footer><p><strong>Transcript note:</strong> {{TRANSCRIPT_NOTE}}</p></footer>

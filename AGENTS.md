@@ -28,19 +28,17 @@ Preserve the master template's element order, class names, CSS, navigation, resp
 
 1. Overall Performance
 2. Performance Profile
-3. Highest-Priority Patterns
-4. Suggestions to Improve
-5. Key Corrections
-6. Useful Language
-7. Model Answer
-8. Next-Class Targets
-9. Transcript Note
+3. Priority Patterns & Suggestions
+4. Key Corrections
+5. Useful Language
+6. Model Answer
+7. Transcript Note
 
 ## Content rules
 
 ### Overall Performance
 
-- Write one paragraph of approximately 70–100 words and never exceed 100 words.
+- Write one paragraph of approximately 60 words and never exceed 70 words.
 - State the conversation length or breadth only when supported by the source.
 - Include the biggest strength, biggest weakness, and the single most important next step.
 - Combine the executive summary and positive feedback here; do not add a separate "What You Did Well" section.
@@ -52,21 +50,16 @@ Preserve the master template's element order, class names, CSS, navigation, resp
 - Do not inflate a level to be encouraging. Base it on fluency, organization, range, accuracy, and comprehensibility.
 - State when formal TOEFL integrated tasks were not assessed.
 
-### Highest-Priority Patterns
+### Priority Patterns & Suggestions
 
-- Include exactly four high-impact patterns supported by recurring evidence.
-- Explain each pattern briefly.
-- Give at least two bulleted, practical example sentences per pattern.
-
-### Suggestions to Improve
-
-- Include exactly four suggestions tied to the identified patterns.
-- Every suggestion must contain an immediately usable example.
+- Include exactly five high-impact patterns supported by recurring evidence.
+- Explain each pattern briefly and pair it with a practical suggestion.
+- Give at least two bulleted, immediately usable example sentences per pattern.
 - Prefer speaking techniques Jihoon can apply in real conversations, such as a story frame, sentence restart, timeline control, or fixed language chunks.
 
 ### Key Corrections
 
-- Include 8–10 reliable corrections. Use fewer only when the source does not contain enough recoverable examples.
+- Include 6–8 reliable corrections. Use fewer only when the source does not contain enough recoverable examples.
 - Every correction must contain these four blocks in this exact order:
   1. Your wording
   2. Minimal correction
@@ -79,22 +72,16 @@ Preserve the master template's element order, class names, CSS, navigation, resp
 
 ### Useful Language
 
-- Include exactly eight useful expressions from or relevant to the conversation.
+- Include 6–8 useful expressions from or relevant to the conversation.
 - Give a brief plain-English meaning and, when helpful, a short example.
 - Prioritize reusable collocations, phrasal verbs, and idioms.
 
 ### Model Answer
 
-- Include one coherent model answer of approximately 120–180 words.
+- Include one coherent model answer of approximately 100 words.
 - Choose one important topic Jihoon discussed.
 - Preserve his actual ideas while improving structure and naturalness.
 - Bold the most reusable language chunks.
-
-### Next-Class Targets
-
-- Include exactly three concrete, measurable speaking targets.
-- Every target must include an example.
-- Prefer targets that can be practiced in 60–90 seconds during the next lesson.
 
 ## Language and formatting
 
@@ -114,8 +101,8 @@ Before reporting completion:
 2. Check JavaScript syntax with `node` when Node.js is available.
 3. Confirm the filename matches `^\d{4}-\d{2}-\d{2}\.html$`.
 4. Confirm the teacher and long-form date appear in the metadata and page title.
-5. Confirm Overall Performance contains no more than 100 words.
-6. Confirm the three proficiency scales and all eight required sections exist.
+5. Confirm Overall Performance contains no more than 70 words.
+6. Confirm the three proficiency scales and all seven required sections exist.
 7. Confirm every placeholder has been removed.
 8. Confirm the report works at mobile widths and does not depend on external files.
 
@@ -129,4 +116,3 @@ If any check fails, fix the report and repeat validation.
 - If direct push is unavailable or protected, create a branch and pull request instead.
 - Never place credentials or personal access tokens in HTML, scripts, prompts, commits, or repository files.
 - After publishing, verify that the GitHub Actions run succeeds and that the new date appears on the calendar.
-
