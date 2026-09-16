@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Jihoon Ahn's English conversation progress report for September 16, 2026.">
+  <title>English Conversation Progress Report — September 16, 2026</title>
+  <style>
+    :root {
+      --bg:#f7f7f5;--paper:#fff;--text:#252525;--muted:#6b6b6b;--line:#e7e7e4;
+      --blue:#2563a6;--blue-soft:#edf4fb;--green:#236b45;--green-soft:#edf7f1;--amber:#8b5e16;--amber-soft:#fff7e6;
+      --shadow:0 12px 36px rgba(28,28,26,.07)
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:18px;line-height:1.68}
+    main{width:min(100% - 32px,860px);margin:28px auto 64px;padding:56px 64px 72px;background:var(--paper);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}
+    h1,h2,h3{margin:0;line-height:1.25;letter-spacing:-.025em}
+    h1{max-width:720px;font-size:clamp(2.15rem,7vw,3.25rem);font-weight:780}
+    h2{margin-top:60px;padding-top:8px;font-size:clamp(1.55rem,5vw,2rem);font-weight:750}
+    h3{font-size:1.12rem;font-weight:720}
+    p{margin:0 0 14px}strong{font-weight:740}
+    .eyebrow{margin-bottom:12px;color:var(--blue);font-size:.78rem;font-weight:760;letter-spacing:.12em;text-transform:uppercase}
+    .meta{margin-top:16px;color:var(--muted);font-size:1rem}
+    .quick-nav{display:flex;gap:9px;margin-top:30px;padding-bottom:6px;overflow-x:auto;scrollbar-width:thin}
+    .quick-nav a{flex:0 0 auto;padding:7px 12px;border:1px solid var(--line);border-radius:999px;color:var(--text);background:#fafaf9;font-size:.82rem;font-weight:650;text-decoration:none}
+    .quick-nav a:hover{background:var(--blue-soft)}
+    .callout{margin-top:20px;padding:22px 24px;border:1px solid #d8e9df;border-radius:12px;background:var(--green-soft)}
+    .callout p:last-child{margin-bottom:0}
+    .profile-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+    .profile-card{padding:20px;border:1px solid var(--line);border-radius:13px;background:#fff}
+    .scale{color:var(--muted);font-size:.78rem;font-weight:720;letter-spacing:.04em;text-transform:uppercase}
+    .level{margin:4px 0 10px;color:var(--blue);font-size:1.25rem;font-weight:780}
+    .profile-card p:last-child{margin:0;color:#444;font-size:.9rem;line-height:1.55}
+    .note{margin-top:14px;color:var(--muted);font-size:.88rem}
+    .stack{display:grid;gap:14px;margin-top:22px}
+    .pattern{padding:20px 22px;border:1px solid var(--line);border-radius:12px;background:#fff}
+    .pattern h3{color:var(--blue)}
+    .pattern p{margin-top:8px}
+    .examples{margin:12px 0 0;padding-left:1.3em}.examples li{margin:5px 0}
+    .example-label{color:var(--blue);font-weight:730}
+    .correction-tools{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:18px 0 12px}
+    .correction-tools p{margin:0;color:var(--muted);font-size:.9rem}
+    button{padding:8px 12px;border:1px solid var(--line);border-radius:9px;background:#fafaf9;color:var(--text);font:inherit;font-size:.82rem;font-weight:680;cursor:pointer}
+    details{border-top:1px solid var(--line)}details:last-of-type{border-bottom:1px solid var(--line)}
+    summary{display:flex;align-items:center;gap:12px;padding:18px 3px;list-style:none;font-weight:720;cursor:pointer}
+    summary::-webkit-details-marker{display:none}
+    summary::before{content:"›";display:inline-grid;width:24px;height:24px;place-items:center;border-radius:6px;color:var(--muted);background:#f3f3f1;font-size:1.25rem;line-height:1;transition:transform .15s ease}
+    details[open] summary::before{transform:rotate(90deg)}
+    .correction-body{display:grid;gap:10px;padding:0 3px 22px 39px}
+    .version{padding:13px 15px;border-radius:9px;background:#f7f7f5}.version.minimal{background:var(--blue-soft)}.version.natural{background:var(--green-soft)}
+    .version-label{display:block;margin-bottom:3px;color:var(--muted);font-size:.76rem;font-weight:760;letter-spacing:.04em;text-transform:uppercase}
+    .why{padding:13px 15px;border-left:3px solid #d8a64b;border-radius:5px 9px 9px 5px;background:var(--amber-soft);font-size:.92rem;line-height:1.55}
+    .why strong{color:var(--amber)}
+    .language-list{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+    .language-item{padding:17px 18px;border:1px solid var(--line);border-radius:11px}
+    .language-item p{margin:5px 0 0;color:#505050;font-size:.91rem;line-height:1.5}
+    .model-answer{margin-top:20px;padding:24px 26px;border-left:4px solid var(--blue);border-radius:5px 12px 12px 5px;background:var(--blue-soft);font-size:1.02rem}
+    .model-answer p:last-child{margin-bottom:0}
+    footer{margin-top:60px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:.82rem}
+    @media(max-width:720px){
+      body{background:var(--paper);font-size:17px;line-height:1.65}
+      main{width:100%;margin:0;padding:32px 20px 56px;border:0;border-radius:0;box-shadow:none}
+      h2{margin-top:48px}.profile-grid,.language-list{grid-template-columns:1fr}
+      .callout,.pattern{padding:18px}.correction-tools{align-items:flex-start;flex-direction:column}
+      summary{padding:17px 1px}.correction-body{padding-left:0}.model-answer{padding:20px}
+    }
+    @media print{body{background:#fff;font-size:11pt}main{width:100%;margin:0;padding:0;border:0;box-shadow:none}.quick-nav,.correction-tools button{display:none}details{break-inside:avoid}details>*{display:block}summary::before{display:none}}
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">English coaching report</p>
+      <h1>English Conversation<br>Progress Report</h1>
+      <p class="meta"><strong>Jihoon Ahn</strong> · Conversation with Daryl · September 16, 2026</p>
+      <nav class="quick-nav" aria-label="Report sections">
+        <a href="#overall">Overall</a><a href="#profile">Levels</a><a href="#patterns">Priorities</a>
+        <a href="#corrections">Corrections</a><a href="#language">Language</a><a href="#model">Model answer</a>
+      </nav>
+    </header>
+
+    <section id="overall">
+      <h2>🎯 Overall Performance</h2>
+      <!-- Write approximately 60 words. -->
+      <div class="callout"><p>You sustained a natural 15-minute conversation across workplace shifts, pet spending, large dogs, and stray-cat policy. Your strongest skill was asking relevant follow-up questions and connecting the topics to personal experience. Your main weakness was sentence control during longer explanations, especially articles, prepositions, and restarts. Your most important next step is to <strong>express one complete idea before adding the next detail</strong>.</p></div>
+    </section>
+
+    <section id="profile">
+      <h2>📊 Performance Profile</h2>
+      <div class="profile-grid">
+        <article class="profile-card"><p class="scale">OPIc</p><p class="level">IM3–IH range</p><p>You can sustain conversation, explain workplace routines, discuss social issues, and ask useful follow-up questions. Frequent grammatical reformulation limits consistent IH performance.</p></article>
+        <article class="profile-card"><p class="scale">TOEFL iBT Speaking</p><p class="level">3.0–3.5 / 6</p><p>Your ideas are relevant and usually comprehensible, with personal examples and clear opinions. Accuracy and organization vary during longer answers. <strong>Formal integrated speaking tasks were not assessed.</strong></p></article>
+        <article class="profile-card"><p class="scale">CEFR Speaking</p><p class="level">B1+</p><p>You can discuss familiar and moderately abstract topics with supporting detail. More consistent sentence structure and grammatical control are needed for stable B2 speaking.</p></article>
+      </div>
+      <p class="note"><strong>Note:</strong> These are informal estimates based on one conversation, not official test scores.</p>
+    </section>
+
+    <section id="patterns">
+      <h2>🚀 Priority Patterns &amp; Suggestions</h2>
+      <div class="stack">
+        <article class="pattern"><h3>1. Control articles in noun phrases</h3><p>Singular countable nouns sometimes appeared without <strong>"a"</strong> or <strong>"an,"</strong> especially after words such as "interesting" and "big."</p><p><span class="example-label">Try:</span> Before finishing a noun phrase, quickly ask: "Is this one countable thing?" If yes, add an article.</p><ul class="examples"><li>"It is <strong>an interesting question</strong>."</li><li>"He was <strong>quite a big dog</strong> by Korean standards."</li></ul></article>
+        <article class="pattern"><h3>2. Use clear time and shift frames</h3><p>Your shift explanation contained useful detail, but the timeline became hard to follow when several times and policies were packed together.</p><p><span class="example-label">Try:</span> Use the frame <strong>"The first shift runs from X to Y. Then..."</strong> and explain one shift per sentence.</p><ul class="examples"><li>"The day shift runs from 6 a.m. to 2 p.m."</li><li>"The night shift ends at 6 a.m., and there is no scheduled overlap."</li></ul></article>
+        <article class="pattern"><h3>3. Build questions with "do" and a comparison</h3><p>Curiosity kept the conversation moving, but some questions used statement word order or an incomplete comparison.</p><p><span class="example-label">Try:</span> Start with <strong>"Do they...?"</strong> and finish comparisons with <strong>"as...as."</strong></p><ul class="examples"><li>"Do they eat as much as humans do?"</li><li>"Do large dogs need more calories than smaller dogs?"</li></ul></article>
+        <article class="pattern"><h3>4. Strengthen verb–noun collocations</h3><p>A few understandable combinations were not the phrases English speakers normally use, such as "works 24 hours" for a factory and "experience about" a policy.</p><p><span class="example-label">Try:</span> Memorize the whole chunks <strong>"operate 24 hours a day"</strong> and <strong>"have experience with."</strong></p><ul class="examples"><li>"The factory operates 24 hours a day."</li><li>"I do not have much experience with the shift-work policy."</li></ul></article>
+        <article class="pattern"><h3>5. Restart instead of extending a broken sentence</h3><p>When an idea became complex, you sometimes repeated fragments and changed grammar midway. The meaning was recoverable, but fluency and accuracy dropped.</p><p><span class="example-label">Try:</span> Say <strong>"Let me rephrase that"</strong>, pause, and restart with a short subject–verb sentence.</p><ul class="examples"><li>"Let me rephrase that. Dogs descended from wolves, so raw meat can be natural for them."</li><li>"Let me put it another way. Feeding stray cats can also increase their population."</li></ul></article>
+      </div>
+    </section>
+
+    <section id="corrections">
+      <h2>✏️ Key Corrections</h2>
+      <div class="correction-tools"><p>Tap a correction to see the revision and explanation.</p><button type="button" id="toggle-all">Expand all</button></div>
+
+      <!-- Keep 6–8 correction blocks. Remove complete details elements only when the source has fewer reliable examples. -->
+      <details open><summary>1. Place the time adverb naturally</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>"Not yet. Now I'm walking to my office."</div><div class="version minimal"><span class="version-label">Minimal correction</span>"Not yet. I'm walking to my office now."</div><div class="version natural"><span class="version-label">Natural version</span><strong>"Not yet. I'm on my way to the office now."</strong></div><div class="why"><strong>Why?</strong> "Now" usually sounds more natural after the main phrase here. "I'm on my way" is a common conversational expression for traveling somewhere.</div></div></details>
+      <details><summary>2. Describe continuous operation</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>"My company is a semiconductor factory, and it works 24 hours."</div><div class="version minimal"><span class="version-label">Minimal correction</span>"My company has a semiconductor factory, and it works 24 hours a day."</div><div class="version natural"><span class="version-label">Natural version</span><strong>"My company operates a semiconductor factory that runs 24 hours a day."</strong></div><div class="why"><strong>Why?</strong> A company is not itself a factory, and machines or facilities normally "run" or "operate." Adding "a day" completes the time expression.</div></div></details>
+      <details><summary>3. Explain arrival before a shift</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>"They should come to the office about early 30 minutes or an hour before their working time."</div><div class="version minimal"><span class="version-label">Minimal correction</span>"They should come to the office about 30 minutes or an hour before their working time."</div><div class="version natural"><span class="version-label">Natural version</span><strong>"They have to arrive 30 minutes to an hour before their shift starts."</strong></div><div class="why"><strong>Why?</strong> "About early" combines two incompatible time markers. "Before their shift starts" is clearer and more idiomatic than "before their working time."</div></div></details>
+      <details><summary>4. Use the right preposition with experience</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>"I don't have much experience about shift worker policy."</div><div class="version minimal"><span class="version-label">Minimal correction</span>"I don't have much experience with the shift-worker policy."</div><div class="version natural"><span class="version-label">Natural version</span><strong>"I don't know much about the shift-work policy because I'm an office worker."</strong></div><div class="why"><strong>Why?</strong> We usually say "experience with" a system or activity. "Shift-work policy" is the natural compound noun; the natural version also states your intended limitation directly.</div></div></details>
+      <details><summary>5. Add an article before a singular noun</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>"I also think that it is very interesting question."</div><div class="version minimal"><span class="version-label">Minimal correction</span>"I also think that it is a very interesting question."</div><div class="version natural"><span class="version-label">Natural version</span><strong>"I also thought it raised an interesting question."</strong></div><div class="why"><strong>Why?</strong> Singular countable nouns such as "question" need an article. "Raised an interesting question" is a useful phrase for discussing an article.</div></div></details>
+      <details><summary>6. Describe where you used to live</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>"Actually, about five years ago, I lived another small apartment."</div><div class="version minimal"><span class="version-label">Minimal correction</span>"Actually, about five years ago, I lived in another small apartment."</div><div class="version natural"><span class="version-label">Natural version</span><strong>"About five years ago, I lived in a different apartment complex."</strong></div><div class="why"><strong>Why?</strong> "Live" needs the preposition "in" before a place. "A different apartment complex" clearly introduces the earlier location where the stray cats gathered.</div></div></details>
+      <details><summary>7. Describe a large childhood pet</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>"I had a dog, and he was quite big dog in Korean standards."</div><div class="version minimal"><span class="version-label">Minimal correction</span>"I had a dog, and he was quite a big dog by Korean standards."</div><div class="version natural"><span class="version-label">Natural version</span><strong>"I had a dog who was considered quite large by Korean standards."</strong></div><div class="why"><strong>Why?</strong> "Dog" needs "a," and the fixed comparison phrase is "by Korean standards." "Who was considered" makes the comparison especially smooth.</div></div></details>
+      <details><summary>8. Form a complete comparison question</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>"Are they eating like humans? Amount of humans?"</div><div class="version minimal"><span class="version-label">Minimal correction</span>"Do they eat the same amount as humans?"</div><div class="version natural"><span class="version-label">Natural version</span><strong>"Do they eat as much as humans do?"</strong></div><div class="why"><strong>Why?</strong> Use "do" for a general-habit question. "As much as" creates a complete and natural comparison of food quantity.</div></div></details>
+    </section>
+
+    <section id="language">
+      <h2>💬 Useful Language</h2>
+      <!-- Keep 6–8 useful expressions. Remove complete article elements only when necessary. -->
+      <div class="language-list">
+        <article class="language-item"><strong>on my way to</strong><p>Traveling toward a place. "I'm on my way to the office."</p></article>
+        <article class="language-item"><strong>run 24 hours a day</strong><p>Operate continuously. "The factory runs 24 hours a day."</p></article>
+        <article class="language-item"><strong>a seamless handoff</strong><p>A smooth transfer with no interruption. "An overlap allows a seamless handoff."</p></article>
+        <article class="language-item"><strong>if it were me</strong><p>Used to give a personal view about someone else's situation. "If it were me, I would set a spending limit."</p></article>
+        <article class="language-item"><strong>spoil a pet</strong><p>Give a pet excessive treats, attention, or luxuries. "My mother loves to spoil her cats."</p></article>
+        <article class="language-item"><strong>by Korean standards</strong><p>Compared with what is typical in Korea. "The dog was large by Korean standards."</p></article>
+        <article class="language-item"><strong>raise an interesting question</strong><p>Introduce an issue worth discussing. "The article raises an interesting question about pet ownership."</p></article>
+        <article class="language-item"><strong>implement a policy</strong><p>Put an official plan or rule into practice. "The city could implement a trap-neuter-return policy."</p></article>
+      </div>
+    </section>
+
+    <section id="model">
+      <h2>🗣️ Model Answer</h2>
+      <h3 style="margin-top:14px">A Balanced Approach to Stray Cats</h3>
+      <!-- Write approximately 100 words. -->
+      <blockquote class="model-answer"><p>In my previous apartment complex, one resident fed stray cats every morning. I understand that she wanted to help them, but many cats began gathering near the building and around my car. Feeding them without managing the population can create problems because the cats reproduce and may affect the local ecosystem. I think local governments should <strong>implement a trap-neuter-return policy</strong>. Volunteers could feed the cats only after they have been treated, and the city could provide financial support. This approach would protect the animals while also reducing complaints from residents. It seems like <strong>a more balanced and responsible solution</strong>.</p></blockquote>
+    </section>
+
+    <footer><p><strong>Transcript note:</strong> This report is based on an automated transcription and two-speaker diarization of a 15-minute, 8 kHz mono recording. Speaker A was identified as you and Speaker B as Daryl through consistent contextual evidence. Very short replies were sometimes grouped with the neighboring speaker, so ambiguous boundaries and apparently corrupted phrases were excluded from correction.</p></footer>
+  </main>
+  <script>
+    const toggle=document.getElementById("toggle-all");
+    const corrections=[...document.querySelectorAll("#corrections details")];
+    toggle.addEventListener("click",()=>{const shouldOpen=corrections.some(item=>!item.open);corrections.forEach(item=>{item.open=shouldOpen});toggle.textContent=shouldOpen?"Collapse all":"Expand all"});
+  </script>
+</body>
+</html>
