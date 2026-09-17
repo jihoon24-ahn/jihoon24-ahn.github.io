@@ -73,7 +73,8 @@ Preserve the master template's element order, class names, CSS, navigation, resp
 ### Useful Language
 
 - Include 6–8 useful expressions from or relevant to the conversation.
-- Give a brief plain-English meaning and, when helpful, a short example.
+- Give every expression a separate, clearly labeled plain-English meaning and example sentence.
+- Keep the meaning concise, and make the example a complete sentence in double quotation marks.
 - Prioritize reusable collocations, phrasal verbs, and idioms.
 
 ### Model Answer
@@ -86,7 +87,9 @@ Preserve the master template's element order, class names, CSS, navigation, resp
 ## Language and formatting
 
 - Write the entire report in English unless the user explicitly requests another language.
-- Use bold text to make key ideas and reusable phrases easy to scan.
+- Use <strong>bold</strong> for key takeaways, corrected language chunks, and reusable expressions that Jihoon should notice first.
+- Use <em>italics</em> for individual target words, grammar forms, prepositions, and short contrasts that support the explanation.
+- Combine bold and italics purposefully to make the report easier to understand, but do not emphasize entire paragraphs or decorate text that is not instructionally important.
 - Use double quotation marks for quoted wording and example sentences. Do not use single quotation marks as quotation marks.
 - Apostrophes inside contractions and possessives are allowed.
 - Keep paragraphs short and readable on a phone.

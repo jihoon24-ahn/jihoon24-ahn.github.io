@@ -20,7 +20,7 @@
     h1{max-width:720px;font-size:clamp(2.15rem,7vw,3.25rem);font-weight:780}
     h2{margin-top:60px;padding-top:8px;font-size:clamp(1.55rem,5vw,2rem);font-weight:750}
     h3{font-size:1.12rem;font-weight:720}
-    p{margin:0 0 14px}strong{font-weight:740}
+    p{margin:0 0 14px}strong{font-weight:740}em{font-style:italic}
     .eyebrow{margin-bottom:12px;color:var(--blue);font-size:.78rem;font-weight:760;letter-spacing:.12em;text-transform:uppercase}
     .meta{margin-top:16px;color:var(--muted);font-size:1rem}
     .quick-nav{display:flex;gap:9px;margin-top:30px;padding-bottom:6px;overflow-x:auto;scrollbar-width:thin}
@@ -56,6 +56,7 @@
     .language-list{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
     .language-item{padding:17px 18px;border:1px solid var(--line);border-radius:11px}
     .language-item p{margin:5px 0 0;color:#505050;font-size:.91rem;line-height:1.5}
+    .language-label{color:var(--muted);font-size:.76rem;font-style:normal;font-weight:760;letter-spacing:.04em;text-transform:uppercase}
     .model-answer{margin-top:20px;padding:24px 26px;border-left:4px solid var(--blue);border-radius:5px 12px 12px 5px;background:var(--blue-soft);font-size:1.02rem}
     .model-answer p:last-child{margin-bottom:0}
     footer{margin-top:60px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:.82rem}
@@ -83,7 +84,7 @@
 
     <section id="overall">
       <h2>🎯 Overall Performance</h2>
-      <!-- Write approximately 60 words. -->
+      <!-- Write approximately 60 words. Use <strong> for the main strength, weakness, and next step; use <em> only for a helpful target word or form. -->
       <div class="callout"><p>{{OVERALL_PERFORMANCE_HTML}}</p></div>
     </section>
 
@@ -99,6 +100,7 @@
 
     <section id="patterns">
       <h2>🚀 Priority Patterns &amp; Suggestions</h2>
+      <!-- In each item, bold the reusable language chunk and italicize the specific grammar form, preposition, or target word being explained. -->
       <div class="stack">
         <article class="pattern"><h3>1. {{PATTERN_1_TITLE}}</h3><p>{{PATTERN_1_EXPLANATION_HTML}}</p><p><span class="example-label">Try:</span> {{PATTERN_1_SUGGESTION_HTML}}</p><ul class="examples"><li>{{PATTERN_1_EXAMPLE_1_HTML}}</li><li>{{PATTERN_1_EXAMPLE_2_HTML}}</li></ul></article>
         <article class="pattern"><h3>2. {{PATTERN_2_TITLE}}</h3><p>{{PATTERN_2_EXPLANATION_HTML}}</p><p><span class="example-label">Try:</span> {{PATTERN_2_SUGGESTION_HTML}}</p><ul class="examples"><li>{{PATTERN_2_EXAMPLE_1_HTML}}</li><li>{{PATTERN_2_EXAMPLE_2_HTML}}</li></ul></article>
@@ -113,6 +115,7 @@
       <div class="correction-tools"><p>Tap a correction to see the revision and explanation.</p><button type="button" id="toggle-all">Expand all</button></div>
 
       <!-- Keep 6–8 correction blocks. Remove complete details elements only when the source has fewer reliable examples. -->
+      <!-- Keep each natural version bold. In each Why block, italicize the exact word, form, or short phrase being discussed. -->
       <details open><summary>1. {{CORRECTION_1_TITLE}}</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>{{CORRECTION_1_ORIGINAL}}</div><div class="version minimal"><span class="version-label">Minimal correction</span>{{CORRECTION_1_MINIMAL}}</div><div class="version natural"><span class="version-label">Natural version</span><strong>{{CORRECTION_1_NATURAL}}</strong></div><div class="why"><strong>Why?</strong> {{CORRECTION_1_WHY_HTML}}</div></div></details>
       <details><summary>2. {{CORRECTION_2_TITLE}}</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>{{CORRECTION_2_ORIGINAL}}</div><div class="version minimal"><span class="version-label">Minimal correction</span>{{CORRECTION_2_MINIMAL}}</div><div class="version natural"><span class="version-label">Natural version</span><strong>{{CORRECTION_2_NATURAL}}</strong></div><div class="why"><strong>Why?</strong> {{CORRECTION_2_WHY_HTML}}</div></div></details>
       <details><summary>3. {{CORRECTION_3_TITLE}}</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>{{CORRECTION_3_ORIGINAL}}</div><div class="version minimal"><span class="version-label">Minimal correction</span>{{CORRECTION_3_MINIMAL}}</div><div class="version natural"><span class="version-label">Natural version</span><strong>{{CORRECTION_3_NATURAL}}</strong></div><div class="why"><strong>Why?</strong> {{CORRECTION_3_WHY_HTML}}</div></div></details>
@@ -125,23 +128,23 @@
 
     <section id="language">
       <h2>💬 Useful Language</h2>
-      <!-- Keep 6–8 useful expressions. Remove complete article elements only when necessary. -->
+      <!-- Keep 6–8 useful expressions. Give each one separate Meaning and Example lines. Expressions are bold by default; italicize a key word in an explanation only when it clarifies usage. Remove complete article elements only when necessary. -->
       <div class="language-list">
-        <article class="language-item"><strong>{{LANGUAGE_1_EXPRESSION}}</strong><p>{{LANGUAGE_1_MEANING_AND_EXAMPLE}}</p></article>
-        <article class="language-item"><strong>{{LANGUAGE_2_EXPRESSION}}</strong><p>{{LANGUAGE_2_MEANING_AND_EXAMPLE}}</p></article>
-        <article class="language-item"><strong>{{LANGUAGE_3_EXPRESSION}}</strong><p>{{LANGUAGE_3_MEANING_AND_EXAMPLE}}</p></article>
-        <article class="language-item"><strong>{{LANGUAGE_4_EXPRESSION}}</strong><p>{{LANGUAGE_4_MEANING_AND_EXAMPLE}}</p></article>
-        <article class="language-item"><strong>{{LANGUAGE_5_EXPRESSION}}</strong><p>{{LANGUAGE_5_MEANING_AND_EXAMPLE}}</p></article>
-        <article class="language-item"><strong>{{LANGUAGE_6_EXPRESSION}}</strong><p>{{LANGUAGE_6_MEANING_AND_EXAMPLE}}</p></article>
-        <article class="language-item"><strong>{{LANGUAGE_7_EXPRESSION}}</strong><p>{{LANGUAGE_7_MEANING_AND_EXAMPLE}}</p></article>
-        <article class="language-item"><strong>{{LANGUAGE_8_EXPRESSION}}</strong><p>{{LANGUAGE_8_MEANING_AND_EXAMPLE}}</p></article>
+        <article class="language-item"><strong>{{LANGUAGE_1_EXPRESSION}}</strong><p><span class="language-label">Meaning</span><br>{{LANGUAGE_1_MEANING_HTML}}</p><p><span class="language-label">Example</span><br>{{LANGUAGE_1_EXAMPLE_HTML}}</p></article>
+        <article class="language-item"><strong>{{LANGUAGE_2_EXPRESSION}}</strong><p><span class="language-label">Meaning</span><br>{{LANGUAGE_2_MEANING_HTML}}</p><p><span class="language-label">Example</span><br>{{LANGUAGE_2_EXAMPLE_HTML}}</p></article>
+        <article class="language-item"><strong>{{LANGUAGE_3_EXPRESSION}}</strong><p><span class="language-label">Meaning</span><br>{{LANGUAGE_3_MEANING_HTML}}</p><p><span class="language-label">Example</span><br>{{LANGUAGE_3_EXAMPLE_HTML}}</p></article>
+        <article class="language-item"><strong>{{LANGUAGE_4_EXPRESSION}}</strong><p><span class="language-label">Meaning</span><br>{{LANGUAGE_4_MEANING_HTML}}</p><p><span class="language-label">Example</span><br>{{LANGUAGE_4_EXAMPLE_HTML}}</p></article>
+        <article class="language-item"><strong>{{LANGUAGE_5_EXPRESSION}}</strong><p><span class="language-label">Meaning</span><br>{{LANGUAGE_5_MEANING_HTML}}</p><p><span class="language-label">Example</span><br>{{LANGUAGE_5_EXAMPLE_HTML}}</p></article>
+        <article class="language-item"><strong>{{LANGUAGE_6_EXPRESSION}}</strong><p><span class="language-label">Meaning</span><br>{{LANGUAGE_6_MEANING_HTML}}</p><p><span class="language-label">Example</span><br>{{LANGUAGE_6_EXAMPLE_HTML}}</p></article>
+        <article class="language-item"><strong>{{LANGUAGE_7_EXPRESSION}}</strong><p><span class="language-label">Meaning</span><br>{{LANGUAGE_7_MEANING_HTML}}</p><p><span class="language-label">Example</span><br>{{LANGUAGE_7_EXAMPLE_HTML}}</p></article>
+        <article class="language-item"><strong>{{LANGUAGE_8_EXPRESSION}}</strong><p><span class="language-label">Meaning</span><br>{{LANGUAGE_8_MEANING_HTML}}</p><p><span class="language-label">Example</span><br>{{LANGUAGE_8_EXAMPLE_HTML}}</p></article>
       </div>
     </section>
 
     <section id="model">
       <h2>🗣️ Model Answer</h2>
       <h3 style="margin-top:14px">{{MODEL_ANSWER_TITLE}}</h3>
-      <!-- Write approximately 100 words. -->
+      <!-- Write approximately 100 words. Bold the most reusable chunks and italicize a small number of especially useful target words or contrasts. -->
       <blockquote class="model-answer"><p>{{MODEL_ANSWER_HTML}}</p></blockquote>
     </section>
 
