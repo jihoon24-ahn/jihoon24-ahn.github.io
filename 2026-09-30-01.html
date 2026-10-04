@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Your English conversation progress report for September 30, 2026.">
+  <meta name="report-teacher" content="Daryl">
+  <title>English Conversation Progress Report — September 30, 2026</title>
+  <style>
+    :root {
+      --bg:#f7f7f5;--paper:#fff;--text:#252525;--muted:#6b6b6b;--line:#e7e7e4;
+      --blue:#2563a6;--blue-soft:#edf4fb;--green:#236b45;--green-soft:#edf7f1;--amber:#8b5e16;--amber-soft:#fff7e6;
+      --shadow:0 12px 36px rgba(28,28,26,.07)
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:18px;line-height:1.68}
+    main{width:min(100% - 32px,860px);margin:28px auto 64px;padding:56px 64px 72px;background:var(--paper);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}
+    h1,h2,h3{margin:0;line-height:1.25;letter-spacing:-.025em}
+    h1{max-width:720px;font-size:clamp(2.15rem,7vw,3.25rem);font-weight:780}
+    h2{margin-top:60px;padding-top:8px;font-size:clamp(1.55rem,5vw,2rem);font-weight:750}
+    h3{font-size:1.12rem;font-weight:720}
+    p{margin:0 0 14px}strong{font-weight:740}em{font-style:italic}
+    .eyebrow{margin-bottom:12px;color:var(--blue);font-size:.78rem;font-weight:760;letter-spacing:.12em;text-transform:uppercase}
+    .meta{margin-top:16px;color:var(--muted);font-size:1rem}
+    .quick-nav{display:flex;gap:9px;margin-top:30px;padding-bottom:6px;overflow-x:auto;scrollbar-width:thin}
+    .quick-nav a{flex:0 0 auto;padding:7px 12px;border:1px solid var(--line);border-radius:999px;color:var(--text);background:#fafaf9;font-size:.82rem;font-weight:650;text-decoration:none}
+    .quick-nav a:hover{background:var(--blue-soft)}
+    .callout{margin-top:20px;padding:22px 24px;border:1px solid #d8e9df;border-radius:12px;background:var(--green-soft)}
+    .callout p:last-child{margin-bottom:0}
+    .profile-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+    .profile-card{padding:20px;border:1px solid var(--line);border-radius:13px;background:#fff}
+    .scale{color:var(--muted);font-size:.78rem;font-weight:720;letter-spacing:.04em;text-transform:uppercase}
+    .level{margin:4px 0 10px;color:var(--blue);font-size:1.25rem;font-weight:780}
+    .profile-card p:last-child{margin:0;color:#444;font-size:.9rem;line-height:1.55}
+    .note{margin-top:14px;color:var(--muted);font-size:.88rem}
+    .stack{display:grid;gap:14px;margin-top:22px}
+    .pattern{padding:20px 22px;border:1px solid var(--line);border-radius:12px;background:#fff}
+    .pattern h3{color:var(--blue)}
+    .pattern p{margin-top:8px}
+    .examples{margin:12px 0 0;padding-left:1.3em}.examples li{margin:5px 0}
+    .example-label{color:var(--blue);font-weight:730}
+    .correction-tools{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:18px 0 12px}
+    .correction-tools p{margin:0;color:var(--muted);font-size:.9rem}
+    button{padding:8px 12px;border:1px solid var(--line);border-radius:9px;background:#fafaf9;color:var(--text);font:inherit;font-size:.82rem;font-weight:680;cursor:pointer}
+    details{border-top:1px solid var(--line)}details:last-of-type{border-bottom:1px solid var(--line)}
+    summary{display:flex;align-items:center;gap:12px;padding:18px 3px;list-style:none;font-weight:720;cursor:pointer}
+    summary::-webkit-details-marker{display:none}
+    summary::before{content:"›";display:inline-grid;width:24px;height:24px;place-items:center;border-radius:6px;color:var(--muted);background:#f3f3f1;font-size:1.25rem;line-height:1;transition:transform .15s ease}
+    details[open] summary::before{transform:rotate(90deg)}
+    .correction-body{display:grid;gap:10px;padding:0 3px 22px 39px}
+    .version{padding:13px 15px;border-radius:9px;background:#f7f7f5}.version.minimal{background:var(--blue-soft)}.version.natural{background:var(--green-soft)}
+    .version-label{display:block;margin-bottom:3px;color:var(--muted);font-size:.76rem;font-weight:760;letter-spacing:.04em;text-transform:uppercase}
+    .why{padding:13px 15px;border-left:3px solid #d8a64b;border-radius:5px 9px 9px 5px;background:var(--amber-soft);font-size:.92rem;line-height:1.55}
+    .why strong{color:var(--amber)}
+    .language-list{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+    .language-item{padding:17px 18px;border:1px solid var(--line);border-radius:11px}
+    .language-item p{margin:5px 0 0;color:#505050;font-size:.91rem;line-height:1.5}
+    .language-label{color:var(--muted);font-size:.76rem;font-style:normal;font-weight:760;letter-spacing:.04em;text-transform:uppercase}
+    .model-answer{margin-top:20px;padding:24px 26px;border-left:4px solid var(--blue);border-radius:5px 12px 12px 5px;background:var(--blue-soft);font-size:1.02rem}
+    .model-answer p:last-child{margin-bottom:0}
+    footer{margin-top:60px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:.82rem}
+    @media(max-width:720px){
+      body{background:var(--paper);font-size:17px;line-height:1.65}
+      main{width:100%;margin:0;padding:32px 20px 56px;border:0;border-radius:0;box-shadow:none}
+      h2{margin-top:48px}.profile-grid,.language-list{grid-template-columns:1fr}
+      .callout,.pattern{padding:18px}.correction-tools{align-items:flex-start;flex-direction:column}
+      summary{padding:17px 1px}.correction-body{padding-left:0}.model-answer{padding:20px}
+    }
+    @media print{body{background:#fff;font-size:11pt}main{width:100%;margin:0;padding:0;border:0;box-shadow:none}.quick-nav,.correction-tools button{display:none}details{break-inside:avoid}details>*{display:block}summary::before{display:none}}
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">English coaching report</p>
+      <h1>English Conversation<br>Progress Report</h1>
+      <p class="meta"><strong>You</strong> · Conversation with Daryl · September 30, 2026</p>
+      <nav class="quick-nav" aria-label="Report sections">
+        <a href="#overall">Overall</a><a href="#profile">Levels</a><a href="#patterns">Priorities</a>
+        <a href="#corrections">Corrections</a><a href="#language">Language</a><a href="#model">Model answer</a>
+      </nav>
+    </header>
+
+    <section id="overall">
+      <h2>🎯 Overall Performance</h2>
+      <!-- Write approximately 60 words. Use <strong> for the main strength, weakness, and next step; use <em> only for a helpful target word or form. -->
+      <div class="callout"><p>You sustained a wide-ranging conversation about English study, volunteering, immigration services, and local voting. Your <strong>strongest skill</strong> was explaining causes and social context with relevant examples. Your <strong>main weakness</strong> was losing grammatical control during longer, self-repaired sentences, especially tense and noun forms. The most important next step is to <strong>finish one clear clause before adding detail</strong>.</p></div>
+    </section>
+
+    <section id="profile">
+      <h2>📊 Performance Profile</h2>
+      <div class="profile-grid">
+        <article class="profile-card"><p class="scale">OPIc</p><p class="level">Intermediate High</p><p>Informal estimate: You can narrate past experiences, explain causes, and discuss social issues at length. Hesitation, restarts, and recurring grammar errors sometimes weaken control when your answers become complex.</p></article>
+        <article class="profile-card"><p class="scale">TOEFL iBT Speaking</p><p class="level">About 20–22 / 30</p><p>Informal conversational estimate: ideas are relevant and generally comprehensible, with useful supporting detail. More controlled grammar and tighter organization would improve delivery. <strong>Formal TOEFL integrated tasks were not assessed.</strong></p></article>
+        <article class="profile-card"><p class="scale">CEFR Speaking</p><p class="level">B1+ approaching B2</p><p>Informal estimate: You can sustain discussion and express reasons on familiar and public topics. You are approaching B2, but your accuracy and sentence control are not yet consistent enough for a firm B2 rating.</p></article>
+      </div>
+      <p class="note"><strong>Note:</strong> These are informal estimates based on one conversation, not official test scores.</p>
+    </section>
+
+    <section id="patterns">
+      <h2>🚀 Priority Patterns &amp; Suggestions</h2>
+      <!-- In each item, bold the reusable language chunk and italicize the specific grammar form, preposition, or target word being explained. -->
+      <div class="stack">
+        <article class="pattern"><h3>1. Control the timeline</h3><p>Past stories sometimes shifted into the present or used an incomplete time structure, as in “it started from 9:30 to 10:30” and “when I first to go.”</p><p><span class="example-label">Try:</span> Use a three-part frame: <strong>background → past event → present result</strong>. Choose the tense before beginning each part.</p><ul class="examples"><li>“When I lived in Washington, DC, I attended the center regularly.”</li><li>“I met a tutor there, and we still talk on Zoom.”</li></ul></article>
+        <article class="pattern"><h3>2. Finish one clause before adding detail</h3><p>Long answers contained several mid-sentence restarts. The ideas were strong, but the listener had to wait for the sentence structure to become clear.</p><p><span class="example-label">Try:</span> Speak in short thought groups. If a sentence breaks down, pause and use <strong>“Let me put that another way.”</strong></p><ul class="examples"><li>“The volunteers are mostly retirees. Many worked for the government.”</li><li>“Let me put that another way. The program depends on volunteers.”</li></ul></article>
+        <article class="pattern"><h3>3. Use complete noun chunks</h3><p>Articles and noun forms were sometimes missing or overbuilt, including “retiree people” and “have right to vote.”</p><p><span class="example-label">Try:</span> Learn the whole chunk, not the isolated noun: <strong>“a retiree,” “the right to,”</strong> and <strong>“funding.”</strong></p><ul class="examples"><li>“Many of the volunteers are retirees.”</li><li>“Taxpayers should have the right to vote.”</li></ul></article>
+        <article class="pattern"><h3>4. Build around reliable collocations</h3><p>Some verb–noun combinations were understandable but unnatural, such as “experiences from foreign culture” and “volunteers for running organizations.”</p><p><span class="example-label">Try:</span> Reuse fixed combinations such as <strong>“experience other cultures,” “run an organization,”</strong> and <strong>“recruit volunteers.”</strong></p><ul class="examples"><li>“They wanted to share their experience of other cultures.”</li><li>“The center needs to recruit volunteers to run its programs.”</li></ul></article>
+        <article class="pattern"><h3>5. Frame nuanced opinions clearly</h3><p>You discussed voting and immigration thoughtfully, but phrases such as “as an Asian view” made your position less precise than your reasoning.</p><p><span class="example-label">Try:</span> Use <strong>position + reason + qualification</strong> to sound balanced during sensitive discussions.</p><ul class="examples"><li>“From an East Asian perspective, showing ID at a polling place seems normal.”</li><li>“I see the concern, although I also think taxpayers deserve representation.”</li></ul></article>
+      </div>
+    </section>
+
+    <section id="corrections">
+      <h2>✏️ Key Corrections</h2>
+      <div class="correction-tools"><p>Tap a correction to see the revision and explanation.</p><button type="button" id="toggle-all">Expand all</button></div>
+
+      <!-- Keep 6–8 correction blocks. Remove complete details elements only when the source has fewer reliable examples. -->
+      <!-- Keep each natural version bold. In each Why block, italicize the exact word, form, or short phrase being discussed. -->
+      <details open><summary>1. Talking about bedtime</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>“I slept a little bit late.”</div><div class="version minimal"><span class="version-label">Minimal correction</span>“I went to sleep a little late.”</div><div class="version natural"><span class="version-label">Natural version</span><strong>“I stayed up a little later than usual.”</strong></div><div class="why"><strong>Why?</strong> <em>Sleep late</em> often means waking up late. <em>Go to sleep late</em> identifies bedtime; <strong>stay up late</strong> is the most natural conversational choice.</div></div></details>
+      <details><summary>2. Describing a time range</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>“It started from 9:30 to 10:30 PM.”</div><div class="version minimal"><span class="version-label">Minimal correction</span>“It started at 9:30 and ended at 10:30 PM.”</div><div class="version natural"><span class="version-label">Natural version</span><strong>“It ran from 9:30 to 10:30 PM.”</strong></div><div class="why"><strong>Why?</strong> Use <em>at</em> with a starting time. The paired structure <em>from … to …</em> works naturally with <strong>run</strong>, <em>last</em>, or <em>be</em>.</div></div></details>
+      <details><summary>3. An ongoing Zoom habit</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>“I usually, I regularly met one of my tutors on Zoom.”</div><div class="version minimal"><span class="version-label">Minimal correction</span>“I regularly meet one of my tutors on Zoom.”</div><div class="version natural"><span class="version-label">Natural version</span><strong>“I still meet one of my former tutors regularly on Zoom.”</strong></div><div class="why"><strong>Why?</strong> The meetings continue now, so use the present simple <em>meet</em>. <strong>Still</strong> clearly connects the current habit to the earlier school experience.</div></div></details>
+      <details><summary>4. Referring to retired people</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>“There are many retiree people.”</div><div class="version minimal"><span class="version-label">Minimal correction</span>“There are many retired people.”</div><div class="version natural"><span class="version-label">Natural version</span><strong>“Many of the volunteers are retirees.”</strong></div><div class="why"><strong>Why?</strong> A <em>retiree</em> is already a person, so <em>retiree people</em> is redundant. <strong>Retirees</strong> is concise and directly identifies the group.</div></div></details>
+      <details><summary>5. Experience with other cultures</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>“Many of them have had experiences from foreign culture.”</div><div class="version minimal"><span class="version-label">Minimal correction</span>“Many of them have had experience with foreign cultures.”</div><div class="version natural"><span class="version-label">Natural version</span><strong>“Many of them have lived or worked abroad and experienced other cultures.”</strong></div><div class="why"><strong>Why?</strong> General <em>experience</em> is usually uncountable, and the natural preposition is <em>with</em>. The natural version makes the type of experience concrete.</div></div></details>
+      <details><summary>6. Using the passive voice</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>“It runs by another volunteers.”</div><div class="version minimal"><span class="version-label">Minimal correction</span>“It is run by other volunteers.”</div><div class="version natural"><span class="version-label">Natural version</span><strong>“Other volunteers run the organization.”</strong></div><div class="why"><strong>Why?</strong> The passive form needs <em>be + past participle</em>: <em>is run</em>. Use <em>other</em>, not <em>another</em>, before a plural noun.</div></div></details>
+      <details><summary>7. Recalling a first visit</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>“When I first to go to the center …”</div><div class="version minimal"><span class="version-label">Minimal correction</span>“When I first went to the center …”</div><div class="version natural"><span class="version-label">Natural version</span><strong>“When I first started going to the center …”</strong></div><div class="why"><strong>Why?</strong> After <em>when I first</em>, use a finite past verb such as <em>went</em>. <strong>Started going</strong> is especially natural when describing the beginning of a repeated activity.</div></div></details>
+      <details><summary>8. Expressing a voting right</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>“If you pay taxes, you might have right to vote.”</div><div class="version minimal"><span class="version-label">Minimal correction</span>“If you pay taxes, you might have the right to vote.”</div><div class="version natural"><span class="version-label">Natural version</span><strong>“If you pay taxes, you should have the right to vote.”</strong></div><div class="why"><strong>Why?</strong> The fixed expression is <strong>have the right to</strong>. Use <em>should</em> when stating what you believe is fair; <em>might</em> expresses uncertainty about a fact.</div></div></details>
+    </section>
+
+    <section id="language">
+      <h2>💬 Useful Language</h2>
+      <!-- Keep 6–8 useful expressions. Give each one separate Meaning and Example lines. Expressions are bold by default; italicize a key word in an explanation only when it clarifies usage. Remove complete article elements only when necessary. -->
+      <div class="language-list">
+        <article class="language-item"><strong>run from … to …</strong><p><span class="language-label">Meaning</span><br>to begin and end at stated times</p><p><span class="language-label">Example</span><br>“My evening class runs from 9:30 to 10:30.”</p></article>
+        <article class="language-item"><strong>stay up late</strong><p><span class="language-label">Meaning</span><br>to remain awake later than usual</p><p><span class="language-label">Example</span><br>“I stayed up late because I had another English class.”</p></article>
+        <article class="language-item"><strong>politely decline</strong><p><span class="language-label">Meaning</span><br>to refuse an invitation or suggestion respectfully</p><p><span class="language-label">Example</span><br>“I politely declined the game and suggested a conversation instead.”</p></article>
+        <article class="language-item"><strong>a mutually beneficial exchange</strong><p><span class="language-label">Meaning</span><br>an arrangement in which both sides gain something</p><p><span class="language-label">Example</span><br>“The tutoring program creates a mutually beneficial exchange.”</p></article>
+        <article class="language-item"><strong>be run by</strong><p><span class="language-label">Meaning</span><br>to be managed or operated by someone</p><p><span class="language-label">Example</span><br>“The center is largely run by volunteers.”</p></article>
+        <article class="language-item"><strong>the bottom line is …</strong><p><span class="language-label">Meaning</span><br>the most important conclusion or practical point is</p><p><span class="language-label">Example</span><br>“The bottom line is that the organization needs more donations.”</p></article>
+        <article class="language-item"><strong>recruit volunteers</strong><p><span class="language-label">Meaning</span><br>to find and persuade people to volunteer</p><p><span class="language-label">Example</span><br>“It has become harder to recruit volunteers for the program.”</p></article>
+        <article class="language-item"><strong>have the right to</strong><p><span class="language-label">Meaning</span><br>to be legally or morally entitled to do something</p><p><span class="language-label">Example</span><br>“Residents who pay local taxes should have the right to vote.”</p></article>
+      </div>
+    </section>
+
+    <section id="model">
+      <h2>🗣️ Model Answer</h2>
+      <h3 style="margin-top:14px">Why the Washington English Center Matters</h3>
+      <!-- Write approximately 100 words. Bold the most reusable chunks and italicize a small number of especially useful target words or contrasts. -->
+      <blockquote class="model-answer"><p>When I lived in Washington, DC, I attended the Washington English Center. Many teachers were volunteers, including retirees who had worked for the federal government or international organizations. They wanted to share their experience and meet people from other cultures, so the program created <strong>a mutually beneficial exchange</strong>. Because many teachers were unpaid, the tuition was affordable. The center also helped immigrants understand practical issues such as visas and local voting. However, it has become harder to <strong>recruit volunteers</strong>, while students still need support. <strong>The bottom line is that</strong> this valuable organization depends on donations and committed volunteers.</p></blockquote>
+    </section>
+
+    <footer><p><strong>Transcript note:</strong> This report is based on a pasted transcript with inconsistent speaker labels. Your wording was attributed only where context was clear; doubtful lines and apparent transcription errors were not assessed.</p></footer>
+  </main>
+  <script>
+    const toggle=document.getElementById("toggle-all");
+    const corrections=[...document.querySelectorAll("#corrections details")];
+    toggle.addEventListener("click",()=>{const shouldOpen=corrections.some(item=>!item.open);corrections.forEach(item=>{item.open=shouldOpen});toggle.textContent=shouldOpen?"Collapse all":"Expand all"});
+  </script>
+</body>
+</html>
