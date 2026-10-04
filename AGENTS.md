@@ -17,7 +17,10 @@ Ask one concise question if the date or teacher is missing. If the source is aud
 ## Output file
 
 - Copy `templates/english-report-master.html` to the repository root.
-- Name the output exactly `YYYY-MM-DD.html`.
+- Before naming a new report, check the repository root for reports from the same date.
+- Name new reports `YYYY-MM-DD-SS.html`, where `SS` is a two-digit session number beginning with `01` (for example, `2026-10-04-01.html` and `2026-10-04-02.html`).
+- Treat an existing legacy file named `YYYY-MM-DD.html` as session `01`. If it already exists, name the next report `YYYY-MM-DD-02.html`; do not rename or overwrite the legacy report.
+- Never overwrite a same-day report. Use the next unused session number for each additional class.
 - Replace every `{{PLACEHOLDER}}`; no placeholder may remain.
 - Keep the report self-contained: inline CSS and JavaScript only, with no external assets.
 - Do not modify `index.html`, `reports.json`, or `.github/workflows/update-reports.yml` when adding an ordinary daily report. The existing workflow updates the archive and calendar.
@@ -102,7 +105,7 @@ Before reporting completion:
 
 1. Parse the HTML with Python's `html.parser` or an equivalent validator.
 2. Check JavaScript syntax with `node` when Node.js is available.
-3. Confirm the filename matches `^\d{4}-\d{2}-\d{2}\.html$`.
+3. Confirm the filename matches `^\d{4}-\d{2}-\d{2}-\d{2}\.html$`. Legacy reports named `YYYY-MM-DD.html` remain valid but should not be used for newly generated reports.
 4. Confirm the teacher and long-form date appear in the metadata and page title.
 5. Confirm Overall Performance contains no more than 70 words.
 6. Confirm the three proficiency scales and all seven required sections exist.
@@ -115,7 +118,7 @@ If any check fails, fix the report and repeat validation.
 
 - Preserve unrelated user changes and inspect `git status` before staging.
 - Stage only the new dated report unless another file is required for the requested task.
-- When the user explicitly asks to publish, commit with `Add English progress report for YYYY-MM-DD` and push to `main`.
+- When the user explicitly asks to publish, commit with `Add English progress report for YYYY-MM-DD session SS` and push to `main`.
 - If direct push is unavailable or protected, create a branch and pull request instead.
 - Never place credentials or personal access tokens in HTML, scripts, prompts, commits, or repository files.
 - After publishing, verify that the GitHub Actions run succeeds and that the new date appears on the calendar.

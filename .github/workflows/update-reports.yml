@@ -25,17 +25,35 @@ jobs:
         run: |
           import json
           import re
+          from html import unescape
           from pathlib import Path
 
-          pattern = re.compile(r"^\d{4}-\d{2}-\d{2}\.html$")
-          reports = sorted(
-              [
-                  path.name
-                  for path in Path(".").glob("*.html")
-                  if pattern.fullmatch(path.name)
-              ],
-              reverse=True,
+          pattern = re.compile(r"^(\d{4}-\d{2}-\d{2})(?:-(\d{2}))?\.html$")
+          teacher_meta = re.compile(
+              r'<meta\s+name="report-teacher"\s+content="([^"]*)"',
+              re.IGNORECASE,
           )
+          teacher_text = re.compile(r"Conversation with\s+([^<·]+?)\s*·", re.IGNORECASE)
+          reports = []
+
+          for path in Path(".").glob("*.html"):
+              match = pattern.fullmatch(path.name)
+              if not match:
+                  continue
+
+              contents = path.read_text(encoding="utf-8")
+              teacher_match = teacher_meta.search(contents) or teacher_text.search(contents)
+              teacher = unescape(teacher_match.group(1).strip()) if teacher_match else ""
+              reports.append(
+                  {
+                      "name": path.name,
+                      "date": match.group(1),
+                      "session": int(match.group(2) or 1),
+                      "teacher": teacher,
+                  }
+              )
+
+          reports.sort(key=lambda report: (report["date"], report["session"]), reverse=True)
 
           Path("reports.json").write_text(
               json.dumps(reports, indent=2) + "\n",

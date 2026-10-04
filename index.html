@@ -163,6 +163,27 @@
       line-height: 1;
     }
 
+    .session-links {
+      display: flex;
+      gap: 4px;
+      margin-top: 2px;
+    }
+
+    .session-link {
+      display: grid;
+      width: 19px;
+      height: 19px;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.62rem;
+      line-height: 1;
+      text-decoration: none;
+    }
+
+    .session-link:hover { background: #24594f; }
+
     .calendar-legend {
       display: flex;
       align-items: center;
@@ -267,6 +288,14 @@
       font-size: 0.82rem;
     }
 
+    .report-description {
+      display: grid;
+      gap: 2px;
+      min-width: 0;
+    }
+
+    .teacher { color: var(--text); font-weight: 700; }
+
     .open-label { color: var(--accent); font-weight: 750; }
 
     .status {
@@ -325,7 +354,7 @@
         <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
       </div>
       <div class="calendar-grid" id="calendar-grid" aria-live="polite"></div>
-      <p class="calendar-legend"><span class="legend-dot" aria-hidden="true"></span>Highlighted dates have class reports.</p>
+      <p class="calendar-legend"><span class="legend-dot" aria-hidden="true"></span>Numbers on a date open that day's class reports.</p>
     </section>
 
     <section aria-labelledby="archive-heading">
@@ -357,7 +386,7 @@
       const monthCount = document.getElementById("month-count");
       const previousMonth = document.getElementById("previous-month");
       const nextMonth = document.getElementById("next-month");
-      const reportPattern = /^\d{4}-\d{2}-\d{2}\.html$/;
+      const reportPattern = /^(\d{4}-\d{2}-\d{2})(?:-(\d{2}))?\.html$/;
       let reportFiles = [];
       let visibleMonth = new Date();
       let earliestMonth = null;
@@ -366,6 +395,11 @@
       function dateFromFilename(filename) {
         const [year, month, day] = filename.slice(0, 10).split("-").map(Number);
         return new Date(year, month - 1, day);
+      }
+
+      function sessionFromFilename(filename) {
+        const match = filename.match(reportPattern);
+        return match && match[2] ? Number(match[2]) : 1;
       }
 
       function monthValue(date) {
@@ -390,18 +424,25 @@
         const year = visibleMonth.getFullYear();
         const month = visibleMonth.getMonth();
         const prefix = `${year}-${String(month + 1).padStart(2, "0")}-`;
-        const reportsByDate = new Map(
-          reportFiles
-            .filter(file => file.name.startsWith(prefix))
-            .map(file => [file.name.slice(0, 10), file])
-        );
+        const reportsByDate = new Map();
+        reportFiles
+          .filter(file => file.name.startsWith(prefix))
+          .forEach(file => {
+            const key = file.name.slice(0, 10);
+            if (!reportsByDate.has(key)) reportsByDate.set(key, []);
+            reportsByDate.get(key).push(file);
+          });
+
+        reportsByDate.forEach(reports => {
+          reports.sort((a, b) => a.session - b.session);
+        });
 
         calendarHeading.textContent = new Intl.DateTimeFormat("en", {
           month: "long",
           year: "numeric"
         }).format(visibleMonth);
 
-        const total = reportsByDate.size;
+        const total = Array.from(reportsByDate.values()).reduce((sum, reports) => sum + reports.length, 0);
         monthCount.textContent = `${total} ${total === 1 ? "class" : "classes"}`;
         calendarGrid.replaceChildren();
 
@@ -417,9 +458,10 @@
 
         for (let day = 1; day <= daysInMonth; day += 1) {
           const key = dateKey(year, month, day);
-          const report = reportsByDate.get(key);
+          const reports = reportsByDate.get(key);
 
-          if (report) {
+          if (reports && reports.length === 1) {
+            const report = reports[0];
             const link = document.createElement("a");
             link.className = "calendar-day has-report";
             link.href = `./${encodeURIComponent(report.name)}`;
@@ -432,6 +474,29 @@
             dot.setAttribute("aria-hidden", "true");
             link.append(number, dot);
             calendarGrid.append(link);
+          } else if (reports) {
+            const date = document.createElement("div");
+            date.className = "calendar-day has-report";
+            const number = document.createElement("span");
+            number.textContent = day;
+            const sessionLinks = document.createElement("div");
+            sessionLinks.className = "session-links";
+
+            reports.forEach(report => {
+              const sessionLink = document.createElement("a");
+              sessionLink.className = "session-link";
+              sessionLink.href = `./${encodeURIComponent(report.name)}`;
+              sessionLink.textContent = report.session;
+              const teacher = report.teacher ? ` with ${report.teacher}` : "";
+              sessionLink.setAttribute(
+                "aria-label",
+                `${readableDate(report.name)}, class ${report.session}${teacher} — open report`
+              );
+              sessionLinks.append(sessionLink);
+            });
+
+            date.append(number, sessionLinks);
+            calendarGrid.append(date);
           } else {
             const date = document.createElement("span");
             date.className = "calendar-day";
@@ -475,9 +540,15 @@
         count.textContent = `${files.length} ${files.length === 1 ? "report" : "reports"}`;
 
         if (!files.length) {
-          showStatus("No reports found yet.", "Upload a report named YYYY-MM-DD.html beside this index.html file.");
+          showStatus("No reports found yet.", "Upload a report named YYYY-MM-DD-01.html beside this index.html file.");
           return;
         }
+
+        const reportsPerDate = files.reduce((counts, file) => {
+          const key = file.name.slice(0, 10);
+          counts.set(key, (counts.get(key) || 0) + 1);
+          return counts;
+        }, new Map());
 
         files.forEach((file, index) => {
           const card = document.createElement("a");
@@ -488,7 +559,9 @@
           top.className = "report-top";
           const date = document.createElement("p");
           date.className = "report-date";
-          date.textContent = readableDate(file.name);
+          const hasSessionSuffix = file.name.match(reportPattern)?.[2];
+          const showSession = hasSessionSuffix || reportsPerDate.get(file.name.slice(0, 10)) > 1;
+          date.textContent = `${readableDate(file.name)}${showSession ? ` · Class ${file.session}` : ""}`;
           top.append(date);
 
           if (index === 0) {
@@ -500,13 +573,22 @@
 
           const meta = document.createElement("div");
           meta.className = "report-meta";
+          const description = document.createElement("span");
+          description.className = "report-description";
+          if (file.teacher) {
+            const teacher = document.createElement("span");
+            teacher.className = "teacher";
+            teacher.textContent = `Teacher: ${file.teacher}`;
+            description.append(teacher);
+          }
           const filename = document.createElement("span");
           filename.className = "filename";
           filename.textContent = file.name;
           const open = document.createElement("span");
           open.className = "open-label";
           open.textContent = "Open →";
-          meta.append(filename, open);
+          description.append(filename);
+          meta.append(description, open);
           card.append(top, meta);
           list.append(card);
         });
@@ -532,7 +614,13 @@
           const reports = contents
             .map(item => typeof item === "string" ? { name: item } : item)
             .filter(item => item && reportPattern.test(item.name))
-            .sort((a, b) => b.name.localeCompare(a.name));
+            .map(item => ({
+              ...item,
+              date: item.name.slice(0, 10),
+              session: Number(item.session) || sessionFromFilename(item.name),
+              teacher: typeof item.teacher === "string" ? item.teacher : ""
+            }))
+            .sort((a, b) => b.date.localeCompare(a.date) || b.session - a.session);
 
           prepareCalendar(reports);
           renderReports(reports);
