@@ -44,6 +44,7 @@ Preserve the master template's element order, class names, CSS, navigation, resp
 - Write one paragraph of approximately 60 words and never exceed 70 words.
 - State the conversation length or breadth only when supported by the source.
 - Include the biggest strength, biggest weakness, and the single most important next step.
+- Omit caveats in Overall Performance about spoken fluency or pronunciation being unverified, or proficiency levels being informal estimates based on one conversation rather than official test scores. Jihoon already understands these limitations; keep this paragraph focused on actionable feedback.
 - Combine the executive summary and positive feedback here; do not add a separate "What You Did Well" section.
 
 ### Performance Profile
