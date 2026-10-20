@@ -91,6 +91,7 @@ Preserve the master template's element order, class names, CSS, navigation, resp
 ## Language and formatting
 
 - Write the entire report in English unless the user explicitly requests another language.
+- Do not include transcript timestamps (for example, 22:00) or timestamp ranges anywhere in the report, including headings, explanations, corrections, and the transcript note.
 - Use <strong>bold</strong> for key takeaways, corrected language chunks, and reusable expressions that Jihoon should notice first.
 - Use <em>italics</em> for individual target words, grammar forms, prepositions, and short contrasts that support the explanation.
 - Combine bold and italics purposefully to make the report easier to understand, but do not emphasize entire paragraphs or decorate text that is not instructionally important.
