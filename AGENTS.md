@@ -73,6 +73,7 @@ Preserve the master template's element order, class names, CSS, navigation, resp
 - Make the natural version idiomatic, conversational, and suitable for everyday or business English.
 - Briefly explain both why the original was wrong or unnatural and why the revision is better.
 - Do not correct obvious transcription corruption as if Jihoon intentionally said it.
+- Words that look like typos may be Jihoon's pronunciation mistakes (for example, "laser" for "razor" or "bird" for "beard"). Do not correct these as typos, grammar, or vocabulary errors, and do not present them as transcription corruption; if relevant, mention them only in the transcript note as pronunciation.
 
 ### Useful Language
 
