@@ -27,15 +27,21 @@ Ask one concise question if the date or teacher is missing. If the source is aud
 
 ## Fixed report structure
 
-Preserve the master template's element order, class names, CSS, navigation, responsive layout, expandable correction blocks, and print styles. Use these sections in this exact order:
+Preserve the master template's element order, class names, CSS, navigation, responsive layout, expandable correction blocks, self-test mode, and print styles. Below the metadata line, include the one-line summary and topic tags. Use these sections in this exact order:
 
 1. Overall Performance
-2. Performance Profile
-3. Priority Patterns & Suggestions
-4. Key Corrections
-5. Useful Language
-6. Model Answer
-7. Transcript Note
+2. Last Time → This Time
+3. Performance Profile
+4. Speaking Snapshot
+5. Sentences You Got Right
+6. Priority Patterns & Suggestions
+7. Key Corrections
+8. What Your Teacher Corrected
+9. Useful Language
+10. Pronunciation Watch (optional; include only when there is evidence)
+11. Model Answer
+12. Your 2-Minute Speaking Task
+13. Transcript Note
 
 ## Content rules
 
@@ -45,7 +51,18 @@ Preserve the master template's element order, class names, CSS, navigation, resp
 - State the conversation length or breadth only when supported by the source.
 - Include the biggest strength, biggest weakness, and the single most important next step.
 - Omit caveats in Overall Performance about spoken fluency or pronunciation being unverified, or proficiency levels being informal estimates based on one conversation rather than official test scores. Jihoon already understands these limitations; keep this paragraph focused on actionable feedback.
-- Combine the executive summary and positive feedback here; do not add a separate "What You Did Well" section.
+- Combine the executive summary and positive feedback here; do not add a separate "What You Did Well" section. Sentences You Got Right is the only other place for positive feedback, and it quotes specific sentences rather than general praise.
+
+### Summary and topic tags
+
+- Write one sentence of no more than 25 words naming what the class covered.
+- Give 2–5 short topic tags in title case. Put the same tags, comma-separated, in the `report-topics` meta tag.
+
+### Last Time → This Time
+
+- Review the first three Priority Patterns from the most recent earlier report, and link to that report.
+- Give each one a status: Improved (`improved`), Same (`same`), Still frequent (`frequent`), or Not observed (`not-observed`).
+- Support every status with one specific piece of evidence from this class. Use Not observed when the class gave no chance to judge it.
 
 ### Performance Profile
 
@@ -53,6 +70,21 @@ Preserve the master template's element order, class names, CSS, navigation, resp
 - Treat levels as informal estimates from this conversation, not official scores.
 - Do not inflate a level to be encouraging. Base it on fluency, organization, range, accuracy, and comprehensibility.
 - State when formal TOEFL integrated tasks were not assessed.
+
+### Speaking Snapshot
+
+- Report four approximate metrics, counting only lines reliably attributed to Jihoon:
+  - Talk share: Jihoon's words divided by all attributed words.
+  - Average turn: Jihoon's words divided by his turns.
+  - Restarts: immediately repeated words or phrases, such as "I I" or "it was it was."
+  - Top filler: the most frequent filler phrase and its count, such as "you know" ×14.
+- In each note, compare with the previous report's snapshot when one exists; otherwise write "First measurement."
+- Omit a metric's comparison, not the metric, when the transcript is too incomplete to compare fairly, and say so in the note.
+
+### Sentences You Got Right
+
+- Include 2–3 sentences Jihoon actually said correctly or effectively, including successful self-corrections.
+- Quote his final wording exactly, and briefly explain what to keep doing. Do not include sentences with uncertain attribution.
 
 ### Priority Patterns & Suggestions
 
@@ -73,7 +105,17 @@ Preserve the master template's element order, class names, CSS, navigation, resp
 - Make the natural version idiomatic, conversational, and suitable for everyday or business English.
 - Briefly explain both why the original was wrong or unnatural and why the revision is better.
 - Do not correct obvious transcription corruption as if Jihoon intentionally said it.
-- Words that look like typos may be Jihoon's pronunciation mistakes (for example, "laser" for "razor" or "bird" for "beard"). Do not correct these as typos, grammar, or vocabulary errors, and do not present them as transcription corruption; if relevant, mention them only in the transcript note as pronunciation.
+- Words that look like typos may be Jihoon's pronunciation mistakes (for example, "laser" for "razor" or "bird" for "beard"). Do not correct these as typos, grammar, or vocabulary errors, and do not present them as transcription corruption; put them in Pronunciation Watch instead.
+
+### Self-test mode
+
+- Keep the Self-test mode button and each "Show answer" button from the master template. They hide the minimal correction, natural version, and explanation until Jihoon has tried his own fix.
+
+### What Your Teacher Corrected
+
+- Include 2–4 moments where the teacher reformulated Jihoon's wording during class.
+- For each, give what Jihoon said, the teacher's exact reformulation, and a one-sentence takeaway.
+- Do not repeat items already listed in Key Corrections. Remove the section only when the transcript contains no teacher reformulations.
 
 ### Useful Language
 
@@ -82,12 +124,24 @@ Preserve the master template's element order, class names, CSS, navigation, resp
 - Keep the meaning concise, and make the example a complete sentence in double quotation marks.
 - Prioritize reusable collocations, phrasal verbs, and idioms.
 
+### Pronunciation Watch
+
+- Include this section only when the transcript shows likely pronunciation slips; otherwise remove the section and its navigation link.
+- Include 1–3 items. For each, give the target word, what it sounded like, a short articulation tip, and a minimal-pair or phrase practice line.
+- Describe the slips as likely, because they are inferred from the transcript rather than heard directly.
+
 ### Model Answer
 
 - Include one coherent model answer of approximately 100 words.
 - Choose one important topic Jihoon discussed.
 - Preserve his actual ideas while improving structure and naturalness.
 - Bold the most reusable language chunks.
+
+### Your 2-Minute Speaking Task
+
+- Give one speaking prompt on a topic from this class.
+- Provide a four-step frame with a sentence starter for each step.
+- List three target chunks from this report for Jihoon to use.
 
 ## Language and formatting
 
@@ -111,9 +165,9 @@ Before reporting completion:
 3. Confirm the filename matches `^\d{4}-\d{2}-\d{2}-\d{2}\.html$`. Legacy reports named `YYYY-MM-DD.html` remain valid but should not be used for newly generated reports.
 4. Confirm the teacher and long-form date appear in the metadata and page title.
 5. Confirm Overall Performance contains no more than 70 words.
-6. Confirm the three proficiency scales and all seven required sections exist.
+6. Confirm the three proficiency scales and all required sections exist in order, with Pronunciation Watch present only when supported.
 7. Confirm every placeholder has been removed.
-8. Confirm the report works at mobile widths and does not depend on external files.
+8. Confirm the report works at mobile widths, self-test mode hides and reveals answers, and the report does not depend on external files.
 
 If any check fails, fix the report and repeat validation.
 

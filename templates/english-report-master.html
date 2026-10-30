@@ -6,7 +6,8 @@
   <meta name="theme-color" content="#ffffff">
   <meta name="description" content="Jihoon Ahn's English conversation progress report for {{REPORT_DATE_LONG}}.">
   <meta name="report-teacher" content="{{TEACHER_NAME}}">
-  <title>English Conversation Progress Report — {{REPORT_DATE_LONG}}</title>
+  <meta name="report-topics" content="{{TOPIC_TAGS_CSV}}">
+  <title>English Conversation Progress Report — {{TEACHER_NAME}} — {{REPORT_DATE_LONG}}</title>
   <style>
     :root {
       --bg:#f7f7f5;--paper:#fff;--text:#252525;--muted:#6b6b6b;--line:#e7e7e4;
@@ -60,15 +61,38 @@
     .language-label{color:var(--muted);font-size:.76rem;font-style:normal;font-weight:760;letter-spacing:.04em;text-transform:uppercase}
     .model-answer{margin-top:20px;padding:24px 26px;border-left:4px solid var(--blue);border-radius:5px 12px 12px 5px;background:var(--blue-soft);font-size:1.02rem}
     .model-answer p:last-child{margin-bottom:0}
+    .summary{margin:14px 0 0;color:#3d3d3d;font-size:1.04rem}
+    .topic-tags{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0 0;padding:0;list-style:none}
+    .topic-tags li{padding:3px 10px;border-radius:999px;background:var(--blue-soft);color:var(--blue);font-size:.78rem;font-weight:700}
+    .progress-item,.recast{padding:16px 18px;border:1px solid var(--line);border-radius:12px;background:#fff}
+    .progress-item h3{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+    .progress-item p,.recast p{margin:6px 0 0;font-size:.95rem;line-height:1.55}
+    .status{display:inline-block;padding:2px 9px;border-radius:999px;font-size:.72rem;font-weight:760;letter-spacing:.03em;text-transform:uppercase}
+    .status.improved{background:var(--green-soft);color:var(--green)}.status.same,.status.not-observed{background:#f1f1ef;color:var(--muted)}.status.frequent{background:var(--amber-soft);color:var(--amber)}
+    .stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:22px}
+    .stat-card{padding:16px;border:1px solid var(--line);border-radius:12px}
+    .stat-value{margin:2px 0 6px;color:var(--blue);font-size:1.45rem;font-weight:780;line-height:1.2}
+    .stat-card p:last-child{margin:0;color:#505050;font-size:.85rem;line-height:1.45}
+    .win{padding:16px 18px;border-left:4px solid var(--green);border-radius:5px 12px 12px 5px;background:var(--green-soft)}
+    .win p{margin:6px 0 0;font-size:.95rem;line-height:1.55}.win p:first-child{margin:0;font-size:1rem}
+    .reveal{display:none;justify-self:start}
+    #corrections.self-test .correction-body>.minimal,#corrections.self-test .correction-body>.natural,#corrections.self-test .correction-body>.why{display:none}
+    #corrections.self-test .reveal{display:inline-block}
+    #corrections.self-test details.revealed .correction-body>.minimal,#corrections.self-test details.revealed .correction-body>.natural,#corrections.self-test details.revealed .correction-body>.why{display:block}
+    #corrections.self-test details.revealed .reveal{display:none}
+    .tool-buttons{display:flex;flex:none;flex-wrap:wrap;gap:8px}
+    .task{margin-top:20px;padding:22px 24px;border:1px dashed #9cbcdf;border-radius:12px;background:#fff}
+    .task ol{margin:10px 0 0;padding-left:1.3em}.task li{margin:5px 0}
+    .task p{margin:12px 0 0}.task p:first-child{margin:0;font-weight:720}
     footer{margin-top:60px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:.82rem}
     @media(max-width:720px){
       body{background:var(--paper);font-size:17px;line-height:1.65}
       main{width:100%;margin:0;padding:32px 20px 56px;border:0;border-radius:0;box-shadow:none}
-      h2{margin-top:48px}.profile-grid,.language-list{grid-template-columns:1fr}
-      .callout,.pattern{padding:18px}.correction-tools{align-items:flex-start;flex-direction:column}
+      h2{margin-top:48px}.profile-grid,.language-list{grid-template-columns:1fr}.stat-grid{grid-template-columns:1fr 1fr}
+      .callout,.pattern,.task{padding:18px}.correction-tools{align-items:flex-start;flex-direction:column}
       summary{padding:17px 1px}.correction-body{padding-left:0}.model-answer{padding:20px}
     }
-    @media print{body{background:#fff;font-size:11pt}main{width:100%;margin:0;padding:0;border:0;box-shadow:none}.quick-nav,.correction-tools button{display:none}details{break-inside:avoid}details>*{display:block}summary::before{display:none}}
+    @media print{body{background:#fff;font-size:11pt}main{width:100%;margin:0;padding:0;border:0;box-shadow:none}.quick-nav,.correction-tools button,.reveal{display:none!important}#corrections .correction-body>*{display:block!important}details{break-inside:avoid}details>*{display:block}summary::before{display:none}}
   </style>
 </head>
 <body>
@@ -77,9 +101,13 @@
       <p class="eyebrow">English coaching report</p>
       <h1>English Conversation<br>Progress Report</h1>
       <p class="meta"><strong>Jihoon Ahn</strong> · Conversation with {{TEACHER_NAME}} · {{REPORT_DATE_LONG}}</p>
+      <!-- One sentence of at most 25 words naming the class topics. Keep 2–5 short topic tags; match TOPIC_TAGS_CSV in the head. -->
+      <p class="summary">{{ONE_LINE_SUMMARY}}</p>
+      <ul class="topic-tags"><li>{{TOPIC_TAG_1}}</li><li>{{TOPIC_TAG_2}}</li><li>{{TOPIC_TAG_3}}</li></ul>
       <nav class="quick-nav" aria-label="Report sections">
-        <a href="#overall">Overall</a><a href="#profile">Levels</a><a href="#patterns">Priorities</a>
-        <a href="#corrections">Corrections</a><a href="#language">Language</a><a href="#model">Model answer</a>
+        <a href="#overall">Overall</a><a href="#progress">Last time</a><a href="#profile">Levels</a><a href="#snapshot">Snapshot</a>
+        <a href="#wins">Got right</a><a href="#patterns">Priorities</a><a href="#corrections">Corrections</a><a href="#recasts">Teacher</a>
+        <a href="#language">Language</a><a href="#pronunciation">Sounds</a><a href="#model">Model answer</a><a href="#task">Task</a>
       </nav>
     </header>
 
@@ -87,6 +115,17 @@
       <h2>🎯 Overall Performance</h2>
       <!-- Write approximately 60 words. Use <strong> for the main strength, weakness, and next step; use <em> only for a helpful target word or form. -->
       <div class="callout"><p>{{OVERALL_PERFORMANCE_HTML}}</p></div>
+    </section>
+
+    <section id="progress">
+      <h2>🔁 Last Time → This Time</h2>
+      <!-- Review the first three Priority Patterns from the most recent earlier report. Status class: improved, same, frequent, or not-observed, with matching label Improved, Same, Still frequent, or Not observed. Give one piece of evidence from this class. -->
+      <p class="note">Priorities from {{PREVIOUS_REPORT_LINK_HTML}}.</p>
+      <div class="stack">
+        <article class="progress-item"><h3>{{PROGRESS_1_TITLE}} <span class="status {{PROGRESS_1_STATUS_CLASS}}">{{PROGRESS_1_STATUS_LABEL}}</span></h3><p>{{PROGRESS_1_EVIDENCE_HTML}}</p></article>
+        <article class="progress-item"><h3>{{PROGRESS_2_TITLE}} <span class="status {{PROGRESS_2_STATUS_CLASS}}">{{PROGRESS_2_STATUS_LABEL}}</span></h3><p>{{PROGRESS_2_EVIDENCE_HTML}}</p></article>
+        <article class="progress-item"><h3>{{PROGRESS_3_TITLE}} <span class="status {{PROGRESS_3_STATUS_CLASS}}">{{PROGRESS_3_STATUS_LABEL}}</span></h3><p>{{PROGRESS_3_EVIDENCE_HTML}}</p></article>
+      </div>
     </section>
 
     <section id="profile">
@@ -97,6 +136,28 @@
         <article class="profile-card"><p class="scale">CEFR Speaking</p><p class="level">{{CEFR_LEVEL}}</p><p>{{CEFR_ASSESSMENT_HTML}}</p></article>
       </div>
       <p class="note"><strong>Note:</strong> These are informal estimates based on one conversation, not official test scores.</p>
+    </section>
+
+    <section id="snapshot">
+      <h2>📈 Speaking Snapshot</h2>
+      <!-- Count only lines reliably attributed to Jihoon. Talk share = Jihoon's words / all attributed words. Average turn = Jihoon's words / Jihoon's turns. Restarts = immediately repeated words or phrases. Each note compares with the previous report's snapshot, or says "First measurement." -->
+      <div class="stat-grid">
+        <article class="stat-card"><p class="scale">Talk share</p><p class="stat-value">{{STAT_TALK_SHARE}}</p><p>{{STAT_TALK_SHARE_NOTE_HTML}}</p></article>
+        <article class="stat-card"><p class="scale">Average turn</p><p class="stat-value">{{STAT_AVERAGE_TURN}}</p><p>{{STAT_AVERAGE_TURN_NOTE_HTML}}</p></article>
+        <article class="stat-card"><p class="scale">Restarts</p><p class="stat-value">{{STAT_RESTARTS}}</p><p>{{STAT_RESTARTS_NOTE_HTML}}</p></article>
+        <article class="stat-card"><p class="scale">Top filler</p><p class="stat-value">{{STAT_TOP_FILLER}}</p><p>{{STAT_TOP_FILLER_NOTE_HTML}}</p></article>
+      </div>
+      <p class="note"><strong>Note:</strong> Counts are approximate and come from the transcript, not audio.</p>
+    </section>
+
+    <section id="wins">
+      <h2>🌱 Sentences You Got Right</h2>
+      <!-- Keep 2–3 sentences Jihoon actually said correctly or effectively. Quote them exactly and explain briefly what to keep doing. -->
+      <div class="stack">
+        <article class="win"><p><strong>{{WIN_1_SENTENCE}}</strong></p><p>{{WIN_1_WHY_HTML}}</p></article>
+        <article class="win"><p><strong>{{WIN_2_SENTENCE}}</strong></p><p>{{WIN_2_WHY_HTML}}</p></article>
+        <article class="win"><p><strong>{{WIN_3_SENTENCE}}</strong></p><p>{{WIN_3_WHY_HTML}}</p></article>
+      </div>
     </section>
 
     <section id="patterns">
@@ -113,18 +174,28 @@
 
     <section id="corrections">
       <h2>✏️ Key Corrections</h2>
-      <div class="correction-tools"><p>Tap a correction to see the revision and explanation.</p><button type="button" id="toggle-all">Expand all</button></div>
+      <div class="correction-tools"><p>Tap a correction to see the revision. In self-test mode, try your own fix aloud first.</p><div class="tool-buttons"><button type="button" id="self-test" aria-pressed="false">Self-test mode</button><button type="button" id="toggle-all">Expand all</button></div></div>
 
       <!-- Keep 6–8 correction blocks. Remove complete details elements only when the source has fewer reliable examples. -->
       <!-- Keep each natural version bold. In each Why block, italicize the exact word, form, or short phrase being discussed. -->
-      <details open><summary>1. {{CORRECTION_1_TITLE}}</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>{{CORRECTION_1_ORIGINAL}}</div><div class="version minimal"><span class="version-label">Minimal correction</span>{{CORRECTION_1_MINIMAL}}</div><div class="version natural"><span class="version-label">Natural version</span><strong>{{CORRECTION_1_NATURAL}}</strong></div><div class="why"><strong>Why?</strong> {{CORRECTION_1_WHY_HTML}}</div></div></details>
-      <details><summary>2. {{CORRECTION_2_TITLE}}</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>{{CORRECTION_2_ORIGINAL}}</div><div class="version minimal"><span class="version-label">Minimal correction</span>{{CORRECTION_2_MINIMAL}}</div><div class="version natural"><span class="version-label">Natural version</span><strong>{{CORRECTION_2_NATURAL}}</strong></div><div class="why"><strong>Why?</strong> {{CORRECTION_2_WHY_HTML}}</div></div></details>
-      <details><summary>3. {{CORRECTION_3_TITLE}}</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>{{CORRECTION_3_ORIGINAL}}</div><div class="version minimal"><span class="version-label">Minimal correction</span>{{CORRECTION_3_MINIMAL}}</div><div class="version natural"><span class="version-label">Natural version</span><strong>{{CORRECTION_3_NATURAL}}</strong></div><div class="why"><strong>Why?</strong> {{CORRECTION_3_WHY_HTML}}</div></div></details>
-      <details><summary>4. {{CORRECTION_4_TITLE}}</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>{{CORRECTION_4_ORIGINAL}}</div><div class="version minimal"><span class="version-label">Minimal correction</span>{{CORRECTION_4_MINIMAL}}</div><div class="version natural"><span class="version-label">Natural version</span><strong>{{CORRECTION_4_NATURAL}}</strong></div><div class="why"><strong>Why?</strong> {{CORRECTION_4_WHY_HTML}}</div></div></details>
-      <details><summary>5. {{CORRECTION_5_TITLE}}</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>{{CORRECTION_5_ORIGINAL}}</div><div class="version minimal"><span class="version-label">Minimal correction</span>{{CORRECTION_5_MINIMAL}}</div><div class="version natural"><span class="version-label">Natural version</span><strong>{{CORRECTION_5_NATURAL}}</strong></div><div class="why"><strong>Why?</strong> {{CORRECTION_5_WHY_HTML}}</div></div></details>
-      <details><summary>6. {{CORRECTION_6_TITLE}}</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>{{CORRECTION_6_ORIGINAL}}</div><div class="version minimal"><span class="version-label">Minimal correction</span>{{CORRECTION_6_MINIMAL}}</div><div class="version natural"><span class="version-label">Natural version</span><strong>{{CORRECTION_6_NATURAL}}</strong></div><div class="why"><strong>Why?</strong> {{CORRECTION_6_WHY_HTML}}</div></div></details>
-      <details><summary>7. {{CORRECTION_7_TITLE}}</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>{{CORRECTION_7_ORIGINAL}}</div><div class="version minimal"><span class="version-label">Minimal correction</span>{{CORRECTION_7_MINIMAL}}</div><div class="version natural"><span class="version-label">Natural version</span><strong>{{CORRECTION_7_NATURAL}}</strong></div><div class="why"><strong>Why?</strong> {{CORRECTION_7_WHY_HTML}}</div></div></details>
-      <details><summary>8. {{CORRECTION_8_TITLE}}</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>{{CORRECTION_8_ORIGINAL}}</div><div class="version minimal"><span class="version-label">Minimal correction</span>{{CORRECTION_8_MINIMAL}}</div><div class="version natural"><span class="version-label">Natural version</span><strong>{{CORRECTION_8_NATURAL}}</strong></div><div class="why"><strong>Why?</strong> {{CORRECTION_8_WHY_HTML}}</div></div></details>
+      <details open><summary>1. {{CORRECTION_1_TITLE}}</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>{{CORRECTION_1_ORIGINAL}}</div><button type="button" class="reveal">Show answer</button><div class="version minimal"><span class="version-label">Minimal correction</span>{{CORRECTION_1_MINIMAL}}</div><div class="version natural"><span class="version-label">Natural version</span><strong>{{CORRECTION_1_NATURAL}}</strong></div><div class="why"><strong>Why?</strong> {{CORRECTION_1_WHY_HTML}}</div></div></details>
+      <details><summary>2. {{CORRECTION_2_TITLE}}</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>{{CORRECTION_2_ORIGINAL}}</div><button type="button" class="reveal">Show answer</button><div class="version minimal"><span class="version-label">Minimal correction</span>{{CORRECTION_2_MINIMAL}}</div><div class="version natural"><span class="version-label">Natural version</span><strong>{{CORRECTION_2_NATURAL}}</strong></div><div class="why"><strong>Why?</strong> {{CORRECTION_2_WHY_HTML}}</div></div></details>
+      <details><summary>3. {{CORRECTION_3_TITLE}}</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>{{CORRECTION_3_ORIGINAL}}</div><button type="button" class="reveal">Show answer</button><div class="version minimal"><span class="version-label">Minimal correction</span>{{CORRECTION_3_MINIMAL}}</div><div class="version natural"><span class="version-label">Natural version</span><strong>{{CORRECTION_3_NATURAL}}</strong></div><div class="why"><strong>Why?</strong> {{CORRECTION_3_WHY_HTML}}</div></div></details>
+      <details><summary>4. {{CORRECTION_4_TITLE}}</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>{{CORRECTION_4_ORIGINAL}}</div><button type="button" class="reveal">Show answer</button><div class="version minimal"><span class="version-label">Minimal correction</span>{{CORRECTION_4_MINIMAL}}</div><div class="version natural"><span class="version-label">Natural version</span><strong>{{CORRECTION_4_NATURAL}}</strong></div><div class="why"><strong>Why?</strong> {{CORRECTION_4_WHY_HTML}}</div></div></details>
+      <details><summary>5. {{CORRECTION_5_TITLE}}</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>{{CORRECTION_5_ORIGINAL}}</div><button type="button" class="reveal">Show answer</button><div class="version minimal"><span class="version-label">Minimal correction</span>{{CORRECTION_5_MINIMAL}}</div><div class="version natural"><span class="version-label">Natural version</span><strong>{{CORRECTION_5_NATURAL}}</strong></div><div class="why"><strong>Why?</strong> {{CORRECTION_5_WHY_HTML}}</div></div></details>
+      <details><summary>6. {{CORRECTION_6_TITLE}}</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>{{CORRECTION_6_ORIGINAL}}</div><button type="button" class="reveal">Show answer</button><div class="version minimal"><span class="version-label">Minimal correction</span>{{CORRECTION_6_MINIMAL}}</div><div class="version natural"><span class="version-label">Natural version</span><strong>{{CORRECTION_6_NATURAL}}</strong></div><div class="why"><strong>Why?</strong> {{CORRECTION_6_WHY_HTML}}</div></div></details>
+      <details><summary>7. {{CORRECTION_7_TITLE}}</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>{{CORRECTION_7_ORIGINAL}}</div><button type="button" class="reveal">Show answer</button><div class="version minimal"><span class="version-label">Minimal correction</span>{{CORRECTION_7_MINIMAL}}</div><div class="version natural"><span class="version-label">Natural version</span><strong>{{CORRECTION_7_NATURAL}}</strong></div><div class="why"><strong>Why?</strong> {{CORRECTION_7_WHY_HTML}}</div></div></details>
+      <details><summary>8. {{CORRECTION_8_TITLE}}</summary><div class="correction-body"><div class="version"><span class="version-label">Your wording</span>{{CORRECTION_8_ORIGINAL}}</div><button type="button" class="reveal">Show answer</button><div class="version minimal"><span class="version-label">Minimal correction</span>{{CORRECTION_8_MINIMAL}}</div><div class="version natural"><span class="version-label">Natural version</span><strong>{{CORRECTION_8_NATURAL}}</strong></div><div class="why"><strong>Why?</strong> {{CORRECTION_8_WHY_HTML}}</div></div></details>
+    </section>
+
+    <section id="recasts">
+      <h2>👂 What Your Teacher Corrected</h2>
+      <!-- Keep 2–4 moments where the teacher reformulated Jihoon's wording during class. Do not repeat items already in Key Corrections. Remove complete article elements when there are fewer. -->
+      <div class="stack">
+        <article class="recast"><p><span class="language-label">You said</span><br>{{RECAST_1_ORIGINAL}}</p><p><span class="language-label">{{TEACHER_NAME}} said</span><br><strong>{{RECAST_1_TEACHER}}</strong></p><p><span class="language-label">Takeaway</span><br>{{RECAST_1_TAKEAWAY_HTML}}</p></article>
+        <article class="recast"><p><span class="language-label">You said</span><br>{{RECAST_2_ORIGINAL}}</p><p><span class="language-label">{{TEACHER_NAME}} said</span><br><strong>{{RECAST_2_TEACHER}}</strong></p><p><span class="language-label">Takeaway</span><br>{{RECAST_2_TAKEAWAY_HTML}}</p></article>
+        <article class="recast"><p><span class="language-label">You said</span><br>{{RECAST_3_ORIGINAL}}</p><p><span class="language-label">{{TEACHER_NAME}} said</span><br><strong>{{RECAST_3_TEACHER}}</strong></p><p><span class="language-label">Takeaway</span><br>{{RECAST_3_TAKEAWAY_HTML}}</p></article>
+      </div>
     </section>
 
     <section id="language">
@@ -142,11 +213,30 @@
       </div>
     </section>
 
+    <section id="pronunciation">
+      <h2>🔊 Pronunciation Watch</h2>
+      <!-- Optional: include only when the transcript shows likely pronunciation slips (for example, "laser" for "razor"). Keep 1–3 items. If there is no evidence, remove this whole section and its quick-nav link. -->
+      <div class="language-list">
+        <article class="language-item"><strong>{{SOUND_1_TARGET}}</strong><p><span class="language-label">Sounded like</span><br>{{SOUND_1_HEARD}}</p><p><span class="language-label">Tip</span><br>{{SOUND_1_TIP_HTML}}</p><p><span class="language-label">Practice</span><br>{{SOUND_1_PRACTICE_HTML}}</p></article>
+        <article class="language-item"><strong>{{SOUND_2_TARGET}}</strong><p><span class="language-label">Sounded like</span><br>{{SOUND_2_HEARD}}</p><p><span class="language-label">Tip</span><br>{{SOUND_2_TIP_HTML}}</p><p><span class="language-label">Practice</span><br>{{SOUND_2_PRACTICE_HTML}}</p></article>
+      </div>
+    </section>
+
     <section id="model">
       <h2>🗣️ Model Answer</h2>
       <h3 style="margin-top:14px">{{MODEL_ANSWER_TITLE}}</h3>
       <!-- Write approximately 100 words. Bold the most reusable chunks and italicize a small number of especially useful target words or contrasts. -->
       <blockquote class="model-answer"><p>{{MODEL_ANSWER_HTML}}</p></blockquote>
+    </section>
+
+    <section id="task">
+      <h2>⏱️ Your 2-Minute Speaking Task</h2>
+      <!-- Give one prompt on a topic from this class, a four-step frame, and three target chunks from this report. -->
+      <div class="task">
+        <p>{{TASK_PROMPT}}</p>
+        <ol><li>{{TASK_STEP_1_HTML}}</li><li>{{TASK_STEP_2_HTML}}</li><li>{{TASK_STEP_3_HTML}}</li><li>{{TASK_STEP_4_HTML}}</li></ol>
+        <p><span class="example-label">Use:</span> {{TASK_TARGET_CHUNKS_HTML}}</p>
+      </div>
     </section>
 
     <footer><p><strong>Transcript note:</strong> {{TRANSCRIPT_NOTE}}</p></footer>
@@ -155,6 +245,10 @@
     const toggle=document.getElementById("toggle-all");
     const corrections=[...document.querySelectorAll("#corrections details")];
     toggle.addEventListener("click",()=>{const shouldOpen=corrections.some(item=>!item.open);corrections.forEach(item=>{item.open=shouldOpen});toggle.textContent=shouldOpen?"Collapse all":"Expand all"});
+    const selfTest=document.getElementById("self-test");
+    const correctionSection=document.getElementById("corrections");
+    selfTest.addEventListener("click",()=>{const on=correctionSection.classList.toggle("self-test");selfTest.setAttribute("aria-pressed",String(on));selfTest.textContent=on?"Show all answers":"Self-test mode";corrections.forEach(item=>item.classList.remove("revealed"))});
+    document.querySelectorAll("#corrections .reveal").forEach(button=>button.addEventListener("click",()=>button.closest("details").classList.add("revealed")));
   </script>
 </body>
 </html>
