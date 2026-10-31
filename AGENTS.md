@@ -128,6 +128,7 @@ Preserve the master template's element order, class names, CSS, navigation, resp
 
 - Include this section only when the transcript shows likely pronunciation slips; otherwise remove the section and its navigation link.
 - Include 1–3 items. For each, give the target word, what it sounded like, a short articulation tip, and a minimal-pair or phrase practice line.
+- Give the correct General American IPA for each target word in slashes (for example, razor /ˈreɪzɚ/), and the IPA of what it sounded like (for example, "laser" /ˈleɪzɚ/). In the tip, name the key sound with its IPA symbol, such as /r/ or /ɪr/.
 - Describe the slips as likely, because they are inferred from the transcript rather than heard directly.
 
 ### Model Answer

@@ -80,6 +80,7 @@
     #corrections.self-test .reveal{display:inline-block}
     #corrections.self-test details.revealed .correction-body>.minimal,#corrections.self-test details.revealed .correction-body>.natural,#corrections.self-test details.revealed .correction-body>.why{display:block}
     #corrections.self-test details.revealed .reveal{display:none}
+    .ipa{color:var(--blue);font-family:"Charis SIL","Doulos SIL","Gentium Plus","Lucida Sans Unicode","Arial Unicode MS",sans-serif;font-size:.95rem;font-weight:600}
     .tool-buttons{display:flex;flex:none;flex-wrap:wrap;gap:8px}
     .task{margin-top:20px;padding:22px 24px;border:1px dashed #9cbcdf;border-radius:12px;background:#fff}
     .task ol{margin:10px 0 0;padding-left:1.3em}.task li{margin:5px 0}
@@ -215,10 +216,10 @@
 
     <section id="pronunciation">
       <h2>🔊 Pronunciation Watch</h2>
-      <!-- Optional: include only when the transcript shows likely pronunciation slips (for example, "laser" for "razor"). Keep 1–3 items. If there is no evidence, remove this whole section and its quick-nav link. -->
+      <!-- Optional: include only when the transcript shows likely pronunciation slips (for example, "laser" for "razor"). Keep 1–3 items. Give the correct General American IPA for the target word in slashes, and the IPA of what it sounded like. If there is no evidence, remove this whole section and its quick-nav link. -->
       <div class="language-list">
-        <article class="language-item"><strong>{{SOUND_1_TARGET}}</strong><p><span class="language-label">Sounded like</span><br>{{SOUND_1_HEARD}}</p><p><span class="language-label">Tip</span><br>{{SOUND_1_TIP_HTML}}</p><p><span class="language-label">Practice</span><br>{{SOUND_1_PRACTICE_HTML}}</p></article>
-        <article class="language-item"><strong>{{SOUND_2_TARGET}}</strong><p><span class="language-label">Sounded like</span><br>{{SOUND_2_HEARD}}</p><p><span class="language-label">Tip</span><br>{{SOUND_2_TIP_HTML}}</p><p><span class="language-label">Practice</span><br>{{SOUND_2_PRACTICE_HTML}}</p></article>
+        <article class="language-item"><strong>{{SOUND_1_TARGET}}</strong> <span class="ipa">{{SOUND_1_IPA}}</span><p><span class="language-label">Sounded like</span><br>{{SOUND_1_HEARD}}</p><p><span class="language-label">Tip</span><br>{{SOUND_1_TIP_HTML}}</p><p><span class="language-label">Practice</span><br>{{SOUND_1_PRACTICE_HTML}}</p></article>
+        <article class="language-item"><strong>{{SOUND_2_TARGET}}</strong> <span class="ipa">{{SOUND_2_IPA}}</span><p><span class="language-label">Sounded like</span><br>{{SOUND_2_HEARD}}</p><p><span class="language-label">Tip</span><br>{{SOUND_2_TIP_HTML}}</p><p><span class="language-label">Practice</span><br>{{SOUND_2_PRACTICE_HTML}}</p></article>
       </div>
     </section>
 
