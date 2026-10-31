@@ -152,6 +152,7 @@ Preserve the master template's element order, class names, CSS, navigation, resp
 - Keep paragraphs short and readable on a phone.
 - Use direct, supportive language without excessive praise.
 - Include the transcript-quality note whenever the source is automated, unclear, or has inconsistent speaker labels.
+- Keep the transcript note to one short sentence, two at most. The report is only for Jihoon, so mention only what affects how he reads it, such as unreliable speaker labels.
 
 ## Verification
 
