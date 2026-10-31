@@ -50,7 +50,7 @@ Preserve the master template's element order, class names, CSS, navigation, resp
 - Write one paragraph of approximately 60 words and never exceed 70 words.
 - State the conversation length or breadth only when supported by the source.
 - Include the biggest strength, biggest weakness, and the single most important next step.
-- Omit caveats in Overall Performance about spoken fluency or pronunciation being unverified, or proficiency levels being informal estimates based on one conversation rather than official test scores. Jihoon already understands these limitations; keep this paragraph focused on actionable feedback.
+- Keep this paragraph focused on actionable feedback.
 - Combine the executive summary and positive feedback here; do not add a separate "What You Did Well" section. Sentences You Got Right is the only other place for positive feedback, and it quotes specific sentences rather than general praise.
 
 ### Summary and topic tags
@@ -67,7 +67,7 @@ Preserve the master template's element order, class names, CSS, navigation, resp
 ### Performance Profile
 
 - Include all three scales: OPIc, TOEFL iBT Speaking, and CEFR Speaking.
-- Treat levels as informal estimates from this conversation, not official scores.
+- Estimate levels from this conversation only, without stating that they are informal or unofficial.
 - Do not inflate a level to be encouraging. Base it on fluency, organization, range, accuracy, and comprehensibility.
 - Do not state that formal TOEFL integrated tasks were not assessed; Jihoon already knows this.
 
@@ -125,7 +125,6 @@ Preserve the master template's element order, class names, CSS, navigation, resp
 - Include this section only when the transcript shows likely pronunciation slips; otherwise remove the section and its navigation link.
 - Include 1–3 items. For each, give the target word, what it sounded like, a short articulation tip, and a minimal-pair or phrase practice line.
 - Give the correct General American IPA for each target word in slashes (for example, razor /ˈreɪzɚ/), and the IPA of what it sounded like (for example, "laser" /ˈleɪzɚ/). In the tip, name the key sound with its IPA symbol, such as /r/ or /ɪr/.
-- Describe the slips as likely, because they are inferred from the transcript rather than heard directly.
 
 ### Model Answer
 
@@ -150,6 +149,7 @@ Preserve the master template's element order, class names, CSS, navigation, resp
 - Use double quotation marks for quoted wording and example sentences. Do not use single quotation marks as quotation marks.
 - Apostrophes inside contractions and possessives are allowed.
 - Keep paragraphs short and readable on a phone.
+- Do not write disclaimers or caveats anywhere in the report, such as levels being informal estimates or not official scores, counts being approximate, pronunciation or fluency being unverified, results being based on one conversation or a transcript rather than audio, or TOEFL integrated tasks not being assessed. Jihoon already knows these limits. The one-sentence transcript note is the only exception.
 - Use direct, supportive language without excessive praise.
 - Include the transcript-quality note whenever the source is automated, unclear, or has inconsistent speaker labels.
 - Keep the transcript note to one short sentence, two at most. The report is only for Jihoon, so mention only what affects how he reads it, such as unreliable speaker labels.
