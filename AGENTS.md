@@ -27,7 +27,7 @@ Ask one concise question if the date or teacher is missing. If the source is aud
 
 ## Fixed report structure
 
-Preserve the master template's element order, class names, CSS, navigation, responsive layout, expandable correction blocks, self-test mode, and print styles. Below the metadata line, include the one-line summary and topic tags. Use these sections in this exact order:
+Preserve the master template's element order, class names, CSS, navigation, responsive layout, expandable correction blocks, and print styles. Below the metadata line, include the one-line summary and topic tags. Use these sections in this exact order:
 
 1. Overall Performance
 2. Last Time → This Time
@@ -107,10 +107,6 @@ Preserve the master template's element order, class names, CSS, navigation, resp
 - Do not correct obvious transcription corruption as if Jihoon intentionally said it.
 - Words that look like typos may be Jihoon's pronunciation mistakes (for example, "laser" for "razor" or "bird" for "beard"). Do not correct these as typos, grammar, or vocabulary errors, and do not present them as transcription corruption; put them in Pronunciation Watch instead.
 
-### Self-test mode
-
-- Keep the Self-test mode button and each "Show answer" button from the master template. They hide the minimal correction, natural version, and explanation until Jihoon has tried his own fix.
-
 ### What Your Teacher Corrected
 
 - Include 2–4 moments where the teacher reformulated Jihoon's wording during class.
@@ -168,7 +164,7 @@ Before reporting completion:
 5. Confirm Overall Performance contains no more than 70 words.
 6. Confirm the three proficiency scales and all required sections exist in order, with Pronunciation Watch present only when supported.
 7. Confirm every placeholder has been removed.
-8. Confirm the report works at mobile widths, self-test mode hides and reveals answers, and the report does not depend on external files.
+8. Confirm the report works at mobile widths and does not depend on external files.
 
 If any check fails, fix the report and repeat validation.
 
