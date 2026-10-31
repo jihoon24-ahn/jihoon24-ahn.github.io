@@ -69,7 +69,7 @@ Preserve the master template's element order, class names, CSS, navigation, resp
 - Include all three scales: OPIc, TOEFL iBT Speaking, and CEFR Speaking.
 - Treat levels as informal estimates from this conversation, not official scores.
 - Do not inflate a level to be encouraging. Base it on fluency, organization, range, accuracy, and comprehensibility.
-- State when formal TOEFL integrated tasks were not assessed.
+- Do not state that formal TOEFL integrated tasks were not assessed; Jihoon already knows this.
 
 ### Speaking Snapshot
 
