@@ -12,7 +12,15 @@ Before generating a report, identify all three inputs:
 2. The class date in `YYYY-MM-DD` format.
 3. The teacher's name.
 
-Ask one concise question if the date or teacher is missing. If the source is audio, transcribe it before assessment. Automated speaker labels may be unreliable; infer attribution only from context and do not present uncertain wording as Jihoon's sentence.
+Ask one concise question if the date or teacher is missing. If the source is audio, transcribe it before assessment.
+
+### Speaker attribution
+
+- Do not trust the transcript's speaker names or numbers. Automated labels are often wrong, even when they look like real names.
+- Reassign every line to Jihoon or the teacher based on content: who asks and who answers, who explains grammar or tells personal stories, references to Jihoon's job, wife, or Korea, and teacher recasts that repeat Jihoon's wording correctly.
+- Numbered labels (for example, Speaker 1–7) may split one person across several numbers or contain background noise; map them by content and ignore noise.
+- Leave a line unassigned when context cannot decide. Do not quote it as Jihoon's wording, and do not count it in the Speaking Snapshot.
+- Mention the reassignment only in the one-sentence transcript note.
 
 ## Output file
 
