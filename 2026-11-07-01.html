@@ -75,6 +75,12 @@
     .task{margin-top:20px;padding:22px 24px;border:1px dashed #9cbcdf;border-radius:12px;background:#fff}
     .task ol{margin:10px 0 0;padding-left:1.3em}.task li{margin:5px 0}
     .task p{margin:12px 0 0}.task p:first-child{margin:0;font-weight:720}
+    .focus-card{padding:18px 20px;border:1px solid var(--line);border-radius:12px;background:#fff}
+    .focus-card h3{color:var(--blue)}
+    .focus-line{display:grid;grid-template-columns:24px 1fr;gap:4px;margin:8px 0 0;font-size:.97rem;line-height:1.5}
+    .focus-line.wrong{color:var(--muted)}
+    .drill{margin:12px 0 0;padding:11px 14px;border-radius:9px;background:var(--blue-soft);font-size:.97rem;line-height:1.5}
+    .drill-label{display:block;margin-bottom:2px;color:var(--blue);font-size:.74rem;font-style:normal;font-weight:760;letter-spacing:.04em;text-transform:uppercase}
     footer{margin-top:60px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:.82rem}
     @media(max-width:720px){
       body{background:var(--paper);font-size:17px;line-height:1.65}
@@ -97,7 +103,7 @@
       <ul class="topic-tags"><li>Practice Routine</li><li>U.S. Politics</li><li>Travel</li></ul>
       <nav class="quick-nav" aria-label="Report sections">
         <a href="#overall">Overall</a><a href="#progress">Last time</a><a href="#profile">Levels</a>
-        <a href="#wins">Got right</a><a href="#patterns">Priorities</a><a href="#corrections">Corrections</a><a href="#recasts">Teacher</a>
+        <a href="#wins">Got right</a><a href="#patterns">Focus</a><a href="#corrections">Corrections</a><a href="#recasts">Teacher</a>
         <a href="#language">Language</a><a href="#pronunciation">Sounds</a><a href="#model">Model answer</a><a href="#task">Task</a>
       </nav>
     </header>
@@ -140,14 +146,12 @@
     </section>
 
     <section id="patterns">
-      <h2>🚀 Priority Patterns &amp; Suggestions</h2>
-      <!-- In each item, bold the reusable language chunk and italicize the specific grammar form, preposition, or target word being explained. -->
+      <h2>🎯 Focus for Next Class</h2>
+      <!-- Exactly three cards. Rule title of at most 8 words; Jihoon's actual wording from this class after ❌; the bold fix after ✅; one practice sentence that uses the fix. -->
       <div class="stack">
-        <article class="pattern"><h3>1. Learn time and verb prepositions as chunks</h3><p>Prepositions slipped with months and verbs: <em>starts on March</em>, <em>negotiate them</em>, <em>in front of the public</em>, <em>enough to me</em>.</p><p><span class="example-label">Try:</span> Review the November 2 rule and add verb chunks: <strong>in March</strong>, <strong>negotiate with</strong>, <strong>in front of an audience</strong>, <strong>enough for me</strong>.</p><ul class="examples"><li>"In Korea, the school year <strong>starts in March</strong>."</li><li>"You have to <strong>negotiate with</strong> the driver before you go."</li></ul></article>
-        <article class="pattern"><h3>2. Don't mix be with another verb</h3><p><em>Be</em> was added before main verbs: <em>I am still think</em>, <em>semester is start</em>. A main verb was also dropped: <em>she wants to a grocery store</em>.</p><p><span class="example-label">Try:</span> Use one check: <strong>be + adjective / -ing</strong>, or <strong>a main verb alone</strong>, never both.</p><ul class="examples"><li>"<strong>I still think</strong> 15 minutes isn't enough."</li><li>"The second semester <strong>starts</strong> in September, and she <strong>wants to go</strong> to the store."</li></ul></article>
-        <article class="pattern"><h3>3. Report what someone said or asked</h3><p>Reported speech mixed direct and indirect forms: <em>she often told me that I feel that your English is getting rusty</em>, <em>she asked me… What do you want to go?</em></p><p><span class="example-label">Try:</span> Change the pronouns to the reporter's view: <strong>she tells me (that) my English…</strong>, <strong>she asked me where I wanted to go</strong>. Or quote directly: <em>She says, "Your English is getting rusty."</em></p><ul class="examples"><li>"My teacher <strong>often tells me that my English</strong> is getting rusty."</li><li>"My wife <strong>asked me where I wanted to go</strong> during my visit."</li></ul></article>
-        <article class="pattern"><h3>4. Describe routines in the simple present</h3><p>Habits came out in the past or with the wrong time phrase: <em>after the meeting, I made an English report every time</em>, <em>At the time, I'm walking to my office</em>.</p><p><span class="example-label">Try:</span> For anything you do regularly, use the <strong>simple present + a frequency word</strong>: <em>every day</em>, <em>usually</em>, <em>after every class</em>.</p><ul class="examples"><li>"<strong>After every class, I make</strong> an English report and review it."</li><li>"<strong>Every morning, I walk</strong> to my office and talk to my teacher on the phone."</li></ul></article>
-        <article class="pattern"><h3>5. Explain a system step by step</h3><p>Explaining the Korean semester system, the sentence looped: <em>Spring semester is first semester, and fourth semester is the second semester, and fourth semester is start on March…</em> Cheryl had to stop you to check.</p><p><span class="example-label">Try:</span> Use a <strong>sequence frame</strong>: one short sentence per step, linked with <em>first</em>, <em>then</em>, and <em>after that</em>.</p><ul class="examples"><li>"<strong>In Korea, the school year has two semesters.</strong> The first one starts in March."</li><li>"<strong>Then</strong> there's a summer break, and <strong>after that</strong>, the second semester starts in September."</li></ul></article>
+        <article class="focus-card"><h3>1. Months take <em>in</em>; verbs keep their partners</h3><p class="focus-line wrong"><span aria-hidden="true">❌</span><span>"starts on March" · "negotiate them"</span></p><p class="focus-line"><span aria-hidden="true">✅</span><span><strong>starts in March</strong> · <strong>negotiate with them</strong></span></p><p class="drill"><span class="drill-label">🔁 Say it 3 times</span>"The school year <strong>starts in March</strong>, and I <strong>negotiate with</strong> my driver before every trip."</p></article>
+        <article class="focus-card"><h3>2. Use <em>be</em> or a verb, never both</h3><p class="focus-line wrong"><span aria-hidden="true">❌</span><span>"I am still think" · "semester is start"</span></p><p class="focus-line"><span aria-hidden="true">✅</span><span><strong>I still think</strong> · <strong>the semester starts</strong></span></p><p class="drill"><span class="drill-label">🔁 Say it 3 times</span>"<strong>I still think</strong> the second semester <strong>starts</strong> in September."</p></article>
+        <article class="focus-card"><h3>3. Routines take the simple present</h3><p class="focus-line wrong"><span aria-hidden="true">❌</span><span>"After the meeting, I made an English report every time."</span></p><p class="focus-line"><span aria-hidden="true">✅</span><span><strong>After every class, I make an English report.</strong></span></p><p class="drill"><span class="drill-label">🔁 Say it 3 times</span>"<strong>Every morning, I walk</strong> to my office and <strong>talk</strong> to my teacher."</p></article>
       </div>
     </section>
 

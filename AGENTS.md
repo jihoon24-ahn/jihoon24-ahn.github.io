@@ -41,7 +41,7 @@ Preserve the master template's element order, class names, CSS, navigation, resp
 2. Last Time → This Time
 3. Performance Profile
 4. Sentences You Got Right
-5. Priority Patterns & Suggestions
+5. Focus for Next Class
 6. Key Corrections
 7. What Your Teacher Corrected
 8. Useful Language
@@ -67,7 +67,7 @@ Preserve the master template's element order, class names, CSS, navigation, resp
 
 ### Last Time → This Time
 
-- Review the first three Priority Patterns from the most recent earlier report, and link to that report.
+- Review the three Focus for Next Class cards from the most recent earlier report (or its first three Priority Patterns if it uses the older format), and link to that report.
 - Give each one a status: Improved (`improved`), Same (`same`), Still frequent (`frequent`), or Not observed (`not-observed`).
 - Support every status with one specific piece of evidence from this class. Use Not observed when the class gave no chance to judge it.
 
@@ -83,12 +83,15 @@ Preserve the master template's element order, class names, CSS, navigation, resp
 - Include 2–3 sentences Jihoon actually said correctly or effectively, including successful self-corrections.
 - Quote his final wording exactly, and briefly explain what to keep doing. Do not include sentences with uncertain attribution.
 
-### Priority Patterns & Suggestions
+### Focus for Next Class
 
-- Include exactly five high-impact patterns supported by recurring evidence.
-- Explain each pattern briefly and pair it with a practical suggestion.
-- Give at least two bulleted, immediately usable example sentences per pattern.
-- Prefer speaking techniques Jihoon can apply in real conversations, such as a story frame, sentence restart, timeline control, or fixed language chunks.
+- Include exactly three focus cards, one for each of the highest-impact problems that recur in this class. Prefer problems that also appeared in earlier reports.
+- Give each card four parts in this order:
+  1. A rule as the title, no more than 8 words (for example, "Use *be* or a verb, never both").
+  2. ❌ Jihoon's actual wording from this class: one or two short quotes.
+  3. ✅ The corrected wording in bold.
+  4. 🔁 Say it 3 times: one complete practice sentence that uses the fix.
+- Keep each card to about 30 words. Do not add explanations; the Why? blocks in Key Corrections explain the grammar.
 
 ### Key Corrections
 
