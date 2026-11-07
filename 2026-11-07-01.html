@@ -69,10 +69,6 @@
     .progress-item p,.recast p{margin:6px 0 0;font-size:.95rem;line-height:1.55}
     .status{display:inline-block;padding:2px 9px;border-radius:999px;font-size:.72rem;font-weight:760;letter-spacing:.03em;text-transform:uppercase}
     .status.improved{background:var(--green-soft);color:var(--green)}.status.same,.status.not-observed{background:#f1f1ef;color:var(--muted)}.status.frequent{background:var(--amber-soft);color:var(--amber)}
-    .stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:22px}
-    .stat-card{padding:16px;border:1px solid var(--line);border-radius:12px}
-    .stat-value{margin:2px 0 6px;color:var(--blue);font-size:1.45rem;font-weight:780;line-height:1.2}
-    .stat-card p:last-child{margin:0;color:#505050;font-size:.85rem;line-height:1.45}
     .win{padding:16px 18px;border-left:4px solid var(--green);border-radius:5px 12px 12px 5px;background:var(--green-soft)}
     .win p{margin:6px 0 0;font-size:.95rem;line-height:1.55}.win p:first-child{margin:0;font-size:1rem}
     .ipa{color:var(--blue);font-family:"Charis SIL","Doulos SIL","Gentium Plus","Lucida Sans Unicode","Arial Unicode MS",sans-serif;font-size:.95rem;font-weight:600}
@@ -83,7 +79,7 @@
     @media(max-width:720px){
       body{background:var(--paper);font-size:17px;line-height:1.65}
       main{width:100%;margin:0;padding:32px 20px 56px;border:0;border-radius:0;box-shadow:none}
-      h2{margin-top:48px}.profile-grid,.language-list{grid-template-columns:1fr}.stat-grid{grid-template-columns:1fr 1fr}
+      h2{margin-top:48px}.profile-grid,.language-list{grid-template-columns:1fr}
       .callout,.pattern,.task{padding:18px}.correction-tools{align-items:flex-start;flex-direction:column}
       summary{padding:17px 1px}.correction-body{padding-left:0}.model-answer{padding:20px}
     }
@@ -100,7 +96,7 @@
       <p class="summary">Croatia, keeping English from getting rusty, U.S. election results, Cheryl's Spain trip, school calendars, and getting around in Turkmenistan.</p>
       <ul class="topic-tags"><li>Practice Routine</li><li>U.S. Politics</li><li>Travel</li></ul>
       <nav class="quick-nav" aria-label="Report sections">
-        <a href="#overall">Overall</a><a href="#progress">Last time</a><a href="#profile">Levels</a><a href="#snapshot">Snapshot</a>
+        <a href="#overall">Overall</a><a href="#progress">Last time</a><a href="#profile">Levels</a>
         <a href="#wins">Got right</a><a href="#patterns">Priorities</a><a href="#corrections">Corrections</a><a href="#recasts">Teacher</a>
         <a href="#language">Language</a><a href="#pronunciation">Sounds</a><a href="#model">Model answer</a><a href="#task">Task</a>
       </nav>
@@ -132,16 +128,6 @@
       </div>
     </section>
 
-    <section id="snapshot">
-      <h2>📈 Speaking Snapshot</h2>
-      <!-- Count only lines reliably attributed to Jihoon. Talk share = Jihoon's words / all attributed words. Average turn = Jihoon's words / Jihoon's turns. Restarts = immediately repeated words or phrases. Each note compares with the previous report's snapshot, or says "First measurement." -->
-      <div class="stat-grid">
-        <article class="stat-card"><p class="scale">Talk share</p><p class="stat-value">About 39%</p><p>Down from 57%. Cheryl told several long stories about Croatia and Spain.</p></article>
-        <article class="stat-card"><p class="scale">Average turn</p><p class="stat-value">About 8 words</p><p>Down from 17. Many turns were short reactions during Cheryl's stories.</p></article>
-        <article class="stat-card"><p class="scale">Restarts</p><p class="stat-value">About 32</p><p>Up from 16, in a class about twice as long. Many came in the semester explanation.</p></article>
-        <article class="stat-card"><p class="scale">Top filler</p><p class="stat-value">"so" ×41</p><p>Up from 32 in a longer class. "Ah" ×33 and "you know" ×14 were next.</p></article>
-      </div>
-    </section>
 
     <section id="wins">
       <h2>🌱 Sentences You Got Right</h2>

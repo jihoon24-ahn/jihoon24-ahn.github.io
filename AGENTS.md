@@ -19,7 +19,7 @@ Ask one concise question if the date or teacher is missing. If the source is aud
 - Do not trust the transcript's speaker names or numbers. Automated labels are often wrong, even when they look like real names.
 - Reassign every line to Jihoon or the teacher based on content: who asks and who answers, who explains grammar or tells personal stories, references to Jihoon's job, wife, or Korea, and teacher recasts that repeat Jihoon's wording correctly.
 - Numbered labels (for example, Speaker 1–7) may split one person across several numbers or contain background noise; map them by content and ignore noise.
-- Leave a line unassigned when context cannot decide. Do not quote it as Jihoon's wording, and do not count it in the Speaking Snapshot.
+- Leave a line unassigned when context cannot decide. Do not quote it as Jihoon's wording.
 - Mention the reassignment only in the one-sentence transcript note.
 
 ## Output file
@@ -40,16 +40,15 @@ Preserve the master template's element order, class names, CSS, navigation, resp
 1. Overall Performance
 2. Last Time → This Time
 3. Performance Profile
-4. Speaking Snapshot
-5. Sentences You Got Right
-6. Priority Patterns & Suggestions
-7. Key Corrections
-8. What Your Teacher Corrected
-9. Useful Language
-10. Pronunciation Watch (optional; include only when there is evidence)
-11. Model Answer
-12. Your 2-Minute Speaking Task
-13. Transcript Note
+4. Sentences You Got Right
+5. Priority Patterns & Suggestions
+6. Key Corrections
+7. What Your Teacher Corrected
+8. Useful Language
+9. Pronunciation Watch (optional; include only when there is evidence)
+10. Model Answer
+11. Your 2-Minute Speaking Task
+12. Transcript Note
 
 ## Content rules
 
@@ -78,16 +77,6 @@ Preserve the master template's element order, class names, CSS, navigation, resp
 - Estimate levels from this conversation only, without stating that they are informal or unofficial.
 - Do not inflate a level to be encouraging. Base it on fluency, organization, range, accuracy, and comprehensibility.
 - Do not state that formal TOEFL integrated tasks were not assessed; Jihoon already knows this.
-
-### Speaking Snapshot
-
-- Report four approximate metrics, counting only lines reliably attributed to Jihoon:
-  - Talk share: Jihoon's words divided by all attributed words.
-  - Average turn: Jihoon's words divided by his turns.
-  - Restarts: immediately repeated words or phrases, such as "I I" or "it was it was."
-  - Top filler: the most frequent filler phrase and its count, such as "you know" ×14.
-- In each note, compare with the previous report's snapshot when one exists; otherwise write "First measurement."
-- Omit a metric's comparison, not the metric, when the transcript is too incomplete to compare fairly, and say so in the note.
 
 ### Sentences You Got Right
 
@@ -157,7 +146,7 @@ Preserve the master template's element order, class names, CSS, navigation, resp
 - Use double quotation marks for quoted wording and example sentences. Do not use single quotation marks as quotation marks.
 - Apostrophes inside contractions and possessives are allowed.
 - Keep paragraphs short and readable on a phone.
-- Do not write disclaimers or caveats anywhere in the report, such as levels being informal estimates or not official scores, counts being approximate, pronunciation or fluency being unverified, results being based on one conversation or a transcript rather than audio, or TOEFL integrated tasks not being assessed. Jihoon already knows these limits. The one-sentence transcript note is the only exception.
+- Do not write disclaimers or caveats anywhere in the report, such as levels being informal estimates or not official scores, pronunciation or fluency being unverified, results being based on one conversation or a transcript rather than audio, or TOEFL integrated tasks not being assessed. Jihoon already knows these limits. The one-sentence transcript note is the only exception.
 - Use direct, supportive language without excessive praise.
 - Include the transcript-quality note whenever the source is automated, unclear, or has inconsistent speaker labels.
 - Keep the transcript note to one short sentence, two at most. The report is only for Jihoon, so mention only what affects how he reads it, such as unreliable speaker labels.
