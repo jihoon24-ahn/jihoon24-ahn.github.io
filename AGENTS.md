@@ -124,7 +124,8 @@ Preserve the master template's element order, class names, CSS, navigation, resp
 
 - Include this section only when the transcript shows likely pronunciation slips; otherwise remove the section and its navigation link.
 - Include 1–3 items. For each, give the target word, what it sounded like, a short articulation tip, and a minimal-pair or phrase practice line.
-- Give the correct General American IPA for each target word in slashes (for example, razor /ˈreɪzɚ/), and the IPA of what it sounded like (for example, "laser" /ˈleɪzɚ/). In the tip, name the key sound with its IPA symbol, such as /r/ or /ɪr/.
+- Write pronunciations in Google Dictionary style (Oxford American respelling), not full IPA. Put the target word's pronunciation in slashes, followed by a simple spelled-out version with the stressed syllable in capitals: razor /ˈrāzər/ · RAY-zer. Do the same for what it sounded like: "laser" /ˈlāzər/ · LAY-zer.
+- Use only Google-style symbols: ā ē ī ō o͞o ä ô ə ər, NG, CH, SH, TH, j, and ˈ for stress. Write the American flap t as /d/ (letter /ˈledər/). Never use full-IPA symbols such as ɚ ɝ ɪ ɛ ɔ ɑ ŋ tʃ dʒ θ t̬ eɪ oʊ. In the tip, name the key sound with the same Google-style symbol, such as /r/ or /ō/.
 
 ### Model Answer
 
